@@ -1,0 +1,28 @@
+.navlinks {
+    color: white;
+    font-size: .80rem;
+    letter-spacing: .15rem;
+    font-family: Oxanium;
+    display: block;
+}
+
+.navlinks:hover {
+    color: skyblue;
+}
+.navlinks:focus{
+    
+    border-bottom: 3px solid green;
+}
+.navlinks button{
+    color: white;
+    font-size: .8rem;
+    letter-spacing: .18rem;
+    border: 1px solid white;
+    border-radius: 0px;
+}
+.navlinks button:hover{
+    color: black;
+    background-color: orange;
+    border: 1px solid orange;
+}
+  

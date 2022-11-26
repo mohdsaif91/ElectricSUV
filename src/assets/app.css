@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Oxanium:wght@200;300;400&display=swap");
+@import url('../components/BannerComponent.module.css');
+@import url('../components/BrandsComponent.module.css');
+@import url('../components/ConnectComponent.module.css');
+@import url('../components/FooterComponent.module.css');
+@import url('../components/GalleryComponent.module.css');
+@import url('../components/HeaderComponent.module.css');
+@import url('../components/HeroBannerComponent.module.css');
+@import url('../components/MediaComponent.module.css');
+@import url('../components/MediaRoomComponent.module.css');
+@import url('../components/TechnologyComponent.module.css');
+@import url('../components/TwoColumnComponent.module.css');
+@import url('../components/YouTubeComponent.module.css');
+
+.main-container {
+  margin: 0 !important;
+  background-color: black;
+}
+
+/*
+  Hides Sitecore editor markup,
+  if you run the app in connected mode while the Sitecore cookies
+  are set to edit mode.
+*/
+.scChromeData, .scpm { display: none !important; }
+
+/*
+  Styles for default JSS error components
+*/
+.sc-jss-editing-error,
+.sc-jss-placeholder-error {
+  padding: 1em;
+  background-color: lightyellow;
+}
+
+/*
+  custom coloring for links and buttons
+*/
+/* 
+  Style for default content block
+*/
+.contentTitle {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+
+body {
+    background: black;
+    color: white;
+    font-family: Inter, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    /* overflow-x: hidden; */
+    max-width: 100%
+}
