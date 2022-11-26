@@ -1,0 +1,16 @@
+.gallery-container {
+  margin-top: 348px;
+  padding: 200px 0 !important;
+}
+
+.gallery-text {
+  padding-left: 100px;
+  padding-right: 100px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 300;
+  font-size: 40px;
+  margin: 0 0 1em -0.07em;
+  font-family: Oxanium, sans-serif;
+}

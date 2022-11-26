@@ -53,3 +53,13 @@ placeholders:
           Welcome to the reimagined world of electric SUVs. Futuristic design, pulsating performance and dynamic innovation.
           Two revolutionary brands from the house of Mahindra. Unique yet connected. Inspired by our past yet focused on tomorrow. Next-generation vehicles for the visionaries, the disrupters, the go-getters and the accelerators of change.
           Our vision is to put sport back into electric sports utility vehicles.
+    - componentName: TechnologyComponent
+      fields:
+        heading: technology
+        graphicImage: INGLO.svg
+        subheading: BREATHTAKING INNOVATION
+        body: We call our intelligent neural network of multi-sensory experiences and platform capabilities - INGLO. It is Indian at heart and Global in its reach and the experience it will deliver.
+        bodyimg: car-chase-body.webp
+    - componentName: GalleryComponent
+      fields:
+        heading: gallery

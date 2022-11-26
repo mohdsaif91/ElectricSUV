@@ -10,7 +10,13 @@ export default function TechnologyComponent(manifest: Manifest): void {
   manifest.addComponent({
     name: 'TechnologyComponent',
     icon: SitecoreIcon.DocumentTag,
-    fields: [{ name: 'heading', type: CommonFieldTypes.SingleLineText }],
+    fields: [
+      { name: 'heading', type: CommonFieldTypes.SingleLineText },
+      { name: 'graphicImage', type: CommonFieldTypes.SingleLineText },
+      { name: 'subheading', type: CommonFieldTypes.SingleLineText },
+      { name: 'body', type: CommonFieldTypes.MultiLineText },
+      { name: 'bodyimg', type: CommonFieldTypes.SingleLineText },
+    ],
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,
     register it here, or components added to that placeholder will not be returned by Sitecore:

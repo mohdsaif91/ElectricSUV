@@ -1,5 +1,6 @@
 import { Text, Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
+import { Col, Container, Row } from 'react-bootstrap';
 
 type GalleryComponentProps = ComponentProps & {
   fields: {
@@ -8,10 +9,15 @@ type GalleryComponentProps = ComponentProps & {
 };
 
 const GalleryComponent = (props: GalleryComponentProps): JSX.Element => (
-  <div>
-    <p>GalleryComponent Component</p>
-    <Text field={props.fields.heading} />
-  </div>
+  <Container fluid className="gallery-container">
+    <Row>
+      <Col>
+        <span className="gallery-text">
+          <Text field={props.fields.heading} />
+        </span>
+      </Col>
+    </Row>
+  </Container>
 );
 
 export default withDatasourceCheck()<GalleryComponentProps>(GalleryComponent);
