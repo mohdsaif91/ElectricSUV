@@ -14,7 +14,7 @@
 @import url('../components/TwoColumnWithImageComponent.module.css');
 
 a[target='_blank']:after {
-  content: '\1F5D7';
+  
 }
 
 /*
@@ -71,6 +71,7 @@ body {
   line-height: 24px;
   /* overflow-x: hidden; */
   max-width: 100%;
+  overflow-x: hidden;
 }
 
 .main-container {

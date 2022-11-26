@@ -27,6 +27,7 @@ const Navigation = (): JSX.Element => {
       <button type="button" className="btn btn-outline-light">
         {'UPDATE ME'}
       </button>
+      
     </Navbar>
   );
 };

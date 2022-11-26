@@ -35,8 +35,7 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
         <title>{fields.pageTitle.value.toString() || 'Page'}</title>
         <link rel="icon" href={`${publicUrl}/favicon.ico`} />
       </Head>
-
-      <Navigation />
+      {/* <Navigation/> */}
       {/* root placeholder for the app, which we add components to using route data */}
       <div className="main-container">
         {route && <Placeholder name="jss-main" rendering={route} />}
