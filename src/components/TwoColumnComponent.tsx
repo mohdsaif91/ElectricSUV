@@ -19,7 +19,7 @@ const TwoColumnComponent = (props: TwoColumnComponentProps): JSX.Element => {
     <div className="row" >
       <div className='col-md-6 d-flex align-items-center'>
         <h1 className='twoColHead' style={{color: props.fields.fontColor.value}}>
-          {props.fields.heading.value.split(' ').map((i,index)=> index ==0 || index == 1? <span>{i}<br/></span>: i + " ")}
+          {props.fields.heading.value}
         </h1>
       </div>
       <div className='col-md-6 d-flex align-items-center'>

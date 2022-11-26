@@ -32,7 +32,9 @@ placeholders:
         heading: TWO REVOLUTIONARY eSUV BRANDS
         body: |
           Welcome to the reimagined world of electric SUVs. Futuristic design, pulsating performance and dynamic innovation.
+          <br/>
           Two revolutionary brands from the house of Mahindra. Unique yet connected. Inspired by our past yet focused on tomorrow. Next-generation vehicles for the visionaries, the disrupters, the go-getters and the accelerators of change.
+          <br/>
           Our vision is to put sport back into electric sports utility vehicles.
     - componentName: YouTubeComponent
       fields:
@@ -51,20 +53,19 @@ placeholders:
       fields:
         backgroundColor: white
         fontColor: black
-        heading: TWO REVOLUTIONARY eSUV BRANDS
+        heading: HEARTCORE DESIGN
         body: |
-          Welcome to the reimagined world of electric SUVs. Futuristic design, pulsating performance and dynamic innovation.
-          Two revolutionary brands from the house of Mahindra. Unique yet connected. Inspired by our past yet focused on tomorrow. Next-generation vehicles for the visionaries, the disrupters, the go-getters and the accelerators of change.
-          Our vision is to put sport back into electric sports utility vehicles.
+          Discover an audacious new design language born from a racing spirit, where dynamics and design meet to set your pulse racing. Exciting proportions, scintillating surfaces, and eye-catching design find inspiration in sustainable solutions, designed in tune with our surroundings.
+          But design is not just about making you stop in your tracks. Design is an attitude. An unmissable presence. A statement of intent, even at rest. Our design philosophy is Heartcore-hard core SUVs, straight from the heart.
     - componentName: TwoColumnComponent
       fields:
         backgroundColor: white
         fontColor: black
-        heading: TWO REVOLUTIONARY eSUV BRANDS
+        heading: TRULY WORLD-CLASS
         body: |
-          Welcome to the reimagined world of electric SUVs. Futuristic design, pulsating performance and dynamic innovation.
-          Two revolutionary brands from the house of Mahindra. Unique yet connected. Inspired by our past yet focused on tomorrow. Next-generation vehicles for the visionaries, the disrupters, the go-getters and the accelerators of change.
-          Our vision is to put sport back into electric sports utility vehicles.
+          With our design centres in the UK and India and our development centres in Chennai, Detroit and Bangalore, we are creating products that will make all your senses come alive.
+          Our designers and engineers are collaborating with leading experts and global partners. Together we are scaling new peaks, exploring the next impossible.
+          A world of endless possibilities. To create a whole new destination. Delivering more for you, your family, your tribe and the environment.
     - componentName: TechnologyComponent
       fields:
         heading: technology

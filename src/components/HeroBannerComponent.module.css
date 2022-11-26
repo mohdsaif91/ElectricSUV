@@ -2,11 +2,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0;
-    width: 100%;
     position: relative;
     margin-top: 0rem;
-    height: 40rem;
-    display: flexbox;
 }
 
 .bannergrid {
