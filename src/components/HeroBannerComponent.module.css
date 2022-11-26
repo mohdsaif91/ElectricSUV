@@ -1,0 +1,32 @@
+.banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    margin-top: 0rem;
+    height: 40rem;
+    display: flexbox;
+}
+
+.bannergrid {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    background-color: aliceblue;
+    border-color: aqua;
+    background: none;
+}
+.bannergrid button{ 
+    height: 3rem;
+    width: 8rem;
+    background-color: black;
+    color: white;
+    font-family: Oxanium;
+    border: 1px solid white;
+}
+.bannergrid button:hover{ 
+    color: black;
+    background-color: orange;
+    border: 1px solid orange;
+}

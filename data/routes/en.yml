@@ -20,13 +20,15 @@ fields:
 # root placeholder names are defined in the package.json config section (required for Sitecore deployment)
 placeholders:
   jss-main:
+    - componentName: HeaderComponent
     - componentName: HeroBannerComponent
       fields:
         bannerImage: XUV400_Desktop.jpg
         buttonKnowMore: Know More
     - componentName: TwoColumnComponent
       fields:
-        backgroundColor: dark
+        backgroundColor: black
+        fontColor: white
         heading: TWO REVOLUTIONARY eSUV BRANDS
         body: |
           Welcome to the reimagined world of electric SUVs. Futuristic design, pulsating performance and dynamic innovation.
@@ -47,7 +49,17 @@ placeholders:
         cardImage2: female.webp
     - componentName: TwoColumnComponent
       fields:
-        backgroundColor: light
+        backgroundColor: white
+        fontColor: black
+        heading: TWO REVOLUTIONARY eSUV BRANDS
+        body: |
+          Welcome to the reimagined world of electric SUVs. Futuristic design, pulsating performance and dynamic innovation.
+          Two revolutionary brands from the house of Mahindra. Unique yet connected. Inspired by our past yet focused on tomorrow. Next-generation vehicles for the visionaries, the disrupters, the go-getters and the accelerators of change.
+          Our vision is to put sport back into electric sports utility vehicles.
+    - componentName: TwoColumnComponent
+      fields:
+        backgroundColor: white
+        fontColor: black
         heading: TWO REVOLUTIONARY eSUV BRANDS
         body: |
           Welcome to the reimagined world of electric SUVs. Futuristic design, pulsating performance and dynamic innovation.
@@ -63,3 +75,4 @@ placeholders:
     - componentName: GalleryComponent
       fields:
         heading: gallery
+    - componentName: FooterComponent

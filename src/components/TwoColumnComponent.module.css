@@ -1,21 +1,6 @@
-.column-title {
-  font-family: Oxanium, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 18px;
-  text-align: left;
-  margin-bottom: 24px;
-}
-.our-brands-container {
-  margin-top: 200px;
-  padding: 0 !important;
-  background-color: black;
+.twoColHead {
+    font-family: "Oxanium";
+    font-weight: 300;
+    letter-spacing: .3rem;
 }
 
-.dark {
-  background-color: #000;
-}
-
-.light {
-  background-color: #ffffff;
-}
