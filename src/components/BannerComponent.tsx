@@ -1,17 +1,37 @@
-import { Text, Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 
 type BannerComponentProps = ComponentProps & {
   fields: {
-    heading: Field<string>;
+    bannerImage: Field<string>;
+    title: Field<string>;
   };
 };
 
 const BannerComponent = (props: BannerComponentProps): JSX.Element => (
-  <div>
-    <p>BannerComponent Component</p>
-    <Text field={props.fields.heading} />
-  </div>
+  <>
+    <div className="separator is-inview" id="esuvs" data-intersecting="0.13385812938213348">
+      <section className="promo-panel no-pad-bottom no-pad-top">
+        <span className="wide-title">{props.fields.title.value}</span>
+        <div className="relative-wrapper">
+          <div className="background-image">
+            <figure>
+              <img
+                loading="lazy"
+                src={props.fields.bannerImage.value}
+                alt="Group Hero Shot"
+                width="1920"
+                height="1333"
+              ></img>
+            </figure>
+          </div>
+          <div className="body-push flex-container">
+            <div className="column"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </>
 );
 
 export default withDatasourceCheck()<BannerComponentProps>(BannerComponent);

@@ -1,0 +1,28 @@
+.wide-title {
+    display: block;
+    position: absolute;
+    opacity: 0.1;
+    margin-bottom: -1px;
+    text-transform: none;
+    color: white;
+    opacity: 0.5;
+    line-height: 0.8;
+    font-size: 33.9vw;
+    left: -2.65vw;
+}
+
+main>section,
+main>.separator>section {
+    padding-top: 80px;
+    padding-bottom: 80px
+}
+
+.label.is-inview:after {
+    width: 80px;
+    border-width: 1px;
+    -webkit-box-shadow: 0 0 14px 4px #64dcff;
+    box-shadow: 0 0 14px 4px #64dcff;
+    -webkit-transition-delay: 0;
+    transition-delay: 0
+}
+
