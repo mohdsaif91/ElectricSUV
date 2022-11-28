@@ -1,11 +1,12 @@
-.footertext div p{
-    font-size: 13px;
-    text-align: baseline;
+.footertext div div p{
+    font-size: small;
+    
 }
-.footertext div a{
-    font-size: 13px;
+.footertext div div  a{
+    font-size: .8rem;
     text-decoration: underline;
     color: white;
+
 }
 .footertext div div div a {
     color: white;

@@ -30,14 +30,15 @@ const MediaRoomComponent = (props: MediaRoomComponentProps): JSX.Element => (
         {props.fields.mediaList.map((_media, index) => {
           // console.log(_media);
           return (
-            <div key={index} id="mediaItem" className="col-xs-1">
-              {/* <MediaComponent
-                image={_media.mediaList.image.value}
-                date={_media.mediaList.date}
-                desc={_media.mediaList.desc}
-                url={_media.mediaList.url}
-              /> */}
-            </div>
+            // <div key={index} id="mediaItem" className="col-xs-1">
+            //   <MediaComponent
+            //     // image={_media.mediaList.image.value}
+            //     date={_media.mediaList.date}
+            //     desc={_media.mediaList.desc}
+            //     url={_media.mediaList.url}
+            //   />
+            // </div>
+            <></>
           );
         })}
       </div>
