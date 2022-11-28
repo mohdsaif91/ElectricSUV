@@ -1,6 +1,6 @@
 import { Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
-import MediaComponent from './MediaComponent';
+// import MediaComponent from './MediaComponent';
 
 interface value {
   value: Field<string>;
@@ -28,16 +28,15 @@ const MediaRoomComponent = (props: MediaRoomComponentProps): JSX.Element => (
     <div className="container">
       <div className="row">
         {props.fields.mediaList.map((_media, index) => {
-          console.log(_media);
-
+          // console.log(_media);
           return (
             <div key={index} id="mediaItem" className="col-xs-1">
-              <MediaComponent
+              {/* <MediaComponent
                 image={_media.mediaList.image.value}
                 date={_media.mediaList.date}
                 desc={_media.mediaList.desc}
                 url={_media.mediaList.url}
-              />
+              /> */}
             </div>
           );
         })}
