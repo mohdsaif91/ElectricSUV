@@ -1,0 +1,46 @@
+.connect-container {
+  background-image: linear-gradient(to bottom, #000 0%, #1f1f1f 100%);
+}
+.text-column {
+  padding: 200px 100px 100px 100px;
+}
+.connect-heading {
+  font-family: Oxanium, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 18px;
+  text-align: left;
+}
+
+.h1 {
+  font-weight: 300;
+  margin: 0 0 1em -0.07em;
+  font-family: Oxanium, sans-serif;
+}
+
+.h1-text {
+  display: block;
+  white-space: normal !important;
+}
+
+.right-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.rellax {
+  display: flex;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.right-image {
+  transform: translate3d(0px, -110px, 0px);
+  object-fit: cover;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
