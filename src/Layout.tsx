@@ -34,6 +34,8 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
       <Head>
         <title>{fields.pageTitle.value.toString() || 'Page'}</title>
         <link rel="icon" href={`${publicUrl}/favicon.ico`} />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" cross-origin="anonymous" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" cross-origin="anonymous"></script>
       </Head>
       {/* <Navigation/> */}
       {/* root placeholder for the app, which we add components to using route data */}
