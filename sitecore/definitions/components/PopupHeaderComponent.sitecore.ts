@@ -14,7 +14,6 @@ export default function PopupHeaderComponent(manifest: Manifest): void {
       { name: 'shortHeader', type: CommonFieldTypes.SingleLineText },
       { name: 'header', type: CommonFieldTypes.SingleLineText },
       { name: 'body', type: CommonFieldTypes.MultiLineText },
-      { name: 'imageAltText', type: CommonFieldTypes.SingleLineText },
     ],
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,

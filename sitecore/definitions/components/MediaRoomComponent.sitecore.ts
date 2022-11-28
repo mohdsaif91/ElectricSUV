@@ -10,7 +10,10 @@ export default function MediaRoomComponent(manifest: Manifest): void {
   manifest.addComponent({
     name: 'MediaRoomComponent',
     icon: SitecoreIcon.DocumentTag,
-    fields: [{ name: 'heading', type: CommonFieldTypes.SingleLineText }],
+    fields: [
+      { name: 'title', type: CommonFieldTypes.SingleLineText },
+      { name: 'mediaList', type: CommonFieldTypes.ContentList },
+    ],
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,
     register it here, or components added to that placeholder will not be returned by Sitecore:

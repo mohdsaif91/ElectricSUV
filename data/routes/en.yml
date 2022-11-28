@@ -80,4 +80,11 @@ placeholders:
     - componentName: GalleryComponent
       fields:
         heading: gallery
+    - componentName: MediaRoomComponent
+      fields:
+        title: MEDIA ROOM
+        mediaList:
+          - id: mahindrasuv-mediaroom-media-001
+          - id: mahindrasuv-mediaroom-media-002
+          - id: mahindrasuv-mediaroom-media-003
     - componentName: FooterComponent
