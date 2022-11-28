@@ -15,7 +15,7 @@ const BannerComponent = (props: BannerComponentProps): JSX.Element => (
         <span className="wide-title">{props.fields.title.value}</span>
         <div className="relative-wrapper">
           <div className="background-image">
-            <figure>
+            <figure >
               <img
                 loading="lazy"
                 src={props.fields.bannerImage.value}
@@ -24,9 +24,6 @@ const BannerComponent = (props: BannerComponentProps): JSX.Element => (
                 height="1333"
               ></img>
             </figure>
-          </div>
-          <div className="body-push flex-container">
-            <div className="column"></div>
           </div>
         </div>
       </section>
