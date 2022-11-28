@@ -2,17 +2,18 @@
 import { CommonFieldTypes, SitecoreIcon, Manifest } from '@sitecore-jss/sitecore-jss-dev-tools';
 
 /**
- * Adds the MediaRoomComponent component to the disconnected manifest.
+ * Adds the PopupHeaderComponent component to the disconnected manifest.
  * This function is invoked by convention (*.sitecore.ts) when 'jss manifest' is run.
  * @param {Manifest} manifest Manifest instance to add components to
  */
-export default function MediaRoomComponent(manifest: Manifest): void {
+export default function PopupHeaderComponent(manifest: Manifest): void {
   manifest.addComponent({
-    name: 'MediaRoomComponent',
+    name: 'PopupHeaderComponent',
     icon: SitecoreIcon.DocumentTag,
     fields: [
-      { name: 'title', type: CommonFieldTypes.SingleLineText },
-      { name: 'mediaList', type: CommonFieldTypes.ContentList },
+      { name: 'shortHeader', type: CommonFieldTypes.SingleLineText },
+      { name: 'header', type: CommonFieldTypes.SingleLineText },
+      { name: 'body', type: CommonFieldTypes.MultiLineText },
     ],
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,

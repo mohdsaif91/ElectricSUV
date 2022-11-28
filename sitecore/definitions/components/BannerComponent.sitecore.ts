@@ -10,7 +10,10 @@ export default function BannerComponent(manifest: Manifest): void {
   manifest.addComponent({
     name: 'BannerComponent',
     icon: SitecoreIcon.DocumentTag,
-    fields: [{ name: 'heading', type: CommonFieldTypes.SingleLineText }],
+    fields: [
+      { name: 'bannerImage', type: CommonFieldTypes.SingleLineText },
+      { name: 'title', type: CommonFieldTypes.SingleLineText },
+    ],
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,
     register it here, or components added to that placeholder will not be returned by Sitecore:
