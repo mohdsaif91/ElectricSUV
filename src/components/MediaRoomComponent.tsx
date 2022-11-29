@@ -1,18 +1,18 @@
 import { Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
-// import MediaComponent from './MediaComponent';
+import { Col, Row } from 'react-bootstrap';
+
+import MediaComponent from './MediaComponent';
 
 interface value {
   value: Field<string>;
 }
 
 interface mediaList {
-  mediaList: {
-    image: Field<value>;
-    date: Field<string>;
-    desc: Field<string>;
-    url: Field<string>;
-  };
+  image: value;
+  date: Field<string>;
+  desc: Field<string>;
+  url: Field<string>;
 }
 
 type MediaRoomComponentProps = ComponentProps & {
@@ -23,27 +23,30 @@ type MediaRoomComponentProps = ComponentProps & {
 };
 
 const MediaRoomComponent = (props: MediaRoomComponentProps): JSX.Element => (
-  <>
-    <h2>{props.fields.title.value}</h2>
-    <div className="container">
-      <div className="row">
-        {props.fields.mediaList.map((_media, index) => {
-          // console.log(_media);
-          return (
-            // <div key={index} id="mediaItem" className="col-xs-1">
-            //   <MediaComponent
-            //     // image={_media.mediaList.image.value}
-            //     date={_media.mediaList.date}
-            //     desc={_media.mediaList.desc}
-            //     url={_media.mediaList.url}
-            //   />
-            // </div>
-            <></>
-          );
-        })}
-      </div>
+  <div className="media-room-container">
+    <div className="media-body-push">
+      <Row className="media-row">
+        <Col lg="12" className="media-heading-text">
+          <h2 className="media-room-text">{props.fields.title.value}</h2>
+        </Col>
+      </Row>
+      <Row className="media-row">
+        <Col className="media-image-container">
+          {props.fields.mediaList.map((_media: any, index) => {
+            return (
+              <MediaComponent
+                key={index}
+                image={_media.fields.image}
+                date={_media.fields.date}
+                desc={_media.fields.desc}
+                url={_media.fields.url}
+              />
+            );
+          })}
+        </Col>
+      </Row>
     </div>
-  </>
+  </div>
 );
 
 export default withDatasourceCheck()<MediaRoomComponentProps>(MediaRoomComponent);
