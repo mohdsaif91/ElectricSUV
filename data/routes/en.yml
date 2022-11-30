@@ -77,6 +77,37 @@ placeholders:
         subheading: BREATHTAKING INNOVATION
         body: We call our intelligent neural network of multi-sensory experiences and platform capabilities - INGLO. It is Indian at heart and Global in its reach and the experience it will deliver.
         bodyimg: car-chase-body.webp
+        closeIcon: closeIcon.png
+        platFormTitle: PLATFORM
+        platformMainTitle: VERSATILE POWERFUL DYNAMIC
+        platformText1: Our revolutionary platform is the basis of everything that follows. Purpose-built and ground up, the INGLO platform outperforms on every level - speed, efficiency, safety, and adaptability.
+        imgWithDec1Title: THRILL ON TAP
+        imgWithDec1Dec: Up to 250 kW power in All-Wheel Drive intending to take you from 0-100 km/h in 5-6 seconds
+        imgWithDec1Img: rear.webp
+        imgWithDec2Title: ENDLESS MODULARITY
+        imgWithDec2Dec: Variable lengths, widths, wheelbases and overhangs create an SUV that fits your lifestyle perfectly.
+        imgWithDec2Img: endless.webp
+        imgWithDec3Title: INCREDIBLE FAST CHARGING
+        imgWithDec3Dec: Next-generation battery science charging up to 80% in less than 30 minutes.
+        imgWithDec3Img: charging.webp
+        imgWithDec4Title: WORLD CLASS SAFETY
+        imgWithDec4Dec: Building for 5 Star Global NCAP ratings with Ultra-strong protection for the passenger cabin and battery tray.
+        imgWithDec4Img: safety.webp
+        hmiTitle: HMI
+        hmiMainTitle: INTELLIGENT INTUITIVE IMMERSIVE
+        hmiText1: INGLO enables the ultimate human machine interface. Vast built-in brainpower sparks limitless multi-sensory connections between you and your vehicle.
+        hmiImgWithDec1Title: PANORAMIC DISPLAY
+        hmiImgWithDec1Dec: Edge-to-edge vista display with heads-up functionality creates an intuitive and immersive experience for both the driver and co-driver.
+        hmiImgWithDec1Img: panaromic.webp
+        hmiImgWithDec2Title: 360° VISION
+        hmiImgWithDec2Dec: With 5 Radars-1 Vision technology, INGLO is futureproofed for L2+ autonomous driving and ADAS.
+        hmiImgWithDec2Img: 360vision.webp
+        hmiImgWithDec3Title: ULTIMATE CONNECTIVITY
+        hmiImgWithDec3Dec: Embedded 5G network capability and Over The Air updates deliver a go-anywhere experience.
+        hmiImgWithDec3Img: 5Gconnectivity.webp
+        hmiImgWithDec4Title: PLUG AND PLAY
+        hmiImgWithDec4Dec: Listen, watch, share - INGLO makes it effortless to interact with the world on your terms.
+        hmiImgWithDec4Img: plug&play.webp
     - componentName: GalleryComponent
       fields:
         heading: gallery
