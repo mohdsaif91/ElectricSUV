@@ -11,7 +11,11 @@ import { SitecorePageProps } from 'lib/page-props';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'nprogress/nprogress.css';
 import '../assets/app.css';
+import AOS from "aos";
+// import AOS from 'aos/dist/aos';
+// import 'aos/dist/aos.cjs';
 
+{/* <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> */}
 NProgress.configure({ showSpinner: false, trickleSpeed: 100 });
 
 Router.events.on('routeChangeStart', () => NProgress.start());
@@ -20,7 +24,11 @@ Router.events.on('routeChangeError', () => NProgress.done());
 
 function App({ Component, pageProps }: AppProps<SitecorePageProps>): JSX.Element {
   const { dictionary, ...rest } = pageProps;
-
+  // AOS.init({
+  //   easing: "ease-out-cubic",
+  //   once: true,
+  //   offset: 50,
+  // });
   return (
     // Use the next-localization (w/ rosetta) library to provide our translation dictionary to the app.
     // Note Next.js does not (currently) provide anything for translation, only i18n routing.
