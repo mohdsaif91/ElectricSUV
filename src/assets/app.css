@@ -12,9 +12,9 @@
 @import url('../components/TwoColumnComponent.module.css');
 @import url('../components/YouTubeComponent.module.css');
 @import url('../components/TwoColumnWithImageComponent.module.css');
+@import url('../components/TechnologyComponents/TechnologyGenericComponent.module.css');
 
 a[target='_blank']:after {
-  
 }
 
 /*
@@ -77,4 +77,13 @@ body {
 .main-container {
   margin: 0 !important;
   background-color: #1f1f1f;
+}
+
+.h4 {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  line-height: 1.3;
+  font-weight: 300;
+  margin: 0 0 1em -0.07em;
+  font-family: Oxanium, sans-serif;
 }
