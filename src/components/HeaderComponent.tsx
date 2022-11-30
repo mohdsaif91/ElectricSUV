@@ -1,10 +1,18 @@
 import { Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
-import { Container, Nav, Navbar, NavLink } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavLink, Offcanvas } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { HiBars3 } from 'react-icons/hi2';
+import { AiOutlineArrowRight } from 'react-icons/ai';
+import { useState } from 'react';
+import { GrClose } from 'react-icons/gr';
+
 
 type HeaderComponentProps = ComponentProps & {
   fields: {
@@ -15,50 +23,134 @@ type HeaderComponentProps = ComponentProps & {
 const menuItems = ['BRANDS', 'DESIGN', 'eSUVs', 'TECHNOLOGY', 'GALLERY', 'MEDIA ROOM'];
 
 const HeaderComponent = (props: HeaderComponentProps): JSX.Element => {
-    return (
-      <nav className="navbar navbar-expand-lg fixed-top" style={{background: 'black'}}>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" ></script>
-
-      <div className='container p-0 pb-1'>
-        <NavLink className='navbar-brand d-inline-flex align-items-start p-0'>
-          <img
-            src="../data/media/img/logoMahindra.png" 
-            width="130"
-            height="20"
-            alt="Mahindra" className='m-0 mb-1 p-0'
-          />
-        </NavLink>
-        <button
-            className="navbar-toggler"
-            type = "button"
-            data-toggle="collapse"
-            data-target="#menuItems"
-            aria-controls="menuItems"
-            aria-expanded="false"
-            aria-label="Toggle Navigation"
-        >
-                  <span className='navbar-toggler-icon text-light'></span>
-            {/* <FontAwesomeIcon icon={faBars} className="text-light"/> */}
-
-                </button>
-          <div className='navbar-collapse collapse' id="menuItems">
-              <ul className="nav p-0 m-0 ml-auto " id="">
-                  {menuItems.map((mi, index) => (
-                      <li key={mi} className="nav-item ">
-                        <a key={mi} href={`#`+mi.toLowerCase()} className="m-0 mt-1 nav-link navlinks" >
-                          {index == 2 ? mi : mi.toUpperCase()}
-                        </a>
-                      </li>
-                    ))}
-                  <li className='navlinks nav-item'>
-                    <button className='btn btn-outline-light m-0 mt-1 p-2 pb-0'>UPDATE ME</button>
-                  </li>
-              </ul>
-          </div>
-      </div>
-    </nav>
-    )
-}
+  const [show, setShow] = useState(false);
   
+  return (
+    <>
+      <Navbar expand="xl" fixed='top' className="navbar p-0 pb-2 pt-2 m-0 " >
+        <Container className='p-0 '>
+          <Navbar.Toggle aria-controls="offcanvasNavbar-expand-xl"><HiBars3 /></Navbar.Toggle>
+          <Navbar.Brand href="#">
+            <img
+              src="../data/media/img/logoMahindra.png"
+              width="130"
+              height="20"
+              alt="Mahindra" className='m-0 mb-1 p-0'
+            />
+          </Navbar.Brand>
+
+          <Navbar.Offcanvas
+            id="offcanvasNavbar-expand-xl"
+            aria-labelledby="offcanvasNavbarLabel-expand-xl"
+            placement="start" className="navCanvas"
+          >
+            <Offcanvas.Header closeButton>
+              <Offcanvas.Title id="offcanvasNavbarLabel-expand-xl"></Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body className='p-0 m-0'>
+              <Nav className="justify-content-end flex-grow-1 align-items-center p-0 m-0 " id='suv-navbar'>
+                {menuItems.map((el, index) => (
+                  <Nav.Item className=''>
+                     <Nav.Link href={`#${el.includes(' ') ? el.split(' ').reduce((i,j)=> i+j).toLowerCase(): el.toLowerCase()}`} key={index} 
+                      className='navlinks p-2 pt-3 pb-0 mx-0 m-0' >
+                    {el} <AiOutlineArrowRight className='d-lg-none'/>
+                    <span></span>
+                  </Nav.Link>
+                  </Nav.Item>
+                ))}
+                <Nav.Item>
+                <Nav.Link className='m-0 p-0 pt-2 pb-2 '>
+                  <button type="button" className="btn btn-outline-light d-md-none d-lg-block d-sm-none spbtn1" onClick={(show) => setShow(true)}>
+                    {'UPDATE ME'}
+                  </button>
+                </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                <Nav.Link className='p-0 '>
+                  <button className="d-md-block d-sm-block d-lg-none btn btn-link p-2 pt-0 border border-0 spbtn2" onClick={(show) => setShow(true)}>
+                    {'UPDATE ME'} <AiOutlineArrowRight className='d-lg-none'/>
+                  </button>
+                </Nav.Link>
+                </Nav.Item>
+              </Nav>
+            </Offcanvas.Body>
+          </Navbar.Offcanvas>
+        </Container>
+      </Navbar>
+
+      <Offcanvas show={show} onHide={(show: any) => setShow(false)} >
+        <Offcanvas.Header className='d-flex justify-content-end p-5 pb-0 pt-2 clsBtn' closeButton>
+          <Offcanvas.Title className=''></Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body className='sideNavOffcanvas'>
+          <div className=''>
+            <div className=' p-4 pt-5 m-2 mt-4'>
+              <h1 className='fw-light  text-uppercase ' >Be the first to know</h1>
+              <p className='text-dark fs-7'>Register your interest and join us on an electrifying journey of discovery.</p>
+              <form className=" updateForm">
+                <div className='row mb-3'>
+                  <div className='col '>
+                    <input className="form-control" type="text" placeholder="FULL NAME" id="txtFullName1" />
+                  </div>
+                </div>
+                <div className='row mb-3'>
+                  <div className='col'>
+                    <input className="form-control" type="text" placeholder="MOBILE NUMBER" id="txtFullName1" />
+                  </div>
+                  <div className='col'>
+                    <input className="form-control" type="email" placeholder="EMAIL" id="txtFullName1" />
+                  </div>
+                </div>
+                <div className='row mb-3'>
+                  <div className='col'>
+                    <select className="form-control" id="sel1" >
+                      <option value="">Select Option</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
+                  </div>
+                  <div className='col'>
+                    <select className="form-control" id="sel1">
+                      <option value="">Select Option</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
+                  </div>
+                </div>
+                <div className=" text-dark ">
+                  <div className="form-check  ">
+                    <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
+                    <label className="form-check-label" htmlFor="defaultCheck1">
+                        I agree to receive a call back from Mahindra &amp; Mahindra and associated agencies and organizations regarding my interest in Mahindra brands.
+                        <br/>I also agree to website's 
+                        <a href="#">Terms and Conditions</a> and 
+                        <a href="#">Privacy Policy</a>.
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <input className="form-check-input" type="checkbox" value="" id="defaultCheck2" />
+                    <label className="form-check-label" htmlFor="defaultCheck2">
+                        Get updates via WhatsApp.
+                    </label>
+                  </div>
+                </div>
+                <div className="">
+                  <button className="btn btn-outline-dark btn-lg ">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </Offcanvas.Body>
+      </Offcanvas>
+
+
+    </>
+  )
+}
+
 
 export default withDatasourceCheck()<HeaderComponentProps>(HeaderComponent);

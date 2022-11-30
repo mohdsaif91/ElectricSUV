@@ -11,8 +11,9 @@ export default function TwoColumnComponent(manifest: Manifest): void {
     name: 'TwoColumnComponent',
     icon: SitecoreIcon.DocumentTag,
     fields: [
+      { name: 'id', type: CommonFieldTypes.SingleLineText },
       { name: 'heading', type: CommonFieldTypes.SingleLineText },
-      { name: 'body', type: CommonFieldTypes.MultiLineText },
+      { name: 'body', type: CommonFieldTypes.RichText },
       { name: 'backgroundColor', type: CommonFieldTypes.SingleLineText },
       { name: 'fontColor', type: CommonFieldTypes.SingleLineText },
     ],

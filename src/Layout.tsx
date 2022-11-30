@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import {
   Placeholder,
@@ -9,6 +9,7 @@ import {
 // import Navigation from 'src/Navigation';
 import Scripts from 'src/Scripts';
 import Navigation from './Navigation';
+import Aos from 'aos';
 
 // Prefix public assets with a public URL to enable compatibility with Sitecore editors.
 // If you're not supporting Sitecore editors, you can remove this.
@@ -24,7 +25,12 @@ interface RouteFields {
 }
 
 const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
-  const { route } = layoutData.sitecore;
+  useEffect(() => {
+    
+    Aos.init();    
+  }, [])
+  
+  const { route } = layoutData.sitecore; // data-
 
   const fields = route?.fields as RouteFields;
 
@@ -39,8 +45,9 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
       </Head>
       {/* <Navigation/> */}
       {/* root placeholder for the app, which we add components to using route data */}
-      <div className="main-container">
+      <div className="main-container" data-spy="scroll" data-target="#suv-navbar" data-offset="0">
         {route && <Placeholder name="jss-main" rendering={route} />}
+        {/* <Slidebar /> */}
       </div>
     </>
   );

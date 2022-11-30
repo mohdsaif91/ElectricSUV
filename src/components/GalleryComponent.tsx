@@ -31,8 +31,8 @@ const GalleryComponent = (props: GalleryComponentProps): JSX.Element => {
     setSlideImage(index);
   };
   return (
-    <Container fluid className="gallery-container">
-      <Row>
+    <Container fluid className="gallery-container" >
+      <Row id='gallery'>
         <Col>
           <span className="gallery-text">
             <Text field={props.fields.heading} />
