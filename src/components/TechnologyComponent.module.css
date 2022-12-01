@@ -27,6 +27,7 @@
 .graphic-body {
   text-align: center;
   margin: 0 326px 70px 326px;
+  max-width: 496px;
 }
 
 .btn-container {
