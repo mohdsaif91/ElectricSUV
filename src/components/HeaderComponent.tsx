@@ -1,35 +1,67 @@
 import { Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
-import { Container, Nav, Navbar, NavLink, Offcanvas } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Container, Nav, Navbar, Offcanvas } from 'react-bootstrap';
 
-import ReactDOM from 'react-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { HiBars3 } from 'react-icons/hi2';
+import { useEffect, useState } from 'react';
 import { AiOutlineArrowRight } from 'react-icons/ai';
-import { useState } from 'react';
-import { GrClose } from 'react-icons/gr';
+import { HiBars3 } from 'react-icons/hi2';
+
+interface headerItem {
+  fields: {
+    label:Field<string>;
+    url:Field<string>;
+  };
+}
 
 
 type HeaderComponentProps = ComponentProps & {
   fields: {
     heading: Field<string>;
+    menuItems: headerItem[];
   };
 };
 
-const menuItems = ['BRANDS', 'DESIGN', 'eSUVs', 'TECHNOLOGY', 'GALLERY', 'MEDIA ROOM'];
+
+// const menuItems = ['BRANDS', 'DESIGN', 'eSUVs', 'TECHNOLOGY', 'GALLERY', 'MEDIA ROOM'];
 
 const HeaderComponent = (props: HeaderComponentProps): JSX.Element => {
   const [show, setShow] = useState(false);
+  console.log(props.fields.menuItems, ' menuitems');
   
+  useEffect(()=> {
+    if(window != undefined){
+      const svg = document.querySelector(".navbarToggleIcon svg");
+      console.log(svg?.removeAttribute('ariahidden'), 'nav svg icon');
+      console.log(      svg?.ariaHidden      )
+      const sections = document.querySelectorAll("section");
+      const navLi = document.querySelectorAll(".navbar-nav div a");
+      let current: any = undefined;
+
+      window.onscroll = () => {
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          if (pageYOffset >= sectionTop - 60) {
+            section.getAttribute('id') == null ? current = "" : current = section.getAttribute('id')
+          }
+        });
+        navLi.forEach((item) => {
+          item.classList.remove("active");
+          if(item.getAttribute('href')?.split('').slice(1,).join('') == current){
+            item.classList.add("active");
+          }
+        });
+      };
+
+    }
+    
+  },[])
+
   return (
     <>
       <Navbar expand="xl" fixed='top' className="navbar p-0 pb-2 pt-2 m-0 " >
         <Container className='p-0 '>
-          <Navbar.Toggle aria-controls="offcanvasNavbar-expand-xl"><HiBars3 /></Navbar.Toggle>
+          <Navbar.Toggle aria-controls="offcanvasNavbar-expand-xl" className='navbarToggleIcon' >
+            <HiBars3  /></Navbar.Toggle>
           <Navbar.Brand href="#">
             <img
               src="../data/media/img/logoMahindra.png"
@@ -49,28 +81,27 @@ const HeaderComponent = (props: HeaderComponentProps): JSX.Element => {
             </Offcanvas.Header>
             <Offcanvas.Body className='p-0 m-0'>
               <Nav className="justify-content-end flex-grow-1 align-items-center p-0 m-0 " id='suv-navbar'>
-                {menuItems.map((el, index) => (
-                  <Nav.Item className=''>
-                     <Nav.Link href={`#${el.includes(' ') ? el.split(' ').reduce((i,j)=> i+j).toLowerCase(): el.toLowerCase()}`} key={index} 
-                      className='navlinks p-2 pt-3 pb-0 mx-0 m-0' >
-                    {el} <AiOutlineArrowRight className='d-lg-none'/>
-                    <span></span>
-                  </Nav.Link>
+                {props.fields.menuItems.map((el:headerItem, index) => (
+                  <Nav.Item className='' key={index}>
+                     <Nav.Link href={el.fields.url.value} key={index} className='navlinks p-2 pt-3 pb-0 mx-0 m-0' >
+                        {el.fields.label.value} <AiOutlineArrowRight className='d-lg-none'/>
+                        <span></span>
+                      </Nav.Link>
                   </Nav.Item>
                 ))}
                 <Nav.Item>
-                <Nav.Link className='m-0 p-0 pt-2 pb-2 '>
-                  <button type="button" className="btn btn-outline-light d-md-none d-lg-block d-sm-none spbtn1" onClick={(show) => setShow(true)}>
-                    {'UPDATE ME'}
-                  </button>
-                </Nav.Link>
+                  <Nav.Link className='m-0 p-0 pt-2 pb-2 '>
+                    <button type="button" className="btn btn-outline-light d-md-none d-lg-block d-sm-none spbtn1" onClick={(show) => setShow(true)}>
+                      {'UPDATE ME'}
+                    </button>
+                  </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                <Nav.Link className='p-0 '>
-                  <button className="d-md-block d-sm-block d-lg-none btn btn-link p-2 pt-0 border border-0 spbtn2" onClick={(show) => setShow(true)}>
-                    {'UPDATE ME'} <AiOutlineArrowRight className='d-lg-none'/>
-                  </button>
-                </Nav.Link>
+                  <Nav.Link className='p-0 '>
+                    <button className="d-md-block d-sm-block d-lg-none btn btn-link p-2 pt-0 border border-0 spbtn2" onClick={(show) => setShow(true)}>
+                      {'UPDATE ME'} <AiOutlineArrowRight className='d-lg-none'/>
+                    </button>
+                  </Nav.Link>
                 </Nav.Item>
               </Nav>
             </Offcanvas.Body>

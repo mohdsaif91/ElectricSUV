@@ -22,7 +22,8 @@ const TwoColumnComponent = (props: TwoColumnComponentProps): JSX.Element => {
   // console.log(props.fields.fontColor.value, "font color");
   return (
   <div   className='container-fluid' style={{backgroundColor: props.fields.backgroundColor.value}}>
-    <div className='container vh-100 d-flex' style={{ backgroundColor: props.fields.backgroundColor.value}} id={props.fields.id.value}>
+    <div className='container vh-100 d-flex' style={{ backgroundColor: props.fields.backgroundColor.value}} >
+    <section id={props.fields.id.value}>
     <div className="row " data-aos-delay='500' data-aos='fade-up' >
       <div className='col-md-6 d-flex align-items-start p-0 pt-5 mt-5'>
         <div className="d-flex align-items-start mt-5 ">
@@ -37,8 +38,9 @@ const TwoColumnComponent = (props: TwoColumnComponentProps): JSX.Element => {
         </div>
       </div>
     </div>
+    </section>
 
-  </div>
+    </div>
   </div>
 )};
 

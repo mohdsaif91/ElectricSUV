@@ -21,6 +21,15 @@ fields:
 placeholders:
   jss-main:
     - componentName: HeaderComponent
+      fields:
+        heading: header
+        menuItems: 
+          - id: header-brands
+          - id: header-design
+          - id: header-esuvs
+          - id: header-technology
+          - id: header-gallery
+          - id: header-mediaroom
     - componentName: HeroBannerComponent
       fields:
         bannerImage: XUV400_Desktop.jpg
