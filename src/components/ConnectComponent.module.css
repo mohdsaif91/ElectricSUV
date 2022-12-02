@@ -23,6 +23,10 @@
   white-space: normal !important;
 }
 
+.image-row {
+  height: 646px;
+}
+
 .right-image-container {
   position: relative;
   overflow: hidden;
