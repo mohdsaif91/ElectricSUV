@@ -23,7 +23,7 @@ placeholders:
     - componentName: HeaderComponent
       fields:
         heading: header
-        menuItems: 
+        menuItems:
           - id: header-brands
           - id: header-design
           - id: header-esuvs
@@ -42,9 +42,9 @@ placeholders:
         heading: TWO <br/>REVOLUTIONARY <br/>eSUV BRANDS
         body: |
           <p>Welcome to the reimagined world of electric SUVs. Futuristic design, pulsating performance and dynamic innovation.</p>
-          
+
           <p>Two revolutionary brands from the house of Mahindra. Unique yet connected. Inspired by our past yet focused on tomorrow. Next-generation vehicles for the visionaries, the disrupters, the go-getters and the accelerators of change.</p>
-          
+
           <p>Our vision is to put sport back into electric sports utility vehicles.</p>
     - componentName: YouTubeComponent
       fields:
@@ -53,15 +53,12 @@ placeholders:
       fields:
         backgroundColor: dark
         heading: our brands
-        cardText1: Honouring our legacy while embracing the future. For those who have the passion to live life beyond boundaries while making a difference. Authentic yet futuristic.
-        cardIcon1: mahindra_logo.svg
-        cardImage1: male.webp
-        cardText2: Opening spaces to a completely reimagined world. For those who want to define their life's journey and be who they want to be. Audacious and a trailblazer.
-        cardIcon2: BE.svg
-        cardImage2: female.webp
+        TwoColumnWithImageComponentItems:
+          - id: mahindrasuv-twoColumnComponent-1
+          - id: mahindrasuv-twoColumnComponent-2
     - componentName: TwoColumnComponent
       fields:
-        id : design
+        id: design
         backgroundColor: white
         fontColor: black
         heading: HEARTCORE <br/>DESIGN
@@ -81,9 +78,9 @@ placeholders:
         heading: TRULY <br/>WORLD-CLASS
         body: |
           <p>With our design centres in the UK and India and our development centres in Chennai, Detroit and Bangalore, we are creating products that will make all your senses come alive.</p>
-          
+
           <p>Our designers and engineers are collaborating with leading experts and global partners. Together we are scaling new peaks, exploring the next impossible.</p>
-          
+
           <p>A world of endless possibilities. To create a whole new destination. Delivering more for you, your family, your tribe and the environment.</p>
     - componentName: TechnologyComponent
       fields:
@@ -95,58 +92,34 @@ placeholders:
         closeIcon: closeIcon.png
         platFormTitle: PLATFORM
         platformMainTitle: VERSATILE POWERFUL DYNAMIC
-        platformText1: Our revolutionary platform is the basis of everything that follows. Purpose-built and ground up, the INGLO platform outperforms on every level - speed, efficiency, safety, and adaptability.
-        imgWithDec1Title: THRILL ON TAP
-        imgWithDec1Dec: Up to 250 kW power in All-Wheel Drive intending to take you from 0-100 km/h in 5-6 seconds
-        imgWithDec1Img: rear.webp
-        imgWithDec2Title: ENDLESS MODULARITY
-        imgWithDec2Dec: Variable lengths, widths, wheelbases and overhangs create an SUV that fits your lifestyle perfectly.
-        imgWithDec2Img: endless.webp
-        imgWithDec3Title: INCREDIBLE FAST CHARGING
-        imgWithDec3Dec: Next-generation battery science charging up to 80% in less than 30 minutes.
-        imgWithDec3Img: charging.webp
-        imgWithDec4Title: WORLD CLASS SAFETY
-        imgWithDec4Dec: Building for 5 Star Global NCAP ratings with Ultra-strong protection for the passenger cabin and battery tray.
-        imgWithDec4Img: safety.webp
+        platformList:
+          - id: mahindrasuv-platform-item-1
+          - id: mahindrasuv-platform-item-2
+          - id: mahindrasuv-platform-item-3
+          - id: mahindrasuv-platform-item-4
         hmiTitle: HMI
         hmiMainTitle: INTELLIGENT INTUITIVE IMMERSIVE
         hmiText1: INGLO enables the ultimate human machine interface. Vast built-in brainpower sparks limitless multi-sensory connections between you and your vehicle.
-        hmiImgWithDec1Title: PANORAMIC DISPLAY
-        hmiImgWithDec1Dec: Edge-to-edge vista display with heads-up functionality creates an intuitive and immersive experience for both the driver and co-driver.
-        hmiImgWithDec1Img: panaromic.webp
-        hmiImgWithDec2Title: 360° VISION
-        hmiImgWithDec2Dec: With 5 Radars-1 Vision technology, INGLO is futureproofed for L2+ autonomous driving and ADAS.
-        hmiImgWithDec2Img: 360vision.webp
-        hmiImgWithDec3Title: ULTIMATE CONNECTIVITY
-        hmiImgWithDec3Dec: Embedded 5G network capability and Over The Air updates deliver a go-anywhere experience.
-        hmiImgWithDec3Img: 5Gconnectivity.webp
-        hmiImgWithDec4Title: PLUG AND PLAY
-        hmiImgWithDec4Dec: Listen, watch, share - INGLO makes it effortless to interact with the world on your terms.
-        hmiImgWithDec4Img: plug&play.webp
+        hmiList:
+          - id: mahindrasuv-hmi-item-1
+          - id: mahindrasuv-hmi-item-2
+          - id: mahindrasuv-hmi-item-3
+          - id: mahindrasuv-hmi-item-4
     - componentName: GalleryComponent
       fields:
         heading: gallery
         carImageListSlide:
-          - image1.webp
-          - image2.webp
-          - image3.webp
-          - image4.webp
-          - image5.webp
-          - image6.webp
-          - image7.webp
-          - image8.webp
-          - image9.webp
-          - image10.webp
-        img1: image1.webp
-        img2: image2.webp
-        img3: image3.webp
-        img4: image4.webp
-        img5: image5.webp
-        img6: image6.webp
-        img7: image7.webp
-        img8: image8.webp
-        img9: image9.webp
-        img10: image10.webp
+          - id: mahindrasuv-gallery-image-1
+          - id: mahindrasuv-gallery-image-2
+          - id: mahindrasuv-gallery-image-3
+          - id: mahindrasuv-gallery-image-4
+          - id: mahindrasuv-gallery-image-5
+          - id: mahindrasuv-gallery-image-6
+          - id: mahindrasuv-gallery-image-7
+          - id: mahindrasuv-gallery-image-8
+          - id: mahindrasuv-gallery-image-9
+          - id: mahindrasuv-gallery-image-10
+          - id: mahindrasuv-gallery-image-11
     - componentName: MediaRoomComponent
       fields:
         title: MEDIA ROOM
@@ -156,19 +129,11 @@ placeholders:
           - id: mahindrasuv-mediaroom-media-003
     - componentName: ConnectComponent
       fields:
-        sectionHeading: connect
-        heading: |
-                 <p>2024.</p
-
-                 <p>IT STARTS</p>
-
-                 <p>HERE.</p>
+        heading: connect
+        styleText1: 2024.
+        styleText2: IT STARTS
+        styleText3: HERE.
         rightImage: femaleDriver.webp
-        body: |
-              Be part of our electrifying journey. To a brighter, bolder, cleaner tomorrow. Be ready.
-
-              Be part of our electrifying journey. To a brighter, bolder, cleaner tomorrow. Be ready.
-
-              Be part of our electrifying journey. To a brighter, bolder, cleaner tomorrow. Be ready.
+        body: Be part of our electrifying journey. To a brighter, bolder, cleaner tomorrow. Be ready.
 
     - componentName: FooterComponent

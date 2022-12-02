@@ -2,53 +2,49 @@ import { withDatasourceCheck, Field, Text } from '@sitecore-jss/sitecore-jss-nex
 import { ComponentProps } from 'lib/component-props';
 import { Col, Container, Row } from 'react-bootstrap';
 
+interface TwoColumnWithImageComponentList {
+  fields: {
+    cardText: Field<string>;
+    cardIcon: Field<string>;
+    cardImage: Field<string>;
+  };
+}
+
 type TwoColumnWIthImageProps = ComponentProps & {
   fields: {
+    TwoColumnWithImageComponentItems: TwoColumnWithImageComponentList[];
     backgroundColor: Field<string>;
     heading: Field<string>;
-    cardText1: Field<string>;
-    cardIcon1: Field<string>;
-    cardImage1: Field<string>;
-    cardText2: Field<string>;
-    cardIcon2: Field<string>;
-    cardImage2: Field<string>;
   };
 };
 
-const TwoColumnWithImage = (props: TwoColumnWIthImageProps): JSX.Element => (
-  <Container className="card-with-image-container">
-    <Row>
-      <Col>
-        <span className="card-with-image-heading is-view">
-          <Text field={props.fields.heading}></Text>
-        </span>
-      </Col>
-    </Row>
-    <Row className="content-container">
-      <Col lg="6" className="card-with-image">
-        <div className="card-body">
-          <div className="card-icon-container">
-            <img className="card-icon" src={props.fields.cardIcon1.value} alt="Mahindra" />
-          </div>
-          <span className="card-text">
-            <Text field={props.fields.cardText1} />
+const TwoColumnWithImage = (props: TwoColumnWIthImageProps): JSX.Element => {
+  return (
+    <Container className="card-with-image-container">
+      <Row>
+        <Col>
+          <span className="card-with-image-heading is-view">
+            <Text field={props.fields.heading}></Text>
           </span>
-        </div>
-        <img className="card-image" src={props.fields.cardImage1.value} alt="Mahindra" />
-      </Col>
-      <Col lg="6" className="card-with-image">
-        <div className="card-body">
-          <div className="card-icon-container">
-            <img className="card-icon" src={props.fields.cardIcon2.value} alt="Mahindra" />
-          </div>
-          <span className="card-text">
-            <Text field={props.fields.cardText2} />
-          </span>
-        </div>
-        <img className="card-image" src={props.fields.cardImage2.value} alt="Mahindra" />
-      </Col>
-    </Row>
-  </Container>
-);
+        </Col>
+      </Row>
+      <Row className="content-container">
+        {props.fields.TwoColumnWithImageComponentItems.map((m: TwoColumnWithImageComponentList) => (
+          <Col lg="6" className="card-with-image">
+            <div className="card-body">
+              <div className="card-icon-container">
+                <img className="card-icon" src={m.fields.cardIcon.value} alt="Mahindra" />
+              </div>
+              <span className="card-text">
+                <Text field={m.fields.cardText} />
+              </span>
+            </div>
+            <img className="card-image" src={m.fields.cardImage.value} alt="Mahindra" />
+          </Col>
+        ))}
+      </Row>
+    </Container>
+  );
+};
 
 export default withDatasourceCheck()<TwoColumnWIthImageProps>(TwoColumnWithImage);

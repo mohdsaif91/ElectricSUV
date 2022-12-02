@@ -23,8 +23,8 @@ type MediaRoomComponentProps = ComponentProps & {
 };
 
 const MediaRoomComponent = (props: MediaRoomComponentProps): JSX.Element => (
-  <div className="media-room-container" >
-    <section id='mediaroom'>
+  <div className="media-room-container">
+    <section id="mediaroom">
       <div className="media-body-push">
         <Row className="media-row">
           <Col lg="12" className="media-heading-text">

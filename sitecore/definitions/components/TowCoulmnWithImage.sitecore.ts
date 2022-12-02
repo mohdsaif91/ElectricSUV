@@ -11,13 +11,8 @@ export default function TwoColumnWithImageComponent(manifest: Manifest): void {
     name: 'TwoColumnWithImageComponent',
     icon: SitecoreIcon.DocumentTag,
     fields: [
+      { name: 'TwoColumnWithImageComponentItems', type: CommonFieldTypes.ContentList },
       { name: 'heading', type: CommonFieldTypes.SingleLineText },
-      { name: 'cardText1', type: CommonFieldTypes.MultiLineText },
-      { name: 'cardIcon1', type: CommonFieldTypes.SingleLineText },
-      { name: 'cardImage1', type: CommonFieldTypes.SingleLineText },
-      { name: 'cardText2', type: CommonFieldTypes.MultiLineText },
-      { name: 'cardIcon2', type: CommonFieldTypes.SingleLineText },
-      { name: 'cardImage2', type: CommonFieldTypes.SingleLineText },
       { name: 'backgroundColor', type: CommonFieldTypes.SingleLineText },
     ],
     /*
