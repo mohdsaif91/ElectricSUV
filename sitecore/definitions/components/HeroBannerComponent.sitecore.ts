@@ -12,7 +12,7 @@ export default function HeroBannerComponent(manifest: Manifest): void {
     icon: SitecoreIcon.DocumentTag,
     fields: [
       { name: 'bannerImage', type: CommonFieldTypes.SingleLineText },
-      { name: 'buttonKnowMore', type: CommonFieldTypes.SingleLineText },
+      { name: 'buttonList', type: CommonFieldTypes.ContentList },
     ],
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,

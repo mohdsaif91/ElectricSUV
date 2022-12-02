@@ -1,7 +1,7 @@
-id: header-esuvs
-displayName: esuvs
+id: herobanner-item1
+displayName: herobanner-item1
 # Template defines the available fields. See /sitecore/definitions/templates/Styleguide-ContentList-Template.sitecore.js
-template: MahindraSuv-Header-Item-template
+template: MahindraSuv-Herobanner-Item-template
 fields:
-  label: eSUVs
-  url: "#esuvs"
+  label: Know More
+  url: "#"

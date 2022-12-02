@@ -15,11 +15,9 @@ type TwoColumnComponentProps = ComponentProps & {
 };
 
 const TwoColumnComponent = (props: TwoColumnComponentProps): JSX.Element => {
-  // console.log(props.fields.backgroundColur.value, "background color");
   useEffect(() => {
     Aos.init();
   }, [])
-  // console.log(props.fields.fontColor.value, "font color");
   return (
   <div   className='container-fluid' style={{backgroundColor: props.fields.backgroundColor.value}}>
     <div className='container vh-100 d-flex' style={{ backgroundColor: props.fields.backgroundColor.value}} >

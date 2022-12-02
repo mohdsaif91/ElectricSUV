@@ -1,29 +1,38 @@
 import { Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
-import {TfiFacebook, TfiTwitterAlt, TfiLinkedin}  from 'react-icons/tfi';
-import { TbBrandInstagram} from 'react-icons/tb';
 import { BsYoutube } from 'react-icons/bs';
-import Link from 'next/link';
-import { NavLink } from 'react-bootstrap';
+import { TbBrandInstagram } from 'react-icons/tb';
+import { TfiFacebook, TfiLinkedin, TfiTwitterAlt } from 'react-icons/tfi';
 
+interface footerItem {
+  fields : {
+    label:Field<string>;
+    url:Field<string>;
+  }
+}
 
 type FooterComponentProps = ComponentProps & {
   fields: {
-    heading: Field<string>;
+    copyright: Field<string>;
+    footList: footerItem[];
   };
 };
 
-const FooterComponent = (props: FooterComponentProps): JSX.Element => (
+const FooterComponent = (props: FooterComponentProps): JSX.Element => {
+  return (
   <div className="container-fluid " style={{backgroundColor: 'black'}}>
     <div className='container footertext ' id='footer' >
       <div className='row p-0 pt-4 pb-4'>
         <div className="col-md-2 d-flex align-items-center p-0" ><img src="logo.svg" width="130" height="20" alt="Mahindra"></img></div>
         <div className='col-md-2 p-0 d-flex align-items-center'>
-          <a href='#' className='' target={"_blank"}>Privacy Policy</a>
-          <a href='#' className='p-2' target={"_blank"}>Terms of use</a >
+          {
+            props.fields.footList.map((item, index)=>{
+              return <a href={item.fields.url.value} key={index} className='mx-1' target={"_blank"}>{item.fields.label.value}</a>
+            })
+          }
         </div>
         <div className='col-md-5 p-0'>
-          <p className='p-0 pt-3'>Copyright ©2022 Mahindra & Mahindra Ltd</p >
+          <p className='p-0 pt-3'>{props.fields.copyright.value}</p>
         </div>
       
 
@@ -39,6 +48,6 @@ const FooterComponent = (props: FooterComponentProps): JSX.Element => (
       </div> 
     </div>
   </div>
-);
+)};
 
 export default withDatasourceCheck()<FooterComponentProps>(FooterComponent);

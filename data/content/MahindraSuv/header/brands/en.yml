@@ -3,5 +3,5 @@ displayName: brands
 # Template defines the available fields. See /sitecore/definitions/templates/Styleguide-ContentList-Template.sitecore.js
 template: MahindraSuv-Header-Item-template
 fields:
-  label: brands
+  label: BRANDS
   url: "#brands"

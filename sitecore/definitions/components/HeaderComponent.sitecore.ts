@@ -12,7 +12,10 @@ export default function HeaderComponent(manifest: Manifest): void {
     icon: SitecoreIcon.DocumentTag,
     fields: [
       { name: 'heading', type: CommonFieldTypes.SingleLineText },
-      { name: 'menuItems', type: CommonFieldTypes.ContentList }
+      { name: 'menuItems', type: CommonFieldTypes.ContentList },
+      { name: 'formHeader', type: CommonFieldTypes.RichText },
+      { name: 'formBody', type: CommonFieldTypes.SingleLineText },
+      { name: 'checkboxItems', type: CommonFieldTypes.ContentList },
     ],
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,
