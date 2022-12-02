@@ -1,17 +1,14 @@
-import { Text, Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Text, Field, withDatasourceCheck, RichText } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 import { Col, Row } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
 
 type ConnectComponentProps = ComponentProps & {
   fields: {
+    sectionHeading: Field<string>;
     heading: Field<string>;
-    subHeading: Field<string>;
     rightImage: Field<string>;
     body: Field<string>;
-    styleText1: Field<string>;
-    styleText2: Field<string>;
-    styleText3: Field<string>;
   };
 };
 
@@ -30,24 +27,17 @@ const ConnectComponent = (props: ConnectComponentProps): JSX.Element => {
     };
   }, []);
 
-
   return (
     <div className="connect-container">
       <Row>
         <Col lg="5" className="text-column">
           <span className="card-with-image-heading is-view">
-            <Text field={props.fields.heading} />
+            <Text field={props.fields.sectionHeading} />
           </span>
 
           <h1 className="h1">
             <span className="h1-text">
-              <Text field={props.fields.styleText1} />
-            </span>
-            <span className="h1-text">
-              <Text field={props.fields.styleText2} />
-            </span>
-            <span className="h1-text">
-              <Text field={props.fields.styleText3} />
+              <RichText field={props.fields.heading} />
             </span>
           </h1>
           <div className="connect-body">

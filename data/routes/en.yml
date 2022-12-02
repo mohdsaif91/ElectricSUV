@@ -156,11 +156,19 @@ placeholders:
           - id: mahindrasuv-mediaroom-media-003
     - componentName: ConnectComponent
       fields:
-        heading: connect
-        styleText1: 2024.
-        styleText2: IT STARTS
-        styleText3: HERE.
+        sectionHeading: connect
+        heading: |
+                 <p>2024.</p
+
+                 <p>IT STARTS</p>
+
+                 <p>HERE.</p>
         rightImage: femaleDriver.webp
-        body: Be part of our electrifying journey. To a brighter, bolder, cleaner tomorrow. Be ready.
+        body: |
+              Be part of our electrifying journey. To a brighter, bolder, cleaner tomorrow. Be ready.
+
+              Be part of our electrifying journey. To a brighter, bolder, cleaner tomorrow. Be ready.
+
+              Be part of our electrifying journey. To a brighter, bolder, cleaner tomorrow. Be ready.
 
     - componentName: FooterComponent

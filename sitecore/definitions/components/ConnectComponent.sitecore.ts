@@ -11,13 +11,10 @@ export default function ConnectComponent(manifest: Manifest): void {
     name: 'ConnectComponent',
     icon: SitecoreIcon.DocumentTag,
     fields: [
-      { name: 'heading', type: CommonFieldTypes.SingleLineText },
-      { name: 'subHeading', type: CommonFieldTypes.SingleLineText },
+      { name: 'sectionHeading', type: CommonFieldTypes.SingleLineText },
+      { name: 'heading', type: CommonFieldTypes.RichText },
       { name: 'rightImage', type: CommonFieldTypes.SingleLineText },
-      { name: 'body', type: CommonFieldTypes.MultiLineText },
-      { name: 'styleText1', type: CommonFieldTypes.SingleLineText },
-      { name: 'styleText2', type: CommonFieldTypes.SingleLineText },
-      { name: 'styleText3', type: CommonFieldTypes.SingleLineText },
+      { name: 'body', type: CommonFieldTypes.RichText },
     ],
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,
