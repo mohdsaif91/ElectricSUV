@@ -6,13 +6,10 @@ import { CommonFieldTypes, Manifest } from '@sitecore-jss/sitecore-jss-dev-tools
  */
 export default function MahindraHeaderItemTemplate(manifest: Manifest): void {
   manifest.addTemplate({
-    name: 'MahindraSuv-Header-Item-template',
+    name: 'MahindraSuv-Footer-Item-Template',
     fields: [
       { name: 'label', type: CommonFieldTypes.SingleLineText },
       { name: 'url', type: CommonFieldTypes.SingleLineText },
-      { name: 'formHeader', type: CommonFieldTypes.SingleLineText },
-      { name: 'formBody', type: CommonFieldTypes.SingleLineText },
-      { name: 'checkboxItems', type: CommonFieldTypes.ContentList },
     ],
   });
 }

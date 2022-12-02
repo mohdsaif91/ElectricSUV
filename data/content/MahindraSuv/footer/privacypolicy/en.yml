@@ -1,7 +1,7 @@
-id: header-esuvs
-displayName: esuvs
+id: footer-privacy
+displayName: privacy
 # Template defines the available fields. See /sitecore/definitions/templates/Styleguide-ContentList-Template.sitecore.js
-template: MahindraSuv-Header-Item-template
+template: MahindraSuv-Footer-Item-Template
 fields:
-  label: eSUVs
-  url: "#esuvs"
+  label: Privacy Policy
+  url: "#"

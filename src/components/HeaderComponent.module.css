@@ -180,3 +180,8 @@
     background-color: white;
     color: #1f1f1f;
 }
+
+
+.navbarToggleIcon .navbar-toggler-icon {
+    background-image: url("/navtoggleicon.svg") !important;
+}
