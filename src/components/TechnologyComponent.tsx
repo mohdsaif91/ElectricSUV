@@ -50,7 +50,7 @@ const TechnologyComponent = (props: TechnologyComponentProps): JSX.Element => {
   const [techDrawer, setTechDrawer] = useState({ platform: false, hmi: false });
 
   return (
-    <Container fluid className="technology-container">
+    <Container fluid className="technology-container" >
       {/* {techDrawer.platform && ( */}
       <TechnologyGenericComponent
         flag={techDrawer.platform}
@@ -98,6 +98,7 @@ const TechnologyComponent = (props: TechnologyComponentProps): JSX.Element => {
       <div className="graphic-body-container">
         <img className="graphic-body-img" src={props.fields.bodyimg.value} alt="Mahindra" />
       </div>
+      <section id='technology'>
       <Container className="technology-content">
         <Row>
           <Col lg="12">
@@ -130,6 +131,7 @@ const TechnologyComponent = (props: TechnologyComponentProps): JSX.Element => {
           </div>
         </Row>
       </Container>
+      </section>
     </Container>
   );
 };

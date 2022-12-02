@@ -41,7 +41,7 @@
     -webkit-box-shadow: 0 0 14px 4px #64dcff;
     box-shadow: 0 0 14px 4px #64dcff;
 }
-.navlinks:not(.button):after {
+.navlinks.active:not(.button):after {
     position: relative;
     left: -1px;
     content: "";

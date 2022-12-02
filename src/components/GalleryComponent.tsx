@@ -32,7 +32,8 @@ const GalleryComponent = (props: GalleryComponentProps): JSX.Element => {
   };
   return (
     <Container fluid className="gallery-container" >
-      <Row id='gallery'>
+      <section id='gallery'>
+      <Row >
         <Col>
           <span className="gallery-text">
             <Text field={props.fields.heading} />
@@ -175,6 +176,7 @@ const GalleryComponent = (props: GalleryComponentProps): JSX.Element => {
           </div>
         </Col>
       </Row>
+      </section>
     </Container>
   );
 };

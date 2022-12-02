@@ -20,7 +20,6 @@ const ConnectComponent = (props: ConnectComponentProps): JSX.Element => {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log(window.pageYOffset);
       setScrollY(window.pageYOffset - 9203);
     };
     handleScroll();
@@ -31,7 +30,6 @@ const ConnectComponent = (props: ConnectComponentProps): JSX.Element => {
     };
   }, []);
 
-  console.log(scrollY);
 
   return (
     <div className="connect-container">
