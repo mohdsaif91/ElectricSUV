@@ -41,8 +41,8 @@ const TechnologyGenericComponent = (props: platformProps): JSX.Element => {
       <div className="platform-text-1">
         <Text field={props.platformText1}></Text>
       </div>
-      {props.listItem.map((m: platformImageItem) => (
-        <div className="img-with-dec">
+      {props.listItem.map((m: platformImageItem, index) => (
+        <div className="img-with-dec" key={index}>
           <div className="image-with-dec-title h4">
             <Text field={m.fields.imgWithTitle}></Text>
           </div>
