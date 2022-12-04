@@ -45,7 +45,8 @@ const ConnectComponent = (props: ConnectComponentProps): JSX.Element => {
   }, []);
 
   return (
-    <div className="connect-container">
+    <section id='connect'>
+      <div className="connect-container">
       <Row className="connect-row">
         <Col lg="5" className="text-column">
           <span className="card-with-image-heading is-view">
@@ -73,6 +74,7 @@ const ConnectComponent = (props: ConnectComponentProps): JSX.Element => {
         </Col>
       </Row>
     </div>
+    </section>
   );
 };
 
