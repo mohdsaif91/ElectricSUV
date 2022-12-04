@@ -12,15 +12,32 @@ type ConnectComponentProps = ComponentProps & {
   };
 };
 
+let oldScrollY = 0;
+
 const ConnectComponent = (props: ConnectComponentProps): JSX.Element => {
   const [scrollY, setScrollY] = useState(0);
+  let refNumber = 0;
+
+  const handleScroll = () => {
+    const pageHeight: any = document.querySelector('.main-container');
+
+    if (window.scrollY > oldScrollY) {
+      if (16 > refNumber) {
+        refNumber++;
+      }
+      setScrollY(refNumber);
+      console.log('down ', refNumber);
+    } else {
+      if (refNumber > -18) {
+        refNumber--;
+      }
+      setScrollY(refNumber);
+      console.log('down ', refNumber);
+    }
+    oldScrollY = window.scrollY;
+  };
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.pageYOffset - 9203);
-    };
-    handleScroll();
-
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -29,8 +46,7 @@ const ConnectComponent = (props: ConnectComponentProps): JSX.Element => {
 
   return (
     <div className="connect-container">
-      <section id='connect'>
-      <Row>
+      <Row className="connect-row">
         <Col lg="5" className="text-column">
           <span className="card-with-image-heading is-view">
             <Text field={props.fields.sectionHeading} />
@@ -48,7 +64,7 @@ const ConnectComponent = (props: ConnectComponentProps): JSX.Element => {
         <Col lg="7" className="right-image-container">
           <figure className="connect-figure rellax">
             <img
-              style={{ transform: `translate3d(0px, ${scrollY}px, 0px)` }}
+              style={{ transform: `translate3d(0px, ${scrollY}%, 0px)` }}
               className="right-image"
               src={props.fields.rightImage.value}
               alt="Mahindra"
@@ -56,7 +72,6 @@ const ConnectComponent = (props: ConnectComponentProps): JSX.Element => {
           </figure>
         </Col>
       </Row>
-      </section>
     </div>
   );
 };

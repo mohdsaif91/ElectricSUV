@@ -23,7 +23,7 @@ placeholders:
     - componentName: HeaderComponent
       fields:
         heading: header
-        menuItems: 
+        menuItems:
           - id: header-brands
           - id: header-design
           - id: header-esuvs
@@ -49,9 +49,9 @@ placeholders:
         heading: TWO <br/>REVOLUTIONARY <br/>eSUV BRANDS
         body: |
           <p>Welcome to the reimagined world of electric SUVs. Futuristic design, pulsating performance and dynamic innovation.</p>
-          
+
           <p>Two revolutionary brands from the house of Mahindra. Unique yet connected. Inspired by our past yet focused on tomorrow. Next-generation vehicles for the visionaries, the disrupters, the go-getters and the accelerators of change.</p>
-          
+
           <p>Our vision is to put sport back into electric sports utility vehicles.</p>
     - componentName: YouTubeComponent
       fields:
@@ -65,7 +65,7 @@ placeholders:
           - id: mahindrasuv-twoColumnComponent-2
     - componentName: TwoColumnComponent
       fields:
-        id : design
+        id: design
         backgroundColor: white
         fontColor: black
         heading: HEARTCORE <br/>DESIGN
@@ -85,9 +85,9 @@ placeholders:
         heading: TRULY <br/>WORLD-CLASS
         body: |
           <p>With our design centres in the UK and India and our development centres in Chennai, Detroit and Bangalore, we are creating products that will make all your senses come alive.</p>
-          
+
           <p>Our designers and engineers are collaborating with leading experts and global partners. Together we are scaling new peaks, exploring the next impossible.</p>
-          
+
           <p>A world of endless possibilities. To create a whole new destination. Delivering more for you, your family, your tribe and the environment.</p>
     - componentName: TechnologyComponent
       fields:
@@ -134,16 +134,17 @@ placeholders:
           - id: mahindrasuv-mediaroom-media-001
           - id: mahindrasuv-mediaroom-media-002
           - id: mahindrasuv-mediaroom-media-003
+          - id: mahindrasuv-mediaroom-media-004
     - componentName: ConnectComponent
       fields:
         sectionHeading: connect
         heading: |
-                 <p>2024.</p>
-                 <p>IT STARTS</p>
-                 <p>HERE.</p>
+          <p>2024.</p>
+          <p>IT STARTS</p>
+          <p>HERE.</p>
         rightImage: femaleDriver.webp
         body: |
-              Be part of our electrifying journey. To a brighter, bolder, cleaner tomorrow. Be ready.
+          Be part of our electrifying journey. To a brighter, bolder, cleaner tomorrow. Be ready.
     - componentName: FooterComponent
       fields:
         copyright: Copyright ©2022 Mahindra & Mahindra Ltd

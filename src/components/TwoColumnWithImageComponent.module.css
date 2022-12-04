@@ -1,5 +1,5 @@
 .card-with-image-container {
-  margin-top: 200px;
+  padding-top: 200px;
 }
 .content-container {
   background-color: #000;
@@ -45,9 +45,29 @@
   text-align: center;
 }
 
-.card-image {
+.human-image {
   overflow: hidden;
   position: relative;
+  padding-top: 90%;
+}
+
+.human-image-figure {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
+}
+
+.card-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  /* overflow: hidden;
+  position: relative;
+  top: 90%; */
 }
 
 .card-icon-container {
@@ -58,10 +78,10 @@
 
 .card-with-image {
   display: flex;
-  /* align-items: center; */
   justify-content: center;
-  flex-direction: column;
+  flex-direction: column-reverse;
   padding: 0 !important;
+  background: #000;
 }
 .card-text {
   text-align: center;

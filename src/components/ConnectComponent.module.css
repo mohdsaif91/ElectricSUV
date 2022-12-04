@@ -1,5 +1,9 @@
 .connect-container {
+  height: 737px;
   background-image: linear-gradient(to bottom, #000 0%, #1f1f1f 100%);
+}
+.connect-row {
+  height: 100%;
 }
 .text-column {
   padding: 200px 100px 100px 100px;
@@ -24,10 +28,11 @@
 }
 
 .image-row {
-  height: 646px;
+  height: 100%;
 }
 
 .right-image-container {
+  height: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -48,6 +53,7 @@
 
 .right-image {
   transform: translate3d(0px, 0px, 0px);
+  transition: 1s;
   object-fit: cover;
   display: block;
   width: 100%;
