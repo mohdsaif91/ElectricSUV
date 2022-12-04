@@ -29,19 +29,25 @@ const TwoColumnWithImage = (props: TwoColumnWIthImageProps): JSX.Element => {
         </Col>
       </Row>
       <Row className="content-container">
-        {props.fields.TwoColumnWithImageComponentItems.map((m: TwoColumnWithImageComponentList, index) => (
-          <Col lg="6" className="card-with-image" key={index}>
-            <div className="card-body">
-              <div className="card-icon-container">
-                <img className="card-icon" src={m.fields.cardIcon.value} alt="Mahindra" />
+        {props.fields.TwoColumnWithImageComponentItems.map(
+          (m: TwoColumnWithImageComponentList, index) => (
+            <Col lg="6" className="card-with-image" key={index}>
+              <div className="human-image">
+                <figure className="human-image-figure">
+                  <img className="card-image" src={m.fields.cardImage.value} alt="Mahindra" />
+                </figure>
               </div>
-              <span className="card-text">
-                <Text field={m.fields.cardText} />
-              </span>
-            </div>
-            <img className="card-image" src={m.fields.cardImage.value} alt="Mahindra" />
-          </Col>
-        ))}
+              <div className="card-body">
+                <div className="card-icon-container">
+                  <img className="card-icon" src={m.fields.cardIcon.value} alt="Mahindra" />
+                </div>
+                <span className="card-text">
+                  <Text field={m.fields.cardText} />
+                </span>
+              </div>
+            </Col>
+          )
+        )}
       </Row>
     </Container>
   );

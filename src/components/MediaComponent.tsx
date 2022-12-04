@@ -1,5 +1,4 @@
 import { Field } from '@sitecore-jss/sitecore-jss-nextjs';
-// import { ComponentProps } from 'lib/component-props';
 
 type MediaComponentProps = {
   image: Field<string>;
@@ -9,7 +8,8 @@ type MediaComponentProps = {
 };
 
 const MediaComponent = (props: MediaComponentProps): JSX.Element => (
-  <div
+  <a
+    href={`${props.url.value}`}
     className="media-column aos-init aos-animate"
     data-aos="fade-up"
     data-aos-duration="500"
@@ -29,7 +29,7 @@ const MediaComponent = (props: MediaComponentProps): JSX.Element => (
     </div>
     <p className="media-date">{props.date.value}</p>
     <h3 className="media-dec">{props.desc.value}</h3>
-  </div>
+  </a>
 );
 
 export default MediaComponent;
