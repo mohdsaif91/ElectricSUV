@@ -63,3 +63,16 @@
 .image-container {
   margin-bottom: 20px;
 }
+
+@media only screen and (max-width: 450px) and (min-width: 340px) {
+  .media-body-push {
+    padding: 32px !important;
+  }
+  .media-image-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .media-column {
+    width: 100%;
+  }
+}

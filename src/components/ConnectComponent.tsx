@@ -19,20 +19,16 @@ const ConnectComponent = (props: ConnectComponentProps): JSX.Element => {
   let refNumber = 0;
 
   const handleScroll = () => {
-    const pageHeight: any = document.querySelector('.main-container');
-
     if (window.scrollY > oldScrollY) {
       if (16 > refNumber) {
         refNumber++;
       }
       setScrollY(refNumber);
-      console.log('down ', refNumber);
     } else {
       if (refNumber > -18) {
         refNumber--;
       }
       setScrollY(refNumber);
-      console.log('down ', refNumber);
     }
     oldScrollY = window.scrollY;
   };
@@ -45,34 +41,36 @@ const ConnectComponent = (props: ConnectComponentProps): JSX.Element => {
   }, []);
 
   return (
-    <div className="connect-container">
-      <Row className="connect-row">
-        <Col lg="5" className="text-column">
-          <span className="card-with-image-heading is-view">
-            <Text field={props.fields.sectionHeading} />
-          </span>
-
-          <h1 className="h1">
-            <span className="h1-text">
-              <RichText field={props.fields.heading} />
+    <section id="connect">
+      <div className="connect-container">
+        <Row className="connect-row">
+          <Col lg="5" sm="12" md="12" className="text-column">
+            <span className="card-with-image-heading is-view">
+              <Text field={props.fields.sectionHeading} />
             </span>
-          </h1>
-          <div className="connect-body">
-            <Text field={props.fields.body} />
-          </div>
-        </Col>
-        <Col lg="7" className="right-image-container">
-          <figure className="connect-figure rellax">
-            <img
-              style={{ transform: `translate3d(0px, ${scrollY}%, 0px)` }}
-              className="right-image"
-              src={props.fields.rightImage.value}
-              alt="Mahindra"
-            />
-          </figure>
-        </Col>
-      </Row>
-    </div>
+
+            <h1 className="h1">
+              <span className="h1-text">
+                <RichText field={props.fields.heading} />
+              </span>
+            </h1>
+            <div className="connect-body">
+              <Text field={props.fields.body} />
+            </div>
+          </Col>
+          <Col lg="7" md="12" sm="12" className="right-image-container">
+            <figure className="connect-figure rellax">
+              <img
+                style={{ transform: `translate3d(0px, ${scrollY}%, 0px)` }}
+                className="right-image"
+                src={props.fields.rightImage.value}
+                alt="Mahindra"
+              />
+            </figure>
+          </Col>
+        </Row>
+      </div>
+    </section>
   );
 };
 

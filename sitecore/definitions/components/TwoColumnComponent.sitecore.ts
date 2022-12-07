@@ -16,6 +16,7 @@ export default function TwoColumnComponent(manifest: Manifest): void {
       { name: 'body', type: CommonFieldTypes.RichText },
       { name: 'backgroundColor', type: CommonFieldTypes.SingleLineText },
       { name: 'fontColor', type: CommonFieldTypes.SingleLineText },
+      { name: 'mobileHeading', type: CommonFieldTypes.SingleLineText },
     ],
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,

@@ -26,7 +26,7 @@ const GalleryComponent = (props: GalleryComponentProps): JSX.Element => {
   return (
     <Container fluid className="gallery-container">
       <section id="gallery">
-        <Row>
+        <Row className="gallery-row">
           <Col>
             <span className="gallery-text">
               <Text field={props.fields.heading} />
@@ -64,90 +64,6 @@ const GalleryComponent = (props: GalleryComponentProps): JSX.Element => {
                   />
                 );
               })}
-              {/* <div className="image-container-5">
-                <div className="image-continer">
-                  <img
-                    className="car-img"
-                    onClick={() => changeImage(0)}
-                    src={props.fields.img1.value}
-                    alt="Mahindra"
-                  />
-                </div>
-                <div className="image-continer">
-                  <img
-                    className="car-img"
-                    onClick={() => changeImage(1)}
-                    src={props.fields.img2.value}
-                    alt="Mahindra"
-                  />
-                </div>
-                <div className="image-continer">
-                  <img
-                    className="car-img"
-                    onClick={() => changeImage(2)}
-                    src={props.fields.img3.value}
-                    alt="Mahindra"
-                  />
-                </div>
-                <div className="image-continer">
-                  <img
-                    className="car-img"
-                    onClick={() => changeImage(3)}
-                    src={props.fields.img4.value}
-                    alt="Mahindra"
-                  />
-                </div>
-                <div className="image-continer">
-                  <img
-                    className="car-img"
-                    onClick={() => changeImage(4)}
-                    src={props.fields.img5.value}
-                    alt="Mahindra"
-                  />
-                </div>
-              </div>
-              <div className="image-container-5">
-                <div className="image-continer">
-                  <img
-                    className="car-img"
-                    onClick={() => changeImage(5)}
-                    src={props.fields.img6.value}
-                    alt="Mahindra"
-                  />
-                </div>
-                <div className="image-continer">
-                  <img
-                    className="car-img"
-                    onClick={() => changeImage(6)}
-                    src={props.fields.img7.value}
-                    alt="Mahindra"
-                  />
-                </div>
-                <div className="image-continer">
-                  <img
-                    className="car-img"
-                    onClick={() => changeImage(7)}
-                    src={props.fields.img8.value}
-                    alt="Mahindra"
-                  />
-                </div>
-                <div className="image-continer">
-                  <img
-                    className="car-img"
-                    onClick={() => changeImage(8)}
-                    src={props.fields.img9.value}
-                    alt="Mahindra"
-                  />
-                </div>
-                <div className="image-continer">
-                  <img
-                    className="car-img"
-                    onClick={() => changeImage(9)}
-                    src={props.fields.img10.value}
-                    alt="Mahindra"
-                  />
-                </div>
-              </div> */}
             </div>
           </Col>
         </Row>

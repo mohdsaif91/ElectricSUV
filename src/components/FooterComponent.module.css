@@ -1,14 +1,22 @@
-.footertext div div p{
-    font-size: small;
-    
+.footertext div div p {
+  font-size: small;
 }
-.footertext div div  a{
-    font-size: .8rem;
-    text-decoration: underline;
-    color: white;
-
+.footertext div div a {
+  font-size: 0.8rem;
+  text-decoration: underline;
+  color: white;
 }
 .footertext div div div a {
-    color: white;
-    font-size: large;
+  color: white;
+  font-size: large;
+}
+
+@media only screen and (max-width: 450px) and (min-width: 340px) {
+  .no-padding {
+    padding: 30px 20px !important;
+  }
+  .footer-container {
+    position: absolute;
+    margin-top: 48%;
+  }
 }

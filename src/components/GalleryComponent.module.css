@@ -51,3 +51,12 @@
 .image-continer {
   width: 20%;
 }
+
+@media only screen and (max-width: 450px) and (min-width: 360px) {
+  .gallery-row {
+    margin: 0 !important;
+  }
+  .gallery-container {
+    margin-top: 0;
+  }
+}

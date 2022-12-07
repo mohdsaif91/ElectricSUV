@@ -91,3 +91,17 @@
   font-size: 16px;
   line-height: 24px;
 }
+
+.vh100 {
+  height: 100vh;
+}
+
+@media only screen and (max-width: 450px) and (min-width: 360px) {
+  .vh100 {
+    height: auto;
+  }
+  .brands-heading {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}

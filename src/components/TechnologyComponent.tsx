@@ -59,12 +59,14 @@ const TechnologyComponent = (props: TechnologyComponentProps): JSX.Element => {
           listItem={props.fields.hmiList}
         />
       )}
-      <div className="graphic-body-container">
-        <img className="graphic-body-img" src={props.fields.bodyimg.value} alt="Mahindra" />
+      <div className="technology-row">
+        <Col lg={12} md={12} sm={12} className="graphic-body-container">
+          <img className="graphic-body-img" src={props.fields.bodyimg.value} alt="Mahindra" />
+        </Col>
       </div>
       <section id="technology">
         <Container className="technology-content">
-          <Row>
+          <Row className="technology-row">
             <Col lg="12">
               <span className="card-with-image-heading is-view heading">
                 <Text field={props.fields.heading}></Text>
