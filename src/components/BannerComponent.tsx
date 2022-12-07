@@ -10,13 +10,14 @@ type BannerComponentProps = ComponentProps & {
 
 const BannerComponent = (props: BannerComponentProps): JSX.Element => (
   <>
-    <div className="separator is-inview"  data-intersecting="0.13385812938213348" >
-      <section className="promo-panel no-pad-bottom no-pad-top" id='esuvs'>
+    <div className="separator is-inview" data-intersecting="0.13385812938213348">
+      <section className="promo-panel no-pad-bottom no-pad-top" id="esuvs">
         <span className="wide-title">{props.fields.title.value}</span>
         <div className="relative-wrapper">
           <div className="background-image">
-            <figure >
+            <figure className="banner-image-container">
               <img
+                className="banner-image"
                 loading="lazy"
                 src={props.fields.bannerImage.value}
                 alt="Group Hero Shot"

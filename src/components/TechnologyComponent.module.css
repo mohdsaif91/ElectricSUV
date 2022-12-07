@@ -1,6 +1,6 @@
 .technology-container {
   background-color: #000;
-  padding-top: 294px !important;
+  padding-top: 294px;
   padding-left: 0 !important;
   padding-right: 0 !important;
   height: 700px;
@@ -71,4 +71,26 @@
   background-color: #fc9f39;
   border-color: #fc9f39;
   color: #000;
+}
+
+@media only screen and (max-width: 450px) and (min-width: 340px) {
+  .graphic-image {
+    margin: 0 !important;
+    width: 100%;
+  }
+  .graphic-body {
+    margin: 0 !important;
+  }
+  .graphic-body-container {
+    padding: 0 !important;
+  }
+  .technology-row {
+    margin: 0 !important;
+  }
+  .technology-container {
+    padding-top: 600px;
+  }
+  .technology-content {
+    top: 0;
+  }
 }

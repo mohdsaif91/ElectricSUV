@@ -38,6 +38,7 @@ placeholders:
     - componentName: HeroBannerComponent
       fields:
         bannerImage: XUV400_Desktop.jpg
+        bannerImageMobile: XUV400_Desktop_mobile.jpg
         buttonList:
           - id: herobanner-item1
           - id: herobanner-item2
@@ -47,6 +48,7 @@ placeholders:
         backgroundColor: black
         fontColor: white
         heading: TWO <br/>REVOLUTIONARY <br/>eSUV BRANDS
+        mobileHeading: TWO REVOLUTIONARY eSUV BRANDS
         body: |
           <p>Welcome to the reimagined world of electric SUVs. Futuristic design, pulsating performance and dynamic innovation.</p>
 
@@ -69,6 +71,7 @@ placeholders:
         backgroundColor: white
         fontColor: black
         heading: HEARTCORE <br/>DESIGN
+        mobileHeading: HEARTCORE DESIGN
         body: |
           <p>Discover an audacious new design language born from a racing spirit, where dynamics and design meet to set your pulse racing. Exciting proportions, scintillating surfaces, and eye-catching design find inspiration in sustainable solutions, designed in tune with our surroundings.</p>
 
@@ -83,6 +86,7 @@ placeholders:
         backgroundColor: white
         fontColor: black
         heading: TRULY <br/>WORLD-CLASS
+        mobileHeading: TRULY WORLD-CLASS
         body: |
           <p>With our design centres in the UK and India and our development centres in Chennai, Detroit and Bangalore, we are creating products that will make all your senses come alive.</p>
 

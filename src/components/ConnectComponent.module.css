@@ -53,9 +53,23 @@
 
 .right-image {
   transform: translate3d(0px, 0px, 0px);
-  transition: 1s;
+  transition: 0.7s;
   object-fit: cover;
   display: block;
   width: 100%;
   height: auto;
+}
+
+@media only screen and (max-width: 450px) and (min-width: 340px) {
+  .connect-row {
+    margin: 0 !important;
+    padding-top: 80px;
+  }
+  .text-column {
+    padding: 0 20px 80px 20px;
+  }
+  .right-image-container {
+    padding: 150% 0 0 0 !important;
+    height: 0 !important;
+  }
 }

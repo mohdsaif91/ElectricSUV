@@ -1,8 +1,10 @@
-import { Field, RichText, Text, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
+import { useEffect, useState } from 'react';
+import { Field, RichText, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
-import {useEffect} from 'react';
 import Aos from 'aos';
+
 import 'aos/dist/aos.css';
+// import './TwoColumnComponent.module.css';
 
 type TwoColumnComponentProps = ComponentProps & {
   fields: {
@@ -11,35 +13,48 @@ type TwoColumnComponentProps = ComponentProps & {
     body: Field<string>;
     backgroundColor: Field<string>;
     fontColor: Field<string>;
+    mobileHeading: Field<string>;
   };
 };
 
 const TwoColumnComponent = (props: TwoColumnComponentProps): JSX.Element => {
+  const [mobile, setMobile] = useState(false);
+
   useEffect(() => {
     Aos.init();
-  }, [])
-  return (
-  <div   className='container-fluid ' style={{backgroundColor: props.fields.backgroundColor.value}}>
-    <div className='container vh-100 p-0 ' style={{ backgroundColor: props.fields.backgroundColor.value}} >
-    <section id={props.fields.id.value}>
-    <div className="row p-0 m-0 " data-aos-delay='500' data-aos='fade-up' >
-      <div className='col-md-6 d-flex align-items-start p-0 pt-5 mt-5'>
-        <div className="d-flex align-items-start mt-5 ">
-          <h1 className='twoColHead ' style={{color: props.fields.fontColor.value}}>
-            <RichText field={props.fields.heading} />
-          </h1>
-        </div>
-      </div>
-      <div className='col-md-6 d-flex align-items-start p-0 pt-5 mt-5'>
-        <div className="d-flex align-items-start mt-5 w-75" style={{color: props.fields.fontColor.value}}>
-          <RichText  field={props.fields.body} />
-        </div>
-      </div>
-    </div>
-    </section>
+    if (typeof window !== 'undefined') {
+      setMobile(window.innerWidth < window.innerHeight);
+    }
+  }, []);
 
+  return (
+    <div
+      className="container-fluid"
+      style={{ backgroundColor: props.fields.backgroundColor.value }}
+    >
+      <div className="container vh100 d-flex">
+        <section id={props.fields.id.value}>
+          <div className="row" data-aos-delay="500" data-aos="fade-up">
+            <div className="brands-heading col-md-6 d-flex align-items-start">
+              <div className="d-flex align-items-start">
+                <h1 className="twoColHead" style={{ color: props.fields.fontColor.value }}>
+                  <RichText field={mobile ? props.fields.mobileHeading : props.fields.heading} />
+                </h1>
+              </div>
+            </div>
+            <div className="col-md-6 d-flex align-items-start two-col-descriptionCol">
+              <div
+                className="d-flex align-items-start heading-alignment"
+                style={{ color: props.fields.fontColor.value }}
+              >
+                <RichText field={props.fields.body} />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
-  </div>
-)};
+  );
+};
 
 export default withDatasourceCheck()<TwoColumnComponentProps>(TwoColumnComponent);

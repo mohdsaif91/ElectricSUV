@@ -12,6 +12,7 @@ export default function HeroBannerComponent(manifest: Manifest): void {
     icon: SitecoreIcon.DocumentTag,
     fields: [
       { name: 'bannerImage', type: CommonFieldTypes.SingleLineText },
+      { name: 'bannerImageMobile', type: CommonFieldTypes.SingleLineText },
       { name: 'buttonList', type: CommonFieldTypes.ContentList },
     ],
     /*
