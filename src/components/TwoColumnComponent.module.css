@@ -5,7 +5,7 @@
   letter-spacing: 0.3rem;
 }
 
-.two-col-descriptionCol {
+.twoColDescriptionCol {
   margin-top: 3rem;
   padding-top: 3rem;
 }
@@ -14,7 +14,7 @@
   margin-top: 3rem;
 }
 
-[data-aos^='fade'][data-aos^='fade'] {
+/* [data-aos^='fade'][data-aos^='fade'] {
   opacity: 0;
   -webkit-transition-property: opacity, -webkit-transform;
   transition-property: opacity, -webkit-transform;
@@ -31,7 +31,7 @@
 [data-aos='fade-up'] {
   -webkit-transform: translate3d(0, 100px, 0);
   transform: translate3d(0, 100px, 0);
-}
+} */
 
 .lineUp {
   animation: 2s anim-lineUp ease-out infinite;
@@ -54,14 +54,19 @@
   }
 }
 
-.brands-heading {
+.vh100 {
+  height: 100vh;
+}
+
+.twoColBrandsHheading {
   margin: 3rem 0 0 0;
   padding: 3rem 0 0 0;
 }
 
 @media only screen and (max-width: 450px) and (min-width: 360px) {
-  .brands-heading {
-    margin-top: 80px !important;
+  .twoColBrandsHheading {
+    margin: 0 !important;
+    padding: 0;
   }
   .twoColHead {
     margin: 0 0 24px 0 !important;
@@ -71,9 +76,9 @@
     padding: 0 !important;
   }
   .row {
-    padding: 80px 0 !important;
+    padding: 80px 0;
   }
-  .two-col-descriptionCol {
+  .twoColDescriptionCol {
     margin-top: 0;
     padding: 0 0 0 0;
   }
@@ -82,5 +87,15 @@
   }
   .heading-alignment p {
     margin-bottom: 24px !important;
+  }
+  .vh100 {
+    height: auto;
+  }
+  .twoColContainer {
+    padding: 80px 20px;
+  }
+  .twoColRow {
+    margin-left: 0 !important ;
+    margin-right: 0 !important ;
   }
 }

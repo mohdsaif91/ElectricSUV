@@ -3,6 +3,8 @@ import { Text, Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nex
 import { ComponentProps } from 'lib/component-props';
 import { Carousel, Col, Container, Row } from 'react-bootstrap';
 
+import GCCSS from './GalleryComponent.module.css';
+
 interface galleryItemList {
   fields: {
     galleryImage: Field<string>;
@@ -12,6 +14,8 @@ interface galleryItemList {
 type GalleryComponentProps = ComponentProps & {
   fields: {
     heading: Field<string>;
+    previousIcon: Field<string>;
+    nextIcon: Field<string>;
     carImageListSlide: galleryItemList[];
   };
 };
@@ -39,7 +43,7 @@ const GalleryComponent = (props: GalleryComponentProps): JSX.Element => {
               <div className="image-conatiner-main">
                 <Carousel
                   activeIndex={slideImage}
-                  onSlid={() => console.log('change')}
+                  onSlid={(d) => setSlideImage(d)}
                   onSelect={(selectedIndex) => setSlideImage(selectedIndex)}
                 >
                   {props.fields.carImageListSlide.map((m: galleryItemList, index: number) => (
@@ -51,7 +55,31 @@ const GalleryComponent = (props: GalleryComponentProps): JSX.Element => {
               </div>
             </div>
           </Col>
-          <Col lg="12">
+          <Col lg="12" className="allImageContainerArrow">
+            <div className={`${GCCSS.galleryBtnContainer}`}>
+              <img
+                className="c-p"
+                onClick={() => {
+                  if (slideImage > 0) {
+                    setSlideImage(slideImage - 1);
+                  }
+                }}
+                src={props.fields.previousIcon.value}
+                alt="Mahindra"
+              />
+              <img
+                className="c-p"
+                onClick={() => {
+                  if (props.fields.carImageListSlide.length - 1 > slideImage) {
+                    setSlideImage(slideImage + 1);
+                  }
+                }}
+                src={props.fields.nextIcon.value}
+                alt="Mahindra"
+              />
+            </div>
+          </Col>
+          <Col lg="12" className="all-image-container-main">
             <div className="all-image-container">
               {props.fields.carImageListSlide.map((m: galleryItemList, index: number) => {
                 return (

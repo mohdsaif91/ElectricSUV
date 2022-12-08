@@ -3,8 +3,8 @@ import { Field, RichText, withDatasourceCheck } from '@sitecore-jss/sitecore-jss
 import { ComponentProps } from 'lib/component-props';
 import Aos from 'aos';
 
+import TCCCSS from './TwoColumnComponent.module.css';
 import 'aos/dist/aos.css';
-// import './TwoColumnComponent.module.css';
 
 type TwoColumnComponentProps = ComponentProps & {
   fields: {
@@ -28,32 +28,35 @@ const TwoColumnComponent = (props: TwoColumnComponentProps): JSX.Element => {
   }, []);
 
   return (
-    <div
-      className="container-fluid"
-      style={{ backgroundColor: props.fields.backgroundColor.value }}
-    >
-      <div className="container vh100 d-flex">
-        <section id={props.fields.id.value}>
-          <div className="row" data-aos-delay="500" data-aos="fade-up">
-            <div className="brands-heading col-md-6 d-flex align-items-start">
+    <section id={props.fields.id.value}>
+      <div
+        className="container-fluid no-padding"
+        style={{ backgroundColor: props.fields.backgroundColor.value }}
+      >
+        <div className={`container ${TCCCSS.twoColContainer} d-flex ${TCCCSS.vh100}`}>
+          <div className="twoColRow" data-aos-delay="500" data-aos="fade-up">
+            <div className={`col-md-6 d-flex align-items-start ${TCCCSS.twoColBrandsHheading}`}>
               <div className="d-flex align-items-start">
-                <h1 className="twoColHead" style={{ color: props.fields.fontColor.value }}>
+                <h1
+                  className={`${TCCCSS.twoColHead}`}
+                  style={{ color: props.fields.fontColor.value }}
+                >
                   <RichText field={mobile ? props.fields.mobileHeading : props.fields.heading} />
                 </h1>
               </div>
             </div>
-            <div className="col-md-6 d-flex align-items-start two-col-descriptionCol">
+            <div className={`${TCCCSS.twoColDescriptionCol} col-md-6 d-flex align-items-start`}>
               <div
-                className="d-flex align-items-start heading-alignment"
+                className={`${TCCCSS.headingAlignment} d-flex align-items-start`}
                 style={{ color: props.fields.fontColor.value }}
               >
                 <RichText field={props.fields.body} />
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

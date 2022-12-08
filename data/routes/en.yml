@@ -119,6 +119,8 @@ placeholders:
     - componentName: GalleryComponent
       fields:
         heading: gallery
+        nextIcon: scroller-next.svg
+        previousIcon: scroller-back.svg
         carImageListSlide:
           - id: mahindrasuv-gallery-image-1
           - id: mahindrasuv-gallery-image-2

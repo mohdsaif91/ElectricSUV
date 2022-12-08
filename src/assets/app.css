@@ -1,21 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Oxanium:wght@200;300;400&display=swap');
+
 @import url('../components/BannerComponent.module.css');
 @import url('../components/BrandsComponent.module.css');
 @import url('../components/ConnectComponent.module.css');
 @import url('../components/FooterComponent.module.css');
 @import url('../components/GalleryComponent.module.css');
 @import url('../components/HeaderComponent.module.css');
-@import url('../components/HeroBannerComponent.module.css');
+/* @import url('../components/HeroBannerComponent.module.css'); */
 @import url('../components/MediaComponent.module.css');
 @import url('../components/MediaRoomComponent.module.css');
 @import url('../components/TechnologyComponent.module.css');
-@import url('../components/TwoColumnComponent.module.css');
+/* @import url('../components/TwoColumnComponent.module.css'); */
 @import url('../components/YouTubeComponent.module.css');
-@import url('../components/TwoColumnWithImageComponent.module.css');
+/* @import url('../components/TwoColumnWithImageComponent.module.css'); */
 @import url('../components/TechnologyComponents/TechnologyGenericComponent.module.css');
-
-a[target='_blank']:after {
-}
 
 /*
   Hides Sitecore editor markup,
@@ -86,4 +84,42 @@ body {
   font-weight: 300;
   margin: 0 0 1em -0.07em;
   font-family: Oxanium, sans-serif;
+}
+
+.is-view:after {
+  width: 80px !important;
+  border-width: 1px;
+  box-shadow: 0 0 14px 4px #64dcff;
+}
+
+.cardWithImageHeading {
+  font-family: Oxanium, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 18px;
+  text-align: left;
+}
+
+.cardWithImageHeading:after {
+  content: '';
+  margin-top: 8px;
+  display: block;
+  width: 0;
+  height: 3px;
+  border-radius: 3px;
+  background: #fff;
+  border: 0 solid rgba(100, 220, 255, 0.5);
+  margin-bottom: 50px;
+  -webkit-transition: all 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.c-p {
+  cursor: pointer;
+}
+
+.no-padding {
+  padding: 0 0 0 0 !important;
 }

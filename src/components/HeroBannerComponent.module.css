@@ -33,7 +33,9 @@
 }
 
 @media only screen and (max-width: 450px) and (min-width: 340px) {
-  .vh100 {
-    height: 600px !important;
+  .banner {
+    height: 600px;
+    object-fit: cover;
+    object-position: 60% 50%;
   }
 }

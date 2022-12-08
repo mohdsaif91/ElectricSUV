@@ -1,7 +1,7 @@
+import { useState } from 'react';
 import { Text, Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 import { Col, Container, Row } from 'react-bootstrap';
-import { useState } from 'react';
 
 import TechnologyGenericComponent from './TechnologyComponents/TechnologyGenericComponent';
 
@@ -68,7 +68,7 @@ const TechnologyComponent = (props: TechnologyComponentProps): JSX.Element => {
         <Container className="technology-content">
           <Row className="technology-row">
             <Col lg="12">
-              <span className="card-with-image-heading is-view heading">
+              <span className="cardWithImageHeading is-view heading">
                 <Text field={props.fields.heading}></Text>
               </span>
             </Col>
