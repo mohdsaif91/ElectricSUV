@@ -2,6 +2,8 @@ import { Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 import { useEffect, useState } from 'react';
 
+import HBCCSS from './HeroBannerComponent.module.css';
+
 interface buttonItems {
   fields: {
     label: Field<string>;
@@ -27,17 +29,16 @@ const HeroBannerComponent = (props: HeroBannerComponentProps): JSX.Element => {
   }, []);
 
   return (
-    <div
-      className="banner vw-100 vh100"
-      style={{
-        backgroundImage: `url(${
-          mobile ? props.fields.bannerImageMobile.value : props.fields.bannerImage.value
-        })`,
-      }}
-      id=""
-    >
-      <section>
-        <div className="btn-group bannergrid" role="group" aria-label="Basic example">
+    <section>
+      <div
+        className={`${HBCCSS.vh100} ${HBCCSS.banner} vw-100 `}
+        style={{
+          backgroundImage: `url(${
+            mobile ? props.fields.bannerImageMobile.value : props.fields.bannerImage.value
+          })`,
+        }}
+      >
+        <div className={`${HBCCSS.bannergrid} btn-group`} role="group" aria-label="Basic example">
           {props.fields.buttonList.map((item, index) => {
             return (
               <button className="mx-3" key={index}>
@@ -46,8 +47,8 @@ const HeroBannerComponent = (props: HeroBannerComponentProps): JSX.Element => {
             );
           })}
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 

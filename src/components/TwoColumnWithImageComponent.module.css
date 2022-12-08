@@ -1,11 +1,9 @@
-.card-with-image-container {
+.cardWithImageContainer {
   padding-top: 200px;
-}
-.content-container {
   background-color: #000;
 }
 
-.card-with-image-heading {
+.cardWithImageHeading {
   font-family: Oxanium, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -13,12 +11,7 @@
   text-align: left;
 }
 
-.is-view:after {
-  width: 80px !important;
-  border-width: 1px;
-  box-shadow: 0 0 14px 4px #64dcff;
-}
-.card-with-image-heading:after {
+.cardWithImageHeading:after {
   content: '';
   margin-top: 8px;
   display: block;
@@ -34,24 +27,24 @@
   transition-delay: 0.5s;
 }
 
-.card-icon {
+.cardIcon {
   width: 118px;
   height: 145px;
   margin: 0 128px 50px 128px;
 }
 
-.card-body {
+.cardBody {
   padding: 32px 96px;
   text-align: center;
 }
 
-.human-image {
+.humanImage {
   overflow: hidden;
   position: relative;
   padding-top: 90%;
 }
 
-.human-image-figure {
+.humanImageFigure {
   display: flex;
   position: absolute;
   top: 0;
@@ -61,7 +54,7 @@
   margin: 0 !important;
 }
 
-.card-image {
+.cardImage {
   display: block;
   max-width: 100%;
   height: auto;
@@ -70,20 +63,20 @@
   top: 90%; */
 }
 
-.card-icon-container {
+.cardIconContainer {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.card-with-image {
+.cardWithImage {
   display: flex;
   justify-content: center;
   flex-direction: column-reverse;
   padding: 0 !important;
   background: #000;
 }
-.card-text {
+.cardTtext {
   text-align: center;
   margin-bottom: 48px;
   font-family: Inter, sans-serif;
@@ -103,5 +96,17 @@
   .brands-heading {
     margin-top: 0 !important;
     padding-top: 0 !important;
+  }
+  .cardWithImageContainer {
+    padding: 80px 20px 0 20px;
+  }
+  .twoColumnWithImageHeading {
+    padding: 0 0;
+  }
+  .cardBody {
+    padding: 20px;
+  }
+  .cardIcon {
+    margin: 0px 96px 50px 96px;
   }
 }

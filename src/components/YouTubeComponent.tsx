@@ -1,6 +1,8 @@
 import { Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 
+import YCCSS from './YouTubeComponent.module.css';
+
 type YouTubeComponentProps = ComponentProps & {
   fields: {
     embedId: Field<string>;
@@ -8,7 +10,7 @@ type YouTubeComponentProps = ComponentProps & {
 };
 
 const YouTubeComponent = (props: YouTubeComponentProps): JSX.Element => (
-  <div className="video-responsive">
+  <div className={`${YCCSS.videoResponsive}`}>
     <iframe
       width="853"
       height="480"

@@ -88,7 +88,9 @@
     margin: 0 !important;
   }
   .technology-container {
-    padding-top: 600px;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column-reverse;
   }
   .technology-content {
     top: 0;

@@ -1,7 +1,7 @@
 .gallery-container {
   background: #000;
   margin-top: 348px;
-  padding: 200px 0 !important;
+  padding: 200px 0;
 }
 
 .gallery-text {
@@ -52,11 +52,34 @@
   width: 20%;
 }
 
+.all-image-container-main {
+  display: block;
+}
+.allImageContainerArrow {
+  display: none;
+}
+.galleryBtnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}
+
 @media only screen and (max-width: 450px) and (min-width: 360px) {
   .gallery-row {
     margin: 0 !important;
   }
   .gallery-container {
     margin-top: 0;
+    padding: 80px 0;
+  }
+  .gallery-text {
+    padding: 0;
+  }
+  .all-image-container-main {
+    display: none;
+  }
+  .allImageContainerArrow {
+    display: block;
   }
 }

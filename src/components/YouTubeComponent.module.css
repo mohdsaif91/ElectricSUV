@@ -1,12 +1,12 @@
 /* YOUTUBE Video */
-.video-responsive {
+.videoResponsive {
   overflow: hidden;
   padding-bottom: 56.25%;
   position: relative;
   height: 0;
 }
 
-.video-responsive iframe {
+.videoResponsive iframe {
   left: 0;
   top: 0;
   height: 100%;
