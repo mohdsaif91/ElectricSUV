@@ -12,9 +12,9 @@ export default function FooterComponent(manifest: Manifest): void {
     icon: SitecoreIcon.DocumentTag,
     fields: [
       { name: 'copyright', type: CommonFieldTypes.SingleLineText },
-      { name: 'footList', type: CommonFieldTypes.ContentList }
+      { name: 'footList', type: CommonFieldTypes.ContentList },
+      { name: 'logo', type: CommonFieldTypes.SingleLineText }
 
-    
   ],
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,

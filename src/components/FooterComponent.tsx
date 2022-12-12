@@ -18,28 +18,29 @@ type FooterComponentProps = ComponentProps & {
   fields: {
     copyright: Field<string>;
     footList: footerItem[];
+    logo: Field<string>
   };
 };
 
 const FooterComponent = (props: FooterComponentProps): JSX.Element => {
   return (
     <div
-      className="container-fluid footer-container no-padding"
+      className="container-fluid footer-container no-padding "
       style={{ backgroundColor: 'black' }}
     >
-      <div className="footertext " id="footer">
-        <Row className="footer-row">
-          <Col lg={3} md={4} sm={12} className="col-md-2 d-flex align-items-center p-0">
-            <img src="logo.svg" width="130" height="20" alt="Mahindra"></img>
+      <div className="footertext container " id="footer">
+        <Row className=" p-2 pt-3 pb-3">
+          <Col lg={2} md={3} sm={12} className="col-md-2 d-flex p-0 align-items-center ">
+            <img src={props.fields.logo.value} width="130" height="20" alt="Mahindra"/>
           </Col>
-          <Col lg={6} md={4} sm={12} className={`${FCCSS.footerLinks} col-md-2 p-0 d-flex`}>
-            <div>
+          <Col lg={7} md={5} sm={12} className={`${FCCSS.footerLinks} col-md-2 p-0 d-flex `}>
+            <div className=''>
               {props.fields.footList.map((item, index) => {
                 return (
                   <a
                     href={item.fields.url.value}
                     key={index}
-                    className={`${FCCSS.footerLinkItems}`}
+                    className={`${FCCSS.footerLinkItems} me-3`}
                     target={'_blank'}
                   >
                     {item.fields.label.value}
@@ -53,30 +54,30 @@ const FooterComponent = (props: FooterComponentProps): JSX.Element => {
             lg={3}
             md={4}
             sm={12}
-            className={`${FCCSS.socialMediaContainer} col-md-3 d-flex align-items-center`}
+            className={`${FCCSS.socialMediaContainer}  d-flex align-items-center  p-0`}
           >
-            <div className="d-flex justify-content-end">
-              <div className="mx-2">
+            <div className="d-flex justify-content-end  ">
+              <div className="me-4">
                 <a href="https://www.facebook.com/mahindrabornelectric/" target="_blank">
                   <TfiFacebook />
                 </a>
               </div>
-              <div className="mx-2">
+              <div className="me-4">
                 <a href="https://twitter.com/born_electric/" target={'_blank'}>
                   <TfiTwitterAlt />
                 </a>
               </div>
-              <div className="mx-2">
+              <div className="me-4">
                 <a href="#" target={'_blank'}>
                   <TbBrandInstagram />
                 </a>
               </div>
-              <div className="mx-2">
+              <div className="me-4">
                 <a href="#" target={'_blank'}>
                   <TfiLinkedin />
                 </a>
               </div>
-              <div className="mx-2">
+              <div className="">
                 <a href="#" target={'_blank'}>
                   <BsYoutube />
                 </a>
