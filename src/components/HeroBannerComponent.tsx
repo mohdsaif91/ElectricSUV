@@ -2,12 +2,18 @@ import { Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 import { useEffect, useState } from 'react';
 
-import HBCCSS from './HeroBannerComponent.module.css';
+import HeroBannerChildComponent from './HeroBanner/HeroBannerChildComponent';
 
-interface buttonItems {
+interface value {
+  value: Field<string>;
+}
+
+interface bannerItems {
   fields: {
-    label: Field<string>;
-    url: Field<string>;
+    mediaType: Field<string>;
+    media: value;
+    mediaMobile: value;
+    mediaText: Field<string>;
   };
 }
 
@@ -15,39 +21,46 @@ type HeroBannerComponentProps = ComponentProps & {
   fields: {
     bannerImage: Field<string>;
     bannerImageMobile: Field<string>;
-    buttonList: buttonItems[];
+    bannerList: bannerItems[];
   };
 };
 
 const HeroBannerComponent = (props: HeroBannerComponentProps): JSX.Element => {
-  const [mobile, setMobile] = useState(false);
+  const [counter, setCounter] = useState(1);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setMobile(window.innerWidth < window.innerHeight);
+    if (counter === props.fields.bannerList.length + 1) {
+      setCounter(1);
     }
+  }, [counter]);
+
+  useEffect(() => {
+    let counterTimer = setInterval(() => {
+      setCounter((stateValue: number) => stateValue + 1);
+    }, 3000);
+    return () => {
+      clearInterval(counterTimer);
+    };
   }, []);
 
   return (
     <section>
-      <div
-        className={`${HBCCSS.vh100} ${HBCCSS.banner} vw-100 `}
-        style={{
-          backgroundImage: `url(${
-            mobile ? props.fields.bannerImageMobile.value : props.fields.bannerImage.value
-          })`,
-        }}
-      >
-        <div className={`${HBCCSS.bannergrid} btn-group`} role="group" aria-label="Basic example">
-          {props.fields.buttonList.map((item, index) => {
-            return (
-              <button className="mx-3" key={index}>
-                {item.fields.label.value}
-              </button>
-            );
-          })}
-        </div>
-      </div>
+      {props.fields.bannerList.map((m: bannerItems, index: number) => {
+        return (
+          <div
+            key={index}
+            className={`${index + 1 === counter ? 'display-block' : 'display-none'}`}
+          >
+            <HeroBannerChildComponent
+              key={index}
+              mediaType={m.fields.mediaType}
+              media={m.fields.media}
+              mediaMobile={m.fields.mediaMobile}
+              mediaText={m.fields.mediaText}
+            />
+          </div>
+        );
+      })}
     </section>
   );
 };

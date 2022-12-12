@@ -30,11 +30,11 @@ const TwoColumnComponent = (props: TwoColumnComponentProps): JSX.Element => {
   return (
     <section id={props.fields.id.value}>
       <div
-        className="container-fluid no-padding"
+        className={`${TCCCSS.twoColContainer} container-fluid`}
         style={{ backgroundColor: props.fields.backgroundColor.value }}
       >
-        <div className={`container ${TCCCSS.twoColContainer} d-flex ${TCCCSS.vh100}`}>
-          <div className="twoColRow" data-aos-delay="500" data-aos="fade-up">
+        <div className={`container  d-flex ${TCCCSS.vh100}`}>
+          <div className={`${TCCCSS.twoColRow}`} data-aos-delay="500" data-aos="fade-up">
             <div className={`col-md-6 d-flex align-items-start ${TCCCSS.twoColBrandsHheading}`}>
               <div className="d-flex align-items-start">
                 <h1

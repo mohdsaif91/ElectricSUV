@@ -8,7 +8,10 @@ export default function StyleguideContentListItemTemplate(manifest: Manifest): v
   manifest.addTemplate({
     name: 'MahindraSuv-Herobanner-Item-template',
     fields: [
-      { name: 'label', type: CommonFieldTypes.SingleLineText },
+      { name: 'mediaType', type: CommonFieldTypes.SingleLineText },
+      { name: 'media', type: CommonFieldTypes.SingleLineText },
+      { name: 'mediaMobile', type: CommonFieldTypes.SingleLineText },
+      { name: 'mediaText', type: CommonFieldTypes.RichText },
       { name: 'url', type: CommonFieldTypes.SingleLineText },
     ],
   });

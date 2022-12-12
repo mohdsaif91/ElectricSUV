@@ -1,17 +1,20 @@
 .twoColHead {
-  margin-top: 3rem;
   font-family: 'Oxanium';
   font-weight: 300;
   letter-spacing: 0.3rem;
 }
 
 .twoColDescriptionCol {
-  margin-top: 3rem;
-  padding-top: 3rem;
+  /* margin-top: 3rem;
+  padding-top: 3rem; */
 }
 
 .heading-alignment {
   margin-top: 3rem;
+}
+
+.twoColRow {
+  display: flex;
 }
 
 /* [data-aos^='fade'][data-aos^='fade'] {
@@ -55,12 +58,15 @@
 }
 
 .vh100 {
-  height: 100vh;
+  /* padding: 0 96px; */
+  /* height: 100vh; */
+}
+
+.twoColContainer {
+  padding: 200px 0;
 }
 
 .twoColBrandsHheading {
-  margin: 3rem 0 0 0;
-  padding: 3rem 0 0 0;
 }
 
 @media only screen and (max-width: 450px) and (min-width: 360px) {
@@ -90,6 +96,7 @@
   }
   .vh100 {
     height: auto;
+    padding: 0;
   }
   .twoColContainer {
     padding: 80px 20px;
@@ -97,5 +104,9 @@
   .twoColRow {
     margin-left: 0 !important ;
     margin-right: 0 !important ;
+  }
+
+  .twoColRow {
+    flex-direction: column;
   }
 }

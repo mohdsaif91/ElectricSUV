@@ -1,8 +1,11 @@
 import { Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
+import { Col, Row } from 'react-bootstrap';
 import { BsYoutube } from 'react-icons/bs';
 import { TbBrandInstagram } from 'react-icons/tb';
 import { TfiFacebook, TfiLinkedin, TfiTwitterAlt } from 'react-icons/tfi';
+
+import FCCSS from './FooterComponent.module.css';
 
 interface footerItem {
   fields: {
@@ -25,24 +28,33 @@ const FooterComponent = (props: FooterComponentProps): JSX.Element => {
       style={{ backgroundColor: 'black' }}
     >
       <div className="footertext " id="footer">
-        <div className="row p-0 pt-4 pb-4">
-          <div className="col-md-2 d-flex align-items-center p-0">
+        <Row className="footer-row">
+          <Col lg={3} md={4} sm={12} className="col-md-2 d-flex align-items-center p-0">
             <img src="logo.svg" width="130" height="20" alt="Mahindra"></img>
-          </div>
-          <div className="col-md-2 p-0 d-flex align-items-center">
-            {props.fields.footList.map((item, index) => {
-              return (
-                <a href={item.fields.url.value} key={index} className="mx-1" target={'_blank'}>
-                  {item.fields.label.value}
-                </a>
-              );
-            })}
-          </div>
-          <div className="col-md-5 p-0">
-            <p className="p-0 pt-3">{props.fields.copyright.value}</p>
-          </div>
-
-          <div className="col-md-3 d-flex align-items-center justify-content-end">
+          </Col>
+          <Col lg={6} md={4} sm={12} className={`${FCCSS.footerLinks} col-md-2 p-0 d-flex`}>
+            <div>
+              {props.fields.footList.map((item, index) => {
+                return (
+                  <a
+                    href={item.fields.url.value}
+                    key={index}
+                    className={`${FCCSS.footerLinkItems}`}
+                    target={'_blank'}
+                  >
+                    {item.fields.label.value}
+                  </a>
+                );
+              })}
+            </div>
+            <p className={`p-0 pt-3 ${FCCSS.copyRight}`}>{props.fields.copyright.value}</p>
+          </Col>
+          <Col
+            lg={3}
+            md={4}
+            sm={12}
+            className={`${FCCSS.socialMediaContainer} col-md-3 d-flex align-items-center`}
+          >
             <div className="d-flex justify-content-end">
               <div className="mx-2">
                 <a href="https://www.facebook.com/mahindrabornelectric/" target="_blank">
@@ -70,8 +82,8 @@ const FooterComponent = (props: FooterComponentProps): JSX.Element => {
                 </a>
               </div>
             </div>
-          </div>
-        </div>
+          </Col>
+        </Row>
       </div>
     </div>
   );

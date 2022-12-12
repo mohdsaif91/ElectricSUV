@@ -3,5 +3,8 @@ displayName: herobanner-item1
 # Template defines the available fields. See /sitecore/definitions/templates/Styleguide-ContentList-Template.sitecore.js
 template: MahindraSuv-Herobanner-Item-template
 fields:
-  label: Know More
-  url: "#"
+  mediaType: image
+  media: XUV400_Desktop.jpg
+  mediaMobile: XUV400_Desktop_mobile.jpg
+  mediaText:
+  url: #
