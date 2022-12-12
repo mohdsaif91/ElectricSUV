@@ -1,4 +1,4 @@
-import { Field } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field, RichText } from '@sitecore-jss/sitecore-jss-nextjs';
 import { useEffect, useState } from 'react';
 
 import HBCCSS from '../HeroBannerComponent.module.css';
@@ -43,14 +43,28 @@ const HeroBannerChildComponent = (props: Props) => {
           </div>
         </div>
       ) : (
-        <video preload="auto" autoPlay={true} width="100%" muted={true} className="html-video">
-          <source src={`${props.media.value}`} type="video/webm" />
-          {/* <source
-            src="./mahindraelectricimages/images/M&amp;M_1920_3mb_target.mp4"
-            type="video/mp4"
-          /> */}
-        </video>
+        <div className={`${HBCCSS.videoContainer}`}>
+          <video
+            preload="auto"
+            loop={true}
+            autoPlay={true}
+            width="100%"
+            muted={true}
+            className="html-video"
+          >
+            <source src={`${props.media.value}`} type="video/webm" />
+            <div>JACK</div>
+          </video>
+          <div className={`${HBCCSS.videoContainerItems}`}>
+            <div className={`${HBCCSS.richTextContainer}`}>
+              <div className={`${HBCCSS.richTextBodyWrapper}`}>
+                <RichText field={props.mediaText} />
+              </div>
+            </div>
+          </div>
+        </div>
       )}
+      {/* </div> */}
     </>
   );
 };

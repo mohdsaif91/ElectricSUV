@@ -131,3 +131,23 @@ body {
 .display-none {
   display: none;
 }
+
+.heroBannerTitle {
+  font-weight: 300;
+  margin: 0 0 1em -0.07em;
+  font-family: Oxanium, sans-serif;
+  line-height: 1;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.typeReveal {
+  display: block;
+  white-space: normal !important;
+}
+
+@media screen and (min-width: 768px) and (min-width: 320px) {
+  .heroBannerTitle {
+    font-size: calc(30px + 40 * ((100vw - 320px) / 1120));
+  }
+}

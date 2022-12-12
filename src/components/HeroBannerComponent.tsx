@@ -3,6 +3,7 @@ import { ComponentProps } from 'lib/component-props';
 import { useEffect, useState } from 'react';
 
 import HeroBannerChildComponent from './HeroBanner/HeroBannerChildComponent';
+import HBCCSS from './HeroBannerComponent.module.css';
 
 interface value {
   value: Field<string>;
@@ -26,7 +27,7 @@ type HeroBannerComponentProps = ComponentProps & {
 };
 
 const HeroBannerComponent = (props: HeroBannerComponentProps): JSX.Element => {
-  const [counter, setCounter] = useState(1);
+  const [counter, setCounter] = useState(2);
 
   useEffect(() => {
     if (counter === props.fields.bannerList.length + 1) {
@@ -37,11 +38,13 @@ const HeroBannerComponent = (props: HeroBannerComponentProps): JSX.Element => {
   useEffect(() => {
     let counterTimer = setInterval(() => {
       setCounter((stateValue: number) => stateValue + 1);
-    }, 3000);
+    }, 4000);
     return () => {
       clearInterval(counterTimer);
     };
   }, []);
+
+  console.log(counter);
 
   return (
     <section>
@@ -61,6 +64,19 @@ const HeroBannerComponent = (props: HeroBannerComponentProps): JSX.Element => {
           </div>
         );
       })}
+      <div>
+        <ul className={`${HBCCSS.tabMenu}`}>
+          {props.fields.bannerList.map((m: bannerItems, index: number) => (
+            <li
+              key={index}
+              onClick={() => setCounter(index + 1)}
+              className={`${index + 1 === counter ? HBCCSS.heroActiveTab : HBCCSS.heroTab}`}
+            >
+              {m.fields.mediaType.value}
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 };
