@@ -32,6 +32,86 @@
   height: 100vh;
 }
 
+.videoContainerItems {
+  position: absolute;
+  top: 0;
+}
+.richTextContainer {
+  padding: 64px 100px;
+  font-size: 56px !important;
+}
+.richTextBodyWrapper {
+  width: 100%;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 72px 0 0 0;
+  padding-top: 100px;
+}
+
+.tabMenu {
+  list-style: none;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  top: auto;
+  left: 50%;
+  right: 20px;
+  bottom: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  padding: 10px;
+  gap: 10px;
+  right: auto;
+  transform: translateX(-50%);
+}
+
+.heroTab {
+  position: relative;
+  grid-column: 1;
+  grid-row: 1;
+  opacity: 0;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.heroActiveTab {
+  z-index: 1;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.tabMenu li {
+  text-indent: -5000px;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  background: #ffffff80;
+}
+
+.tabMenu li.heroActiveTab {
+  background: #fc9f39 !important;
+}
+
 @media only screen and (max-width: 450px) and (min-width: 340px) {
   .banner {
     height: 600px;
