@@ -11,7 +11,7 @@
   font-size: large;
 }
 .footer-row {
-  padding: 32px 96px;
+  padding: 20px 80px;
 }
 
 .footerLinks {
@@ -27,10 +27,16 @@
 .socialMediaContainer {
   justify-content: flex-end;
 }
+.socialMediaContainer div div a svg{
+  color: white;
+  width: 1.2rem;
+  height: 1.2rem;
+
+}
 
 @media only screen and (max-width: 450px) and (min-width: 340px) {
   .no-padding {
-    padding: 30px 20px !important;
+    padding: 10px 20px !important;
   }
   .footer-container {
     position: absolute;

@@ -23,6 +23,7 @@ placeholders:
     - componentName: HeaderComponent
       fields:
         heading: header
+        logo: logo.svg
         menuItems:
           - id: header-brands
           - id: header-design
@@ -155,6 +156,7 @@ placeholders:
           Be part of our electrifying journey. To a brighter, bolder, cleaner tomorrow. Be ready.
     - componentName: FooterComponent
       fields:
+        logo: logo.svg
         copyright: Copyright ©2022 Mahindra & Mahindra Ltd
         footList:
           - id: footer-privacy

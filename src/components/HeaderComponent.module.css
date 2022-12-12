@@ -97,8 +97,7 @@
   padding-left: 1rem !important;
 }
 
-.sideNavOffcanvas {
-}
+
 .sideNavOffcanvas h1 {
   color: black !important;
   font-family: Oxanium;
@@ -144,8 +143,7 @@
   color: #1f1f1f;
   box-shadow: none !important;
 }
-.updateform {
-}
+
 .updateForm div div input,
 select {
   border-radius: 1px;
@@ -161,8 +159,7 @@ select:focus {
   box-shadow: none !important;
 }
 .updateForm div div select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
+
   background: transparent;
   background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
   background-repeat: no-repeat;
@@ -184,9 +181,6 @@ select:focus {
   color: #1f1f1f;
 }
 
-.navbarToggleIcon .navbar-toggler-icon {
-  background-image: url('/navtoggleicon.svg') !important;
-}
 
 @media only screen and (max-width: 450px) and (min-width: 340px) {
 }
