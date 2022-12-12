@@ -13,7 +13,7 @@ export default function HeroBannerComponent(manifest: Manifest): void {
     fields: [
       { name: 'bannerImage', type: CommonFieldTypes.SingleLineText },
       { name: 'bannerImageMobile', type: CommonFieldTypes.SingleLineText },
-      { name: 'buttonList', type: CommonFieldTypes.ContentList },
+      { name: 'bannerList', type: CommonFieldTypes.ContentList },
     ],
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,

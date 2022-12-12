@@ -1,5 +1,5 @@
-id: herobanner-item2
-displayName: herobanner-item2
+id: herobanner-item3
+displayName: herobanner-item3
 # Template defines the available fields. See /sitecore/definitions/templates/Styleguide-ContentList-Template.sitecore.js
 template: MahindraSuv-Herobanner-Item-template
 fields:

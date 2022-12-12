@@ -23,7 +23,7 @@ type TwoColumnWIthImageProps = ComponentProps & {
 const TwoColumnWithImage = (props: TwoColumnWIthImageProps): JSX.Element => {
   return (
     <Container className={`${TCWICCSS.cardWithImageContainer}`}>
-      <Row className={`${TCWICCSS.twoColumnWithImageHeadin}`}>
+      <Row className={`${TCWICCSS.twoColumnWithImageHeading}`}>
         <Col>
           <span className={`${TCWICCSS.cardWithImageHeading} is-view`}>
             <Text field={props.fields.heading}></Text>

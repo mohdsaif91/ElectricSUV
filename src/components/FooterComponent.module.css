@@ -2,13 +2,30 @@
   font-size: small;
 }
 .footertext div div a {
-  font-size: 0.8rem;
+  font-size: 0.8rem !important;
   text-decoration: underline;
   color: white;
 }
 .footertext div div div a {
   color: white;
   font-size: large;
+}
+.footer-row {
+  padding: 32px 96px;
+}
+
+.footerLinks {
+  display: flex;
+  align-items: center;
+}
+
+.footerLinkItems {
+  margin-right: 0.25rem;
+  margin-left: 0.25rem;
+}
+
+.socialMediaContainer {
+  justify-content: flex-end;
 }
 
 @media only screen and (max-width: 450px) and (min-width: 340px) {
@@ -18,5 +35,20 @@
   .footer-container {
     position: absolute;
     margin-top: 48%;
+  }
+  .footer-row {
+    padding: 32px 20px;
+  }
+  .footerLinks {
+    margin-top: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footerLinkItems {
+    margin-left: 0;
+  }
+  .socialMediaContainer {
+    justify-content: flex-start;
+    padding-left: 0;
   }
 }
