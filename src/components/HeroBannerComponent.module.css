@@ -1,18 +1,29 @@
 .banner {
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 0;
-  position: relative;
+  padding: 64px 100px;
   margin-top: 0rem;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  object-position: 60% 50%;
+  display: block;
+  max-width: 100%;
 }
 
 .bannergrid {
   position: absolute;
   bottom: 10%;
   left: 10%;
+  margin-top: 180px;
   background-color: aliceblue;
   border-color: aqua;
   background: none;
+  display: flex;
+  gap: 30px;
 }
 .bannergrid button {
   height: 3rem;
@@ -21,6 +32,7 @@
   color: white;
   font-family: Oxanium;
   border: 1px solid white;
+  font-size: 16px !important;
 }
 .bannergrid button:hover {
   color: black;
@@ -28,8 +40,42 @@
   border: 1px solid orange;
 }
 
+.hero-btn {
+  font-size: 16px !important;
+}
+
 .vh100 {
   height: 100vh;
+}
+
+/* /// */
+.bodyPush {
+  padding: 60px 0;
+}
+.heroFlexContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 auto;
+  z-index: 2;
+}
+.brandWrapper {
+  width: 100%;
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin: auto 0 0;
+  padding-top: 100px;
+}
+/* /// */
+
+.videoContainer {
+  z-index: 1;
 }
 
 .videoContainerItems {
@@ -42,39 +88,42 @@
 }
 .richTextBodyWrapper {
   width: 100%;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  margin: 72px 0 0 0;
+  margin: 42px 0 0 0;
   padding-top: 100px;
 }
 
+.heroVideo {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  object-position: 60% 50%;
+}
+
 .tabMenu {
+  position: relative;
   list-style: none;
-  position: absolute;
   display: flex;
   justify-content: center;
   z-index: 2;
   top: auto;
   left: 50%;
-  right: 20px;
-  bottom: 20px;
+  bottom: 120px;
   background: rgba(0, 0, 0, 0.8);
   border-radius: 20px;
   padding: 10px;
   gap: 10px;
   right: auto;
   transform: translateX(-50%);
+  margin-bottom: -36px;
+  width: 60px;
 }
 
 .heroTab {
@@ -105,6 +154,9 @@
   padding: 0;
   border: 0;
   cursor: pointer;
+}
+
+.tabMenu li.heroInActive {
   background: #ffffff80;
 }
 
@@ -117,5 +169,29 @@
     height: 600px;
     object-fit: cover;
     object-position: 60% 50%;
+    padding: 60px 20px;
+  }
+  .bannergrid {
+    top: 62%;
+    margin-top: 150px;
+  }
+  .tabMenu {
+    top: auto;
+    left: 90%;
+    right: auto;
+    bottom: 42px;
+  }
+  .vh100 {
+    max-height: 600px;
+  }
+  .richTextContainer {
+    padding: 64px 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .bodyPush {
+    padding-left: 100px;
+    padding-right: 100px;
   }
 }
