@@ -13,7 +13,7 @@ export default function ConnectComponent(manifest: Manifest): void {
     fields: [
       { name: 'sectionHeading', type: CommonFieldTypes.SingleLineText },
       { name: 'heading', type: CommonFieldTypes.RichText },
-      { name: 'rightImage', type: CommonFieldTypes.SingleLineText },
+      { name: 'rightImage', type: CommonFieldTypes.Image },
       { name: 'body', type: CommonFieldTypes.RichText },
     ],
     /*

@@ -5,4 +5,4 @@ template: MahindraSuv-Technology-Item-Template
 fields:
   imgWithTitle: ULTIMATE CONNECTIVITY
   imgWithDec: Embedded 5G network capability and Over The Air updates deliver a go-anywhere experience.
-  imgWithDecImg: 5Gconnectivity.webp
+  imgWithDecImg: /data/media/img/Technology/Hmi/5Gconnectivity.webp

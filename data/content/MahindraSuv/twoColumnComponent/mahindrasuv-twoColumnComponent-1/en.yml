@@ -4,5 +4,5 @@ displayName: MahindraSuv TwoColumnWithImage - Item 1
 template: MahindraSuv-TwoColumnWithImageComponent-Item-Template
 fields:
   cardText: Honouring our legacy while embracing the future. For those who have the passion to live life beyond boundaries while making a difference. Authentic yet futuristic.
-  cardIcon: mahindra_logo.svg
-  cardImage: male.webp
+  cardIcon: /data/media/img/TwoColumn/mahindra_logo.svg
+  cardImage: /data/media/img/TwoColumn/male.webp

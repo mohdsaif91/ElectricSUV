@@ -1,4 +1,4 @@
-import { withDatasourceCheck, Field, Text } from '@sitecore-jss/sitecore-jss-nextjs';
+import { withDatasourceCheck, Field, Text, ImageField } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 import { Col, Container, Row } from 'react-bootstrap';
 
@@ -7,8 +7,8 @@ import TCWICCSS from './TwoColumnWithImageComponent.module.css';
 interface TwoColumnWithImageComponentList {
   fields: {
     cardText: Field<string>;
-    cardIcon: Field<string>;
-    cardImage: Field<string>;
+    cardIcon: ImageField;
+    cardImage: ImageField;
   };
 }
 

@@ -4,5 +4,5 @@ displayName: MahindraSuv TwoColumnWithImage - Item 2
 template: MahindraSuv-TwoColumnWithImageComponent-Item-Template
 fields:
   cardText: Opening spaces to a completely reimagined world. For those who want to define their life's journey and be who they want to be. Audacious and a trailblazer.
-  cardIcon: BE.svg
-  cardImage: female.webp
+  cardIcon: /data/media/img/TwoColumn/BE.svg
+  cardImage: /data/media/img/TwoColumn/female.webp

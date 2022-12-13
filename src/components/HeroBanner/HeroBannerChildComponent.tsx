@@ -1,4 +1,4 @@
-import { Field, RichText } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field, RichText, ImageField } from '@sitecore-jss/sitecore-jss-nextjs';
 import { useEffect, useState } from 'react';
 
 import HBCCSS from '../HeroBannerComponent.module.css';
@@ -9,8 +9,8 @@ interface value {
 
 type Props = {
   mediaType: Field<string>;
-  media: value;
-  mediaMobile: value;
+  media: ImageField;
+  mediaMobile: ImageField;
   mediaText: Field<string>;
 };
 

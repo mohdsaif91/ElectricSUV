@@ -16,7 +16,7 @@ export default function HeaderComponent(manifest: Manifest): void {
       { name: 'formHeader', type: CommonFieldTypes.RichText },
       { name: 'formBody', type: CommonFieldTypes.SingleLineText },
       { name: 'checkboxItems', type: CommonFieldTypes.ContentList },
-      { name: 'logo', type: CommonFieldTypes.SingleLineText }
+      { name: 'logo', type: CommonFieldTypes.Image },
     ],
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,

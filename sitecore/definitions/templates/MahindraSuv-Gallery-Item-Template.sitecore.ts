@@ -7,6 +7,6 @@ import { CommonFieldTypes, Manifest } from '@sitecore-jss/sitecore-jss-dev-tools
 export default function MahindraGalleryItemTemplate(manifest: Manifest): void {
   manifest.addTemplate({
     name: 'MahindraSuv-Gallery-Item-Template',
-    fields: [{ name: 'galleryImage', type: CommonFieldTypes.SingleLineText }],
+    fields: [{ name: 'galleryImage', type: CommonFieldTypes.Image }],
   });
 }

@@ -1,4 +1,4 @@
-import { Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field, ImageField, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 import { useEffect, useState } from 'react';
 
@@ -12,8 +12,8 @@ interface value {
 interface bannerItems {
   fields: {
     mediaType: Field<string>;
-    media: value;
-    mediaMobile: value;
+    media: ImageField;
+    mediaMobile: ImageField;
     mediaText: Field<string>;
   };
 }

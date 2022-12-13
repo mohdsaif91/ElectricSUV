@@ -1,15 +1,11 @@
-import { Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field, ImageField, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 import { Col, Row } from 'react-bootstrap';
 
 import MediaComponent from './MediaComponent';
 
-interface value {
-  value: Field<string>;
-}
-
 interface mediaList {
-  image: value;
+  image: ImageField;
   date: Field<string>;
   desc: Field<string>;
   url: Field<string>;

@@ -12,8 +12,8 @@ export default function GalleryComponent(manifest: Manifest): void {
     icon: SitecoreIcon.DocumentTag,
     fields: [
       { name: 'heading', type: CommonFieldTypes.SingleLineText },
-      { name: 'previousIcon', type: CommonFieldTypes.SingleLineText },
-      { name: 'nextIcon', type: CommonFieldTypes.SingleLineText },
+      { name: 'previousIcon', type: CommonFieldTypes.Image },
+      { name: 'nextIcon', type: CommonFieldTypes.Image },
       { name: 'carImageListSlide', type: CommonFieldTypes.ContentList },
     ],
     /*

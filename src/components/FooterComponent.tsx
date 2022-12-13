@@ -1,4 +1,4 @@
-import { Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field, ImageField, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 import { Col, Row } from 'react-bootstrap';
 import { BsYoutube } from 'react-icons/bs';
@@ -18,7 +18,7 @@ type FooterComponentProps = ComponentProps & {
   fields: {
     copyright: Field<string>;
     footList: footerItem[];
-    logo: Field<string>
+    logo: ImageField;
   };
 };
 

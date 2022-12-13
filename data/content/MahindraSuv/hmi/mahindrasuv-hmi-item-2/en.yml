@@ -5,4 +5,4 @@ template: MahindraSuv-Technology-Item-Template
 fields:
   imgWithTitle: 360° VISION
   imgWithDec: With 5 Radars-1 Vision technology, INGLO is futureproofed for L2+ autonomous driving and ADAS.
-  imgWithDecImg: 360vision.webp
+  imgWithDecImg: /data/media/img/Technology/Hmi/360vision.webp

@@ -1,4 +1,4 @@
-import { Text, Field, withDatasourceCheck, RichText } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Text, Field, withDatasourceCheck, RichText, ImageField } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 import { Col, Row } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
@@ -7,7 +7,7 @@ type ConnectComponentProps = ComponentProps & {
   fields: {
     sectionHeading: Field<string>;
     heading: Field<string>;
-    rightImage: Field<string>;
+    rightImage: ImageField;
     body: Field<string>;
   };
 };

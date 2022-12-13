@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Text, Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Text, Field, withDatasourceCheck, ImageField } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 import { Carousel, Col, Container, Row } from 'react-bootstrap';
 
@@ -7,15 +7,15 @@ import GCCSS from './GalleryComponent.module.css';
 
 interface galleryItemList {
   fields: {
-    galleryImage: Field<string>;
+    galleryImage: ImageField;
   };
 }
 
 type GalleryComponentProps = ComponentProps & {
   fields: {
     heading: Field<string>;
-    previousIcon: Field<string>;
-    nextIcon: Field<string>;
+    previousIcon: ImageField;
+    nextIcon: ImageField;
     carImageListSlide: galleryItemList[];
   };
 };

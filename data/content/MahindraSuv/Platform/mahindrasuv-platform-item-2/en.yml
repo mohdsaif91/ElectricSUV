@@ -5,4 +5,4 @@ template: MahindraSuv-Technology-Item-Template
 fields:
   imgWithTitle: ENDLESS MODULARITY
   imgWithDec: Variable lengths, widths, wheelbases and overhangs create an SUV that fits your lifestyle perfectly.
-  imgWithDecImg: endless.webp
+  imgWithDecImg: /data/media/img/Technology/Platform/endless.webp

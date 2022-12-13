@@ -1,4 +1,4 @@
-import { Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field, ImageField, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 import { Container, Nav, Navbar, Offcanvas } from 'react-bootstrap';
 
@@ -26,7 +26,7 @@ type HeaderComponentProps = ComponentProps & {
     formHeader: Field<string>;
     formBody: Field<string>;
     checkboxItems: updateMeFormItems[];
-    logo: Field<string>;
+    logo: ImageField;
   };
 };
 
