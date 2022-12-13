@@ -11,7 +11,7 @@ export default function MediaComponent(manifest: Manifest): void {
     name: 'MediaComponent',
     icon: SitecoreIcon.DocumentTag,
     fields: [
-      { name: 'image', type: CommonFieldTypes.SingleLineText },
+      { name: 'image', type: CommonFieldTypes.Image },
       { name: 'date', type: CommonFieldTypes.SingleLineText },
       { name: 'desc', type: CommonFieldTypes.SingleLineText },
       { name: 'url', type: CommonFieldTypes.SingleLineText },

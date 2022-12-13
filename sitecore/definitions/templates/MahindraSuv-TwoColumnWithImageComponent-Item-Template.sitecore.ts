@@ -9,8 +9,8 @@ export default function StyleguideContentListItemTemplate(manifest: Manifest): v
     name: 'MahindraSuv-TwoColumnWithImageComponent-Item-Template',
     fields: [
       { name: 'cardText', type: CommonFieldTypes.SingleLineText },
-      { name: 'cardIcon', type: CommonFieldTypes.SingleLineText },
-      { name: 'cardImage', type: CommonFieldTypes.SingleLineText },
+      { name: 'cardIcon', type: CommonFieldTypes.Image },
+      { name: 'cardImage', type: CommonFieldTypes.Image },
     ],
   });
 }

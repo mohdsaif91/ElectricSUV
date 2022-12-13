@@ -1,7 +1,7 @@
-import { Field } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field, ImageField } from '@sitecore-jss/sitecore-jss-nextjs';
 
 type MediaComponentProps = {
-  image: Field<string>;
+  image: ImageField;
   date: Field<string>;
   desc: Field<string>;
   url: Field<string>;

@@ -5,4 +5,4 @@ template: MahindraSuv-Technology-Item-Template
 fields:
   imgWithTitle: INCREDIBLE FAST CHARGING
   imgWithDec: Next-generation battery science charging up to 80% in less than 30 minutes.
-  imgWithDecImg: charging.webp
+  imgWithDecImg: /data/media/img/Technology/Platform/charging.webp

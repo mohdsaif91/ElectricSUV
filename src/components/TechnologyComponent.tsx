@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Text, Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Text, Field, withDatasourceCheck, ImageField } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 import { Col, Container, Row } from 'react-bootstrap';
 
@@ -16,11 +16,11 @@ interface listItem {
 type TechnologyComponentProps = ComponentProps & {
   fields: {
     heading: Field<string>;
-    graphicImage: Field<string>;
+    graphicImage: ImageField;
     subheading: Field<string>;
     body: Field<string>;
-    bodyimg: Field<string>;
-    closeIcon: Field<string>;
+    bodyimg: ImageField;
+    closeIcon: ImageField;
     platFormTitle: Field<string>;
     platformMainTitle: Field<string>;
     platformText1: Field<string>;

@@ -11,7 +11,7 @@ export default function BannerComponent(manifest: Manifest): void {
     name: 'BannerComponent',
     icon: SitecoreIcon.DocumentTag,
     fields: [
-      { name: 'bannerImage', type: CommonFieldTypes.SingleLineText },
+      { name: 'bannerImage', type: CommonFieldTypes.Image },
       { name: 'title', type: CommonFieldTypes.SingleLineText },
     ],
     /*

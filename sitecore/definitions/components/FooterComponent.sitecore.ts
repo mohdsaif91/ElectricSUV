@@ -13,7 +13,7 @@ export default function FooterComponent(manifest: Manifest): void {
     fields: [
       { name: 'copyright', type: CommonFieldTypes.SingleLineText },
       { name: 'footList', type: CommonFieldTypes.ContentList },
-      { name: 'logo', type: CommonFieldTypes.SingleLineText }
+      { name: 'logo', type: CommonFieldTypes.Image },
 
   ],
     /*
