@@ -3,8 +3,11 @@ import { useEffect, useState } from 'react';
 
 import HBCCSS from '../HeroBannerComponent.module.css';
 
-interface value {
-  value: Field<string>;
+interface buttonItem {
+  fields: {
+    label: Field<string>;
+    url: Field<string>;
+  };
 }
 
 type Props = {
@@ -12,6 +15,7 @@ type Props = {
   media: ImageField;
   mediaMobile: ImageField;
   mediaText: Field<string>;
+  buttonItems: buttonItem[];
 };
 
 const HeroBannerChildComponent = (props: Props) => {
@@ -32,33 +36,58 @@ const HeroBannerChildComponent = (props: Props) => {
             backgroundImage: `url(${mobile ? props.mediaMobile.value : props.media.value})`,
           }}
         >
-          <div className={`${HBCCSS.bannergrid} btn-group`} role="group" aria-label="Basic example">
-            {/* {props.fields.buttonList.map((item, index) => {
-              return (
-                <button className="mx-3" key={index}>
-                  {item.fields.label.value}
-                </button>
-              );
-            })} */}
+          <div className={`${HBCCSS.richTextBodyWrapper}`}>
+            <div className={`${HBCCSS.richTextContainer}`}>
+              <RichText field={props.mediaText} />
+              <div
+                className={`${HBCCSS.bannergrid} btn-group`}
+                role="group"
+                aria-label="Basic example"
+              >
+                {props.buttonItems.map((item, index) => {
+                  return (
+                    <button className="mx-3" key={index}>
+                      {item.fields.label.value}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
       ) : (
-        <div className={`${HBCCSS.videoContainer}`}>
+        <div className={`${HBCCSS.videoContainer} ${HBCCSS.vh100}`}>
           <video
             preload="auto"
             loop={true}
             autoPlay={true}
-            width="100%"
             muted={true}
-            className="html-video"
+            className={`${HBCCSS.heroVideo}`}
           >
             <source src={`${props.media.value}`} type="video/webm" />
-            <div>JACK</div>
+            {/* <div className={`${HBCCSS.bodyPush} ${HBCCSS.heroFlexContainer}`}>
+              <div className={`${HBCCSS.brandWrapper}`}>
+                <RichText field={props.mediaText} />
+              </div>
+            </div> */}
           </video>
           <div className={`${HBCCSS.videoContainerItems}`}>
             <div className={`${HBCCSS.richTextContainer}`}>
               <div className={`${HBCCSS.richTextBodyWrapper}`}>
                 <RichText field={props.mediaText} />
+                <div
+                  className={`${HBCCSS.bannergrid} btn-group`}
+                  role="group"
+                  aria-label="Basic example"
+                >
+                  {props.buttonItems.map((item, index) => {
+                    return (
+                      <button className="mx-3 hero-btn" key={index}>
+                        {item.fields.label.value}
+                      </button>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>

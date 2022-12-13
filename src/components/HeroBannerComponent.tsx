@@ -5,8 +5,11 @@ import { useEffect, useState } from 'react';
 import HeroBannerChildComponent from './HeroBanner/HeroBannerChildComponent';
 import HBCCSS from './HeroBannerComponent.module.css';
 
-interface value {
-  value: Field<string>;
+interface buttonItems {
+  fields: {
+    label: Field<string>;
+    url: Field<string>;
+  };
 }
 
 interface bannerItems {
@@ -15,6 +18,7 @@ interface bannerItems {
     media: ImageField;
     mediaMobile: ImageField;
     mediaText: Field<string>;
+    buttonList: buttonItems[];
   };
 }
 
@@ -27,7 +31,7 @@ type HeroBannerComponentProps = ComponentProps & {
 };
 
 const HeroBannerComponent = (props: HeroBannerComponentProps): JSX.Element => {
-  const [counter, setCounter] = useState(2);
+  const [counter, setCounter] = useState(1);
 
   useEffect(() => {
     if (counter === props.fields.bannerList.length + 1) {
@@ -44,8 +48,6 @@ const HeroBannerComponent = (props: HeroBannerComponentProps): JSX.Element => {
     };
   }, []);
 
-  console.log(counter);
-
   return (
     <section>
       {props.fields.bannerList.map((m: bannerItems, index: number) => {
@@ -60,23 +62,26 @@ const HeroBannerComponent = (props: HeroBannerComponentProps): JSX.Element => {
               media={m.fields.media}
               mediaMobile={m.fields.mediaMobile}
               mediaText={m.fields.mediaText}
+              buttonItems={m.fields.buttonList}
             />
           </div>
         );
       })}
-      <div>
+      <>
         <ul className={`${HBCCSS.tabMenu}`}>
           {props.fields.bannerList.map((m: bannerItems, index: number) => (
             <li
               key={index}
               onClick={() => setCounter(index + 1)}
-              className={`${index + 1 === counter ? HBCCSS.heroActiveTab : HBCCSS.heroTab}`}
+              className={`${HBCCSS.heroTab} ${
+                index + 1 === counter ? HBCCSS.heroActiveTab : HBCCSS.heroInActive
+              }`}
             >
               {m.fields.mediaType.value}
             </li>
           ))}
         </ul>
-      </div>
+      </>
     </section>
   );
 };

@@ -4,7 +4,7 @@ displayName: herobanner-item2
 template: MahindraSuv-Herobanner-Item-template
 fields:
   mediaType: video
-  media: /data/media/video/HeroBanner/heroBanner01.webm
+  media: /data/media/img/HeroBanner/heroBanner01.webm
   mediaMobile: null
   mediaText: <h1 class="heroBannerTitle">
     <span class="typeReveal" data-orig-text="5  E-SUVs" data-delay="250">
@@ -16,3 +16,6 @@ fields:
     <span class="typeReveal" data-orig-text="1 Futuristic Vision" data-delay="750"><span class="live">1 Futuristic Vision</span><span className="ghost">1 Futuristic Vision</span></span>
     </h1>
   url: '#'
+  buttonList:
+    - id: hero-2-button-item1
+    # - id: hero-2-button-item2
