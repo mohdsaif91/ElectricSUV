@@ -51,7 +51,7 @@ const ConnectComponent = (props: ConnectComponentProps): JSX.Element => {
       <div className="connect-container">
         <Row className="connect-row">
           <Col lg="5" sm="12" md="12" className="text-column">
-            <span className="card-with-image-heading is-view">
+            <span className="connect-heading is-view" >
               <Text field={props.fields.sectionHeading} />
             </span>
 
@@ -69,7 +69,7 @@ const ConnectComponent = (props: ConnectComponentProps): JSX.Element => {
               <img
                 style={{ transform: `translate3d(0px, ${scrollY}%, 0px)` }}
                 className="right-image"
-                src={props.fields.rightImage.value}
+                src={props.fields.rightImage.value?.toString()}
                 alt="Mahindra"
               />
             </figure>

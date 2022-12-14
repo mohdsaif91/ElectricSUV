@@ -22,44 +22,46 @@ type TwoColumnWIthImageProps = ComponentProps & {
 
 const TwoColumnWithImage = (props: TwoColumnWIthImageProps): JSX.Element => {
   return (
-    <Container className={`${TCWICCSS.cardWithImageContainer}`}>
-      <Row className={`${TCWICCSS.twoColumnWithImageHeading}`}>
-        <Col>
-          <span className={`${TCWICCSS.cardWithImageHeading} is-view`}>
-            <Text field={props.fields.heading}></Text>
-          </span>
-        </Col>
-      </Row>
-      <Row className="contentContainer">
-        {props.fields.TwoColumnWithImageComponentItems.map(
-          (m: TwoColumnWithImageComponentList, index) => (
-            <Col lg="6" className={`${TCWICCSS.cardWithImage}`} key={index}>
-              <div className={`${TCWICCSS.humanImage}`}>
-                <figure className={`${TCWICCSS.humanImageFigure}`}>
-                  <img
-                    className={`${TCWICCSS.cardImage}`}
-                    src={m.fields.cardImage.value}
-                    alt="Mahindra"
-                  />
-                </figure>
-              </div>
-              <div className={`${TCWICCSS.cardBody}`}>
-                <div className={`${TCWICCSS.cardIconContainer}`}>
-                  <img
-                    className={`${TCWICCSS.cardIcon}`}
-                    src={m.fields.cardIcon.value}
-                    alt="Mahindra"
-                  />
+    <div className={`${TCWICCSS.mainContainer} container-fluid`}>
+      <Container className={`${TCWICCSS.cardWithImageContainer}`}>
+        <Row className={`${TCWICCSS.twoColumnWithImageHeading}`}>
+          <Col>
+            <span className={`${TCWICCSS.cardWithImageHeading} is-view`}>
+              <Text field={props.fields.heading}></Text>
+            </span>
+          </Col>
+        </Row>
+        <Row className="contentContainer">
+          {props.fields.TwoColumnWithImageComponentItems.map(
+            (m: TwoColumnWithImageComponentList, index) => (
+              <Col lg="6" className={`${TCWICCSS.cardWithImage}`} key={index}>
+                <div className={`${TCWICCSS.humanImage}`}>
+                  <figure className={`${TCWICCSS.humanImageFigure}`}>
+                    <img
+                      className={`${TCWICCSS.cardImage}`}
+                      src={m.fields.cardImage.value?.toString()}
+                      alt="Mahindra"
+                    />
+                  </figure>
                 </div>
-                <span className={`${TCWICCSS.cardTtext}`}>
-                  <Text field={m.fields.cardText} />
-                </span>
-              </div>
-            </Col>
-          )
-        )}
-      </Row>
-    </Container>
+                <div className={`${TCWICCSS.cardBody}`}>
+                  <div className={`${TCWICCSS.cardIconContainer}`}>
+                    <img
+                      className={`${TCWICCSS.cardIcon}`}
+                      src={m.fields.cardIcon.value?.toString()}
+                      alt="Mahindra"
+                    />
+                  </div>
+                  <span className={`${TCWICCSS.cardTtext}`}>
+                    <Text field={m.fields.cardText} />
+                  </span>
+                </div>
+              </Col>
+            )
+          )}
+        </Row>
+      </Container>
+    </div>
   );
 };
 

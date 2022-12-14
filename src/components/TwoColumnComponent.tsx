@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { Field, RichText, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 import TCCCSS from './TwoColumnComponent.module.css';
-import 'aos/dist/aos.css';
 
 type TwoColumnComponentProps = ComponentProps & {
   fields: {

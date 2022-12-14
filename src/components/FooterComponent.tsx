@@ -23,6 +23,9 @@ type FooterComponentProps = ComponentProps & {
 };
 
 const FooterComponent = (props: FooterComponentProps): JSX.Element => {
+  console.log(typeof JSON.stringify(props.fields.logo.value), ' logo image field');
+  console.log(typeof props.fields.logo.value, ' logo image field');
+
   return (
     <div
       className="container-fluid footer-container no-padding "
@@ -31,7 +34,7 @@ const FooterComponent = (props: FooterComponentProps): JSX.Element => {
       <div className="footertext container " id="footer">
         <Row className=" p-2 pt-3 pb-3">
           <Col lg={2} md={3} sm={12} className="col-md-2 d-flex p-0 align-items-center ">
-            <img src={props.fields.logo.value} width="130" height="20" alt="Mahindra"/>
+            <img src={props.fields.logo.value?.toString()} width="130" height="20" alt="Mahindra"/>
           </Col>
           <Col lg={7} md={5} sm={12} className={`${FCCSS.footerLinks} col-md-2 p-0 d-flex `}>
             <div className=''>
