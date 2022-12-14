@@ -1,4 +1,4 @@
-.platform-container {
+.platformContainer {
   position: fixed;
   overflow: auto;
   top: 0;
@@ -45,7 +45,6 @@
 .platform-text-1 {
   font-size: calc(20px + 10 * ((100vw - 320px) / 1120));
   max-width: 760px;
-  margin-bottom: 150px !important;
   line-height: 1.3;
   font-weight: 300;
   margin: 0 0 1em -0.07em;
@@ -69,4 +68,33 @@
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.isView:after {
+  width: 80px !important;
+  border-width: 1px;
+  box-shadow: 0 0 14px 4px #64dcff;
+}
+
+.technologyDescritpion {
+  font-weight: 300;
+  margin: 0 0 1em -0.07em;
+  font-family: Oxanium, sans-serif;
+  line-height: 1.3;
+}
+
+@media only screen and (max-width: 450px) and (min-width: 340px) {
+  .platformContainer {
+    padding: 20px;
+    width: 100%;
+    z-index: 1189;
+  }
+  .heading {
+    font-size: 18px;
+  }
+  .technologyDescritpion {
+    max-width: 760px;
+    margin-bottom: 150px;
+    font-size: 20px;
+  }
 }

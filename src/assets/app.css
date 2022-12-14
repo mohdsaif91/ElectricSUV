@@ -6,13 +6,10 @@
 @import url('../components/FooterComponent.module.css');
 @import url('../components/GalleryComponent.module.css');
 @import url('../components/HeaderComponent.module.css');
-/* @import url('../components/HeroBannerComponent.module.css'); */
 @import url('../components/MediaComponent.module.css');
 @import url('../components/MediaRoomComponent.module.css');
 @import url('../components/TechnologyComponent.module.css');
-/* @import url('../components/TwoColumnComponent.module.css'); */
 @import url('../components/YouTubeComponent.module.css');
-/* @import url('../components/TwoColumnWithImageComponent.module.css'); */
 @import url('../components/TechnologyComponents/TechnologyGenericComponent.module.css');
 
 /*
@@ -90,6 +87,19 @@ body {
   width: 80px !important;
   border-width: 1px;
   box-shadow: 0 0 14px 4px #64dcff;
+  content: '';
+  margin-top: 8px;
+  display: block;
+  width: 0;
+  height: 3px;
+  border-radius: 3px;
+  background: #fff;
+  border: 0 solid rgba(100, 220, 255, 0.5);
+  margin-bottom: 50px;
+  -webkit-transition: all 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
 }
 
 .cardWithImageHeading {
@@ -134,11 +144,11 @@ body {
 
 .heroBannerTitle {
   font-weight: 300;
-  margin: 0 0 1em -0.07em;
   font-family: Oxanium, sans-serif;
   line-height: 1;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  margin-bottom: 29px;
 }
 
 .typeReveal {

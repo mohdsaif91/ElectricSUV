@@ -1,7 +1,7 @@
 .banner {
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 64px 100px;
+  padding: 0 100px 64px 100px;
   margin-top: 0rem;
   -webkit-box-flex: 1;
   -ms-flex: 1 0 100%;
@@ -14,16 +14,31 @@
   max-width: 100%;
 }
 
-.bannergrid {
+.backgroundImage {
+  display: flex;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  height: 100%;
+}
+
+.backgroundVideoPosition {
   position: absolute;
-  bottom: 10%;
-  left: 10%;
-  margin-top: 180px;
+}
+
+.bannergrid {
   background-color: aliceblue;
   border-color: aqua;
   background: none;
   display: flex;
   gap: 30px;
+}
+.bannerImageGrid {
+  margin-top: 180px;
+}
+.bannerVideoGrid {
+  margin-top: 42px;
 }
 .bannergrid button {
   height: 3rem;
@@ -45,37 +60,12 @@
 }
 
 .vh100 {
-  height: 100vh;
+  max-height: 680px;
 }
 
-/* /// */
-.bodyPush {
-  padding: 60px 0;
-}
-.heroFlexContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex: 1 0 auto;
-  z-index: 2;
-}
-.brandWrapper {
-  width: 100%;
-  -webkit-box-flex: 0;
-  flex: 0 0 auto;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  justify-content: center;
-  margin: auto 0 0;
-  padding-top: 100px;
-}
-/* /// */
-
-.videoContainer {
+.heroContainer {
   z-index: 1;
+  height: 100%;
 }
 
 .videoContainerItems {
@@ -83,17 +73,27 @@
   top: 0;
 }
 .richTextContainer {
-  padding: 64px 100px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   font-size: 56px !important;
+  z-index: 9;
 }
 .richTextBodyWrapper {
+  position: relative;
   width: 100%;
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 42px 0 0 0;
+
   padding-top: 100px;
+}
+.richTextBodyWrapperImage {
+  margin: 180px 0 0 0;
+}
+.richTextBodyWrapperVideo {
+  margin: 42px 0 0 0;
 }
 
 .heroVideo {
@@ -107,15 +107,17 @@
   object-position: 60% 50%;
 }
 
+/* courosul */
+
 .tabMenu {
   position: relative;
   list-style: none;
   display: flex;
   justify-content: center;
-  z-index: 2;
+  z-index: 99;
   top: auto;
   left: 50%;
-  bottom: 120px;
+  bottom: 56px;
   background: rgba(0, 0, 0, 0.8);
   border-radius: 20px;
   padding: 10px;
@@ -154,6 +156,7 @@
   padding: 0;
   border: 0;
   cursor: pointer;
+  background: #ffffff80;
 }
 
 .tabMenu li.heroInActive {
@@ -165,6 +168,12 @@
 }
 
 @media only screen and (max-width: 450px) and (min-width: 340px) {
+  .backgroundImage {
+    top: auto;
+  }
+  .bannerVideoGrid {
+    margin-top: 106px;
+  }
   .banner {
     height: 600px;
     object-fit: cover;
@@ -173,19 +182,25 @@
   }
   .bannergrid {
     top: 62%;
-    margin-top: 150px;
   }
   .tabMenu {
     top: auto;
-    left: 90%;
+    left: 89%;
     right: auto;
-    bottom: 42px;
+    bottom: 59px;
   }
   .vh100 {
     max-height: 600px;
   }
+  .backgroundVideoPosition {
+    max-height: 600px;
+    height: 100%;
+  }
   .richTextContainer {
-    padding: 64px 20px;
+    /* padding: 64px 20px; */
+  }
+  .richTextBodyWrapperImage {
+    margin: 151px 0 0 0;
   }
 }
 
@@ -193,5 +208,11 @@
   .bodyPush {
     padding-left: 100px;
     padding-right: 100px;
+  }
+  .vh100 {
+    max-height: 656px;
+  }
+  .tabMenu {
+    bottom: 56px;
   }
 }

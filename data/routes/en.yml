@@ -105,6 +105,11 @@ placeholders:
         closeIcon: /data/media/img/Technology/closeIcon.png
         platFormTitle: PLATFORM
         platformMainTitle: VERSATILE POWERFUL DYNAMIC
+        platformDescription: <p class="description h3">
+          Our revolutionary platform is the basis of everything that follows.
+          Purpose-built and ground up, the INGLO platform outperforms on every level - speed, efficiency,
+          safety, and adaptability.
+          </p>
         platformList:
           - id: mahindrasuv-platform-item-1
           - id: mahindrasuv-platform-item-2
@@ -113,6 +118,10 @@ placeholders:
         hmiTitle: HMI
         hmiMainTitle: INTELLIGENT INTUITIVE IMMERSIVE
         hmiText1: INGLO enables the ultimate human machine interface. Vast built-in brainpower sparks limitless multi-sensory connections between you and your vehicle.
+        hmiDescription: <p class="description h3">
+          INGLO enables the ultimate human machine interface. Vast built-in
+          brainpower sparks limitless multi-sensory connections between you and your vehicle.
+          </p>
         hmiList:
           - id: mahindrasuv-hmi-item-1
           - id: mahindrasuv-hmi-item-2

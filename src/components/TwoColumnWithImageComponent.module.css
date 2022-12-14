@@ -11,7 +11,10 @@
   text-align: left;
 }
 
-.cardWithImageHeading:after {
+/* .cardWithImageHeading:after {
+  width: 80px !important;
+  border-width: 1px;
+  box-shadow: 0 0 14px 4px #64dcff;
   content: '';
   margin-top: 8px;
   display: block;
@@ -25,7 +28,7 @@
   transition: all 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   -webkit-transition-delay: 0.5s;
   transition-delay: 0.5s;
-}
+} */
 
 .cardIcon {
   width: 118px;

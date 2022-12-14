@@ -1,4 +1,10 @@
-import { Text, Field, withDatasourceCheck, RichText, ImageField } from '@sitecore-jss/sitecore-jss-nextjs';
+import {
+  Text,
+  Field,
+  withDatasourceCheck,
+  RichText,
+  ImageField,
+} from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 import { Col, Row } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
@@ -22,13 +28,13 @@ const ConnectComponent = (props: ConnectComponentProps): JSX.Element => {
     if (window.scrollY > oldScrollY) {
       if (16 > refNumber) {
         refNumber++;
+        setScrollY(refNumber);
       }
-      setScrollY(refNumber);
     } else {
       if (refNumber > -18) {
         refNumber--;
+        setScrollY(refNumber);
       }
-      setScrollY(refNumber);
     }
     oldScrollY = window.scrollY;
   };

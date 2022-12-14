@@ -3,6 +3,7 @@ import { ComponentProps } from 'lib/component-props';
 import { useEffect, useState } from 'react';
 
 import HeroBannerChildComponent from './HeroBanner/HeroBannerChildComponent';
+
 import HBCCSS from './HeroBannerComponent.module.css';
 
 interface buttonItems {
