@@ -15,4 +15,4 @@ fields:
   buttonList:
     - id: hero-1-button-item1
     - id: hero-1-button-item2
-    # - id: hero-1-button-item3
+    - id: hero-1-button-item3

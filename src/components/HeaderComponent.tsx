@@ -78,7 +78,7 @@ const HeaderComponent = (props: HeaderComponentProps): JSX.Element => {
           </Navbar.Toggle>
           <Navbar.Brand href="#">
             <img
-              src={props.fields.logo.value}
+              src={props.fields.logo.value?.toString()}
               width="130"
               height="20"
               alt="Mahindra"

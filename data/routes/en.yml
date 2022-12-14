@@ -43,7 +43,6 @@ placeholders:
         bannerList:
           - id: herobanner-item1
           - id: herobanner-item2
-
     - componentName: TwoColumnComponent
       fields:
         id: brands
