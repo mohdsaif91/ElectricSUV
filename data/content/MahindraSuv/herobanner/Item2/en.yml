@@ -13,7 +13,8 @@ fields:
     <span class="typeReveal" data-orig-text="2 Revolutionary Brands" data-delay="500">
     <span class="live">2 Revolutionary Brands</span>
     </span>
-    <span class="typeReveal" data-orig-text="1 Futuristic Vision" data-delay="750"><span class="live">1 Futuristic Vision</span><span className="ghost">1 Futuristic Vision</span></span>
+    <span class="typeReveal" data-orig-text="1 Futuristic Vision" data-delay="750"><span class="live">1 Futuristic Vision</span>
+    </span>
     </h1>
   url: '#'
   buttonList:

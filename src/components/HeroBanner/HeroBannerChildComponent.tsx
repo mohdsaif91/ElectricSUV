@@ -30,59 +30,60 @@ const HeroBannerChildComponent = (props: Props) => {
   return (
     <>
       {props.mediaType.value === 'image' ? (
-        <div
-          className={`${HBCCSS.vh100} ${HBCCSS.banner} vw-100 `}
-          style={{
-            backgroundImage: `url(${mobile ? props.mediaMobile.value : props.media.value})`,
-          }}
-        >
-          <div className={`${HBCCSS.richTextBodyWrapper}`}>
-            <div className={`${HBCCSS.richTextContainer}`}>
-              <RichText field={props.mediaText} />
-              <div
-                className={`${HBCCSS.bannergrid} btn-group`}
-                role="group"
-                aria-label="Basic example"
-              >
-                {props.buttonItems.map((item, index) => {
-                  return (
-                    <button className="mx-3" key={index}>
-                      {item.fields.label.value}
-                    </button>
-                  );
-                })}
+        <div className={`${HBCCSS.heroContainer} ${HBCCSS.vh100}`}>
+          <div className={`${HBCCSS.backgroundImage}`}>
+            <div
+              className={` ${HBCCSS.banner} vw-100 `}
+              style={{
+                backgroundImage: `url(${mobile ? props.mediaMobile.value : props.media.value})`,
+              }}
+            >
+              <div className={`${HBCCSS.richTextBodyWrapper} ${HBCCSS.richTextBodyWrapperImage}`}>
+                <div className={`${HBCCSS.richTextContainer}`}>
+                  <RichText field={props.mediaText} />
+                  <div
+                    className={`${HBCCSS.bannergrid} ${HBCCSS.bannerImageGrid} btn-group`}
+                    role="group"
+                    aria-label="Basic example"
+                  >
+                    {props.buttonItems.map((item, index) => {
+                      return (
+                        <button className="" key={index}>
+                          {item.fields.label.value}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       ) : (
-        <div className={`${HBCCSS.videoContainer} ${HBCCSS.vh100}`}>
-          <video
-            preload="auto"
-            loop={true}
-            autoPlay={true}
-            muted={true}
-            className={`${HBCCSS.heroVideo}`}
-          >
-            <source src={`${props.media.value}`} type="video/webm" />
-            {/* <div className={`${HBCCSS.bodyPush} ${HBCCSS.heroFlexContainer}`}>
-              <div className={`${HBCCSS.brandWrapper}`}>
-                <RichText field={props.mediaText} />
-              </div>
-            </div> */}
-          </video>
-          <div className={`${HBCCSS.videoContainerItems}`}>
-            <div className={`${HBCCSS.richTextContainer}`}>
-              <div className={`${HBCCSS.richTextBodyWrapper}`}>
+        <div className={`${HBCCSS.heroContainer} ${HBCCSS.vh100}`}>
+          <div className={`${HBCCSS.backgroundImage} ${HBCCSS.backgroundVideoPosition}`}>
+            <video
+              preload="auto"
+              loop={true}
+              autoPlay={true}
+              muted={true}
+              className={`${HBCCSS.heroVideo}`}
+            >
+              <source src={`${props.media.value}`} type="video/webm" />
+            </video>
+          </div>
+          <div className={`${HBCCSS.banner}`}>
+            <div className={`${HBCCSS.richTextBodyWrapper} ${HBCCSS.richTextBodyWrapperVideo}`}>
+              <div className={`${HBCCSS.richTextContainer}`}>
                 <RichText field={props.mediaText} />
                 <div
-                  className={`${HBCCSS.bannergrid} btn-group`}
+                  className={`${HBCCSS.bannergrid} ${HBCCSS.bannerVideoGrid} btn-group`}
                   role="group"
                   aria-label="Basic example"
                 >
                   {props.buttonItems.map((item, index) => {
                     return (
-                      <button className="mx-3 hero-btn" key={index}>
+                      <button className="hero-btn" key={index}>
                         {item.fields.label.value}
                       </button>
                     );
@@ -93,7 +94,6 @@ const HeroBannerChildComponent = (props: Props) => {
           </div>
         </div>
       )}
-      {/* </div> */}
     </>
   );
 };

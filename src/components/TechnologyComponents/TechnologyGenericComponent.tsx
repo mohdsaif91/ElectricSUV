@@ -1,5 +1,7 @@
-import { Text, Field } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Text, Field, RichText } from '@sitecore-jss/sitecore-jss-nextjs';
 import { Col, Row } from 'react-bootstrap';
+
+import TGCCSS from './TechnologyGenericComponent.module.css';
 
 interface platformImageItem {
   fields: {
@@ -16,12 +18,17 @@ type platformProps = {
   title: Field<string>;
   platformMainTitle: Field<string>;
   platformText1: Field<string>;
+  descritpion: Field<string>;
   listItem: platformImageItem[];
 };
 
 const TechnologyGenericComponent = (props: platformProps): JSX.Element => {
   return (
-    <div className={`platform-container technology-transition ${props.flag ? '' : 'is-hidden'}`}>
+    <div
+      className={`${TGCCSS.platformContainer} technology-transition ${
+        props.flag ? '' : 'is-hidden'
+      }`}
+    >
       <img
         className="close-icon"
         src={props.closeIcon}
@@ -29,15 +36,24 @@ const TechnologyGenericComponent = (props: platformProps): JSX.Element => {
         alt="close"
       />
       <Row>
-        <Col>
-          <span className="card-with-image-heading is-view">
-            <Text field={props.title}></Text>
-          </span>
+        <Col lg={12} md={12} sm={12}>
+          <div className="card-with-image-heading heading is-view">
+            <span className={`${TGCCSS.isView}`}>
+              <Text field={props.title}></Text>
+            </span>
+          </div>
+        </Col>
+        <Col lg={12} md={12} sm={12}>
+          <h3 className="platform-main-title">
+            <Text field={props.platformMainTitle}></Text>
+          </h3>
+        </Col>
+        <Col lg={12} md={12} sm={12}>
+          <div className={`${TGCCSS.technologyDescritpion}`}>
+            <RichText field={props.descritpion} />
+          </div>
         </Col>
       </Row>
-      <h3 className="platform-main-title">
-        <Text field={props.platformMainTitle}></Text>
-      </h3>
       <div className="platform-text-1">
         <Text field={props.platformText1}></Text>
       </div>

@@ -24,16 +24,20 @@ type TechnologyComponentProps = ComponentProps & {
     platFormTitle: Field<string>;
     platformMainTitle: Field<string>;
     platformText1: Field<string>;
+    platformDescription: Field<string>;
     platformList: listItem[];
     hmiTitle: Field<string>;
     hmiMainTitle: Field<string>;
     hmiText1: Field<string>;
+    hmiDescription: Field<string>;
     hmiList: listItem[];
   };
 };
 
 const TechnologyComponent = (props: TechnologyComponentProps): JSX.Element => {
   const [techDrawer, setTechDrawer] = useState({ platform: false, hmi: false });
+
+  console.log(props.fields);
 
   return (
     <Container fluid className="technology-container">
@@ -45,6 +49,7 @@ const TechnologyComponent = (props: TechnologyComponentProps): JSX.Element => {
           title={props.fields.platFormTitle}
           platformMainTitle={props.fields.platformMainTitle}
           platformText1={props.fields.platformText1}
+          descritpion={props.fields.platformDescription}
           listItem={props.fields.platformList}
         />
       )}
@@ -56,6 +61,7 @@ const TechnologyComponent = (props: TechnologyComponentProps): JSX.Element => {
           title={props.fields.hmiTitle}
           platformMainTitle={props.fields.hmiMainTitle}
           platformText1={props.fields.hmiText1}
+          descritpion={props.fields.hmiDescription}
           listItem={props.fields.hmiList}
         />
       )}

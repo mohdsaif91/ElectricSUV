@@ -19,11 +19,13 @@ export default function TechnologyComponent(manifest: Manifest): void {
       { name: 'closeIcon', type: CommonFieldTypes.Image },
       { name: 'platFormTitle', type: CommonFieldTypes.SingleLineText },
       { name: 'platformMainTitle', type: CommonFieldTypes.SingleLineText },
+      { name: 'platformDescription', type: CommonFieldTypes.RichText },
       { name: 'platformList', type: CommonFieldTypes.ContentList },
       { name: 'platformText1', type: CommonFieldTypes.MultiLineText },
       { name: 'hmiTitle', type: CommonFieldTypes.SingleLineText },
       { name: 'hmiMainTitle', type: CommonFieldTypes.SingleLineText },
       { name: 'hmiText1', type: CommonFieldTypes.MultiLineText },
+      { name: 'hmiDescription', type: CommonFieldTypes.RichText },
       { name: 'hmiList', type: CommonFieldTypes.ContentList },
     ],
     /*
