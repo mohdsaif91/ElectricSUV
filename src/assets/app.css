@@ -161,3 +161,22 @@ body {
     font-size: calc(30px + 40 * ((100vw - 320px) / 1120));
   }
 }
+
+.typingDemo {
+  animation: typing 2s steps(22) step-end infinite alternate;
+
+  overflow: hidden;
+  width: 22ch;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+/* @keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+} */

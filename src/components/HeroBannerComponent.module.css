@@ -86,14 +86,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   padding-top: 100px;
 }
 .richTextBodyWrapperImage {
   margin: 180px 0 0 0;
 }
 .richTextBodyWrapperVideo {
-  margin: 42px 0 0 0;
+  padding: 142px 0 0 0;
 }
 
 .heroVideo {
@@ -210,7 +209,7 @@
     padding-right: 100px;
   }
   .vh100 {
-    max-height: 656px;
+    height: 600px;
   }
   .tabMenu {
     bottom: 56px;
