@@ -16,16 +16,26 @@ type Props = {
   mediaMobile: ImageField;
   mediaText: Field<string>;
   buttonItems: buttonItem[];
+  render: boolean;
+  changeRender: any;
 };
 
 const HeroBannerChildComponent = (props: Props) => {
   const [mobile, setMobile] = useState(false);
+  const [renderTyping, setRenderTyping] = useState(true);
 
   useEffect(() => {
+    if (props.render) {
+      console.log('calledOnce PARENT', typeof props.render);
+      props.changeRender(false);
+      setRenderTyping(false);
+    }
     if (typeof window !== 'undefined') {
       setMobile(window.innerWidth < window.innerHeight);
     }
   }, []);
+
+  console.log(props.render, ' PARENT CHILD');
 
   return (
     <>
@@ -60,7 +70,7 @@ const HeroBannerChildComponent = (props: Props) => {
           </div>
         </div>
       ) : (
-        <div className={`${HBCCSS.heroContainer} ${HBCCSS.vh100}`}>
+        <div className={`${HBCCSS.heroContainer} ${HBCCSS.vh100}`} id="heroChildComponent">
           <div className={`${HBCCSS.backgroundImage} ${HBCCSS.backgroundVideoPosition}`}>
             <video
               preload="auto"
@@ -74,7 +84,7 @@ const HeroBannerChildComponent = (props: Props) => {
           </div>
           <div className={`${HBCCSS.banner}`}>
             <div className={`${HBCCSS.richTextBodyWrapper} ${HBCCSS.richTextBodyWrapperVideo}`}>
-              <div className={`${HBCCSS.richTextContainer}`}>
+              <div className={`${HBCCSS.richTextContainer} ${renderTyping ? 'typingDemo' : ''}`}>
                 <RichText field={props.mediaText} />
                 <div
                   className={`${HBCCSS.bannergrid} ${HBCCSS.bannerVideoGrid} btn-group`}
