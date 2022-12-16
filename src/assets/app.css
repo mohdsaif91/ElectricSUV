@@ -163,12 +163,12 @@ body {
     font-size: calc(30px + 40 * ((100vw - 320px) / 1120));
   }
   .typeReveal {
-    width: 386px;
+    width: 396px;
   }
 }
 
 .typingDemo {
-  animation: typewriter 8s steps(44) 1s 1 normal both;
+  animation: typewriter 2s steps(44) 1s 1 normal both;
   overflow: hidden;
   width: 22ch;
 }
