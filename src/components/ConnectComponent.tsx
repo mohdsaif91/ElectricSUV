@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import {
   Text,
   Field,
@@ -7,7 +8,6 @@ import {
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 import { Col, Row } from 'react-bootstrap';
-import { useEffect, useState } from 'react';
 
 type ConnectComponentProps = ComponentProps & {
   fields: {
@@ -22,9 +22,35 @@ let oldScrollY = 0;
 
 const ConnectComponent = (props: ConnectComponentProps): JSX.Element => {
   const [scrollY, setScrollY] = useState(0);
+  const [render, setRender] = useState(false);
   let refNumber = 0;
 
+  useEffect(() => {
+    return () => {
+      setRender(false);
+    };
+  }, []);
+
   const handleScroll = () => {
+    const connectElement = document.querySelector('#connect');
+    const connectElementPosition: any = connectElement?.getBoundingClientRect();
+    // checking whether fully visible
+    // if (connectElementPosition.top >= 0 && connectElementPosition.bottom <= window.innerHeight) {
+    //   console.log('Element is fully visible in screen');
+    // }
+
+    // checking for partial visibility
+    if (connectElementPosition.top < window.innerHeight && connectElementPosition.bottom >= 0) {
+      if (!render) {
+        setRender(true);
+      }
+    }
+    // } else {
+    //   // if (!render) {
+    //   setRender(false);
+    //   // }
+    // }
+
     if (window.scrollY > oldScrollY) {
       if (16 > refNumber) {
         refNumber++;
@@ -51,12 +77,11 @@ const ConnectComponent = (props: ConnectComponentProps): JSX.Element => {
       <div className="connect-container">
         <Row className="connect-row">
           <Col lg="5" sm="12" md="12" className="text-column">
-            <span className="connect-heading is-view" >
+            <span className="connect-heading is-view">
               <Text field={props.fields.sectionHeading} />
             </span>
-
             <h1 className="h1">
-              <span className="h1-text">
+              <span className={`h1-text ${render ? 'typingDemo' : ''}`}>
                 <RichText field={props.fields.heading} />
               </span>
             </h1>

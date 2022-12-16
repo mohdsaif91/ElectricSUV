@@ -37,8 +37,6 @@ type TechnologyComponentProps = ComponentProps & {
 const TechnologyComponent = (props: TechnologyComponentProps): JSX.Element => {
   const [techDrawer, setTechDrawer] = useState({ platform: false, hmi: false });
 
-  console.log(props.fields);
-
   return (
     <Container fluid className="technology-container">
       {techDrawer.platform && (

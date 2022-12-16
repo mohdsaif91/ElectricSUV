@@ -76,7 +76,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  font-size: 56px !important;
+  font-size: 48px;
   z-index: 9;
 }
 .richTextBodyWrapper {
@@ -196,7 +196,7 @@
     height: 100%;
   }
   .richTextContainer {
-    /* padding: 64px 20px; */
+    font-size: 27px;
   }
   .richTextBodyWrapperImage {
     margin: 151px 0 0 0;
@@ -213,5 +213,22 @@
   }
   .tabMenu {
     bottom: 56px;
+  }
+}
+
+/* animation */
+
+.animationContainer {
+  animation: zoom-in-zoom-out 1.5s ease alternate;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    opacity: 0;
+    transform: scale(1.3, 1.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
   }
 }
