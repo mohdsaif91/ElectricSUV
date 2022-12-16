@@ -32,7 +32,7 @@ type HeroBannerComponentProps = ComponentProps & {
 };
 
 const HeroBannerComponent = (props: HeroBannerComponentProps): JSX.Element => {
-  const [counter, setCounter] = useState(2);
+  const [counter, setCounter] = useState(1);
   const [render, setRender] = useState(false);
 
   useEffect(() => {

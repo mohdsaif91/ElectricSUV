@@ -149,21 +149,26 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   margin-bottom: 29px;
+  max-height: 296px;
 }
 
 .typeReveal {
   display: block;
   white-space: normal !important;
+  width: 850px;
 }
 
-@media screen and (min-width: 768px) and (min-width: 320px) {
+@media only screen and (max-width: 450px) and (min-width: 320px) {
   .heroBannerTitle {
     font-size: calc(30px + 40 * ((100vw - 320px) / 1120));
+  }
+  .typeReveal {
+    width: 386px;
   }
 }
 
 .typingDemo {
-  animation: typewriter 2s steps(44) 1s 1 normal both;
+  animation: typewriter 8s steps(44) 1s 1 normal both;
   overflow: hidden;
   width: 22ch;
 }

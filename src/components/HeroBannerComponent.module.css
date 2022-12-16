@@ -60,7 +60,7 @@
 }
 
 .vh100 {
-  max-height: 680px;
+  height: 90vh;
 }
 
 .heroContainer {
@@ -209,7 +209,7 @@
     padding-right: 100px;
   }
   .vh100 {
-    height: 600px;
+    /* height: 600px; */
   }
   .tabMenu {
     bottom: 56px;
