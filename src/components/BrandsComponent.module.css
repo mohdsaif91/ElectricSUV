@@ -7,5 +7,6 @@
   .banner-image-container {
     height: 234px;
     width: 100%;
+    margin-bottom: 0;
   }
 }

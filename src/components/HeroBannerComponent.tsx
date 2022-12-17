@@ -50,14 +50,12 @@ const HeroBannerComponent = (props: HeroBannerComponentProps): JSX.Element => {
       }
     }
     let counterTimer = setInterval(() => {
-      setCounter((stateValue: number) => stateValue + 1);
+      // setCounter((stateValue: number) => stateValue + 1);
     }, 4000);
     return () => {
       clearInterval(counterTimer);
     };
   }, []);
-
-  console.log(render, ' PARENT');
 
   return (
     <section>

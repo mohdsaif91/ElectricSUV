@@ -34,22 +34,12 @@ const ConnectComponent = (props: ConnectComponentProps): JSX.Element => {
   const handleScroll = () => {
     const connectElement = document.querySelector('#connect');
     const connectElementPosition: any = connectElement?.getBoundingClientRect();
-    // checking whether fully visible
-    // if (connectElementPosition.top >= 0 && connectElementPosition.bottom <= window.innerHeight) {
-    //   console.log('Element is fully visible in screen');
-    // }
 
-    // checking for partial visibility
     if (connectElementPosition.top < window.innerHeight && connectElementPosition.bottom >= 0) {
       if (!render) {
         setRender(true);
       }
     }
-    // } else {
-    //   // if (!render) {
-    //   setRender(false);
-    //   // }
-    // }
 
     if (window.scrollY > oldScrollY) {
       if (16 > refNumber) {
@@ -76,7 +66,7 @@ const ConnectComponent = (props: ConnectComponentProps): JSX.Element => {
     <section id="connect">
       <div className="connect-container">
         <Row className="connect-row">
-          <Col lg="5" sm="12" md="12" className="text-column">
+          <Col lg="5" sm="12" md="6" className="text-column">
             <span className="connect-heading is-view">
               <Text field={props.fields.sectionHeading} />
             </span>
@@ -89,7 +79,7 @@ const ConnectComponent = (props: ConnectComponentProps): JSX.Element => {
               <Text field={props.fields.body} />
             </div>
           </Col>
-          <Col lg="7" md="12" sm="12" className="right-image-container">
+          <Col lg="7" md="6" sm="12" className="right-image-container">
             <figure className="connect-figure rellax">
               <img
                 style={{ transform: `translate3d(0px, ${scrollY}%, 0px)` }}

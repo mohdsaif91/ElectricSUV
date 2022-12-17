@@ -76,3 +76,25 @@
     width: 100%;
   }
 }
+/* TABLET */
+@media only screen and (max-width: 850px) and (min-width: 700px) {
+  .media-body-push {
+    padding: 80px 50px;
+  }
+  .media-image-container {
+    gap: 32px;
+  }
+  .media-column {
+    width: 202px;
+  }
+}
+
+@media only screen and (max-width: 760px) and (min-width: 700px) {
+  .media-image-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .media-column {
+    width: 100%;
+  }
+}

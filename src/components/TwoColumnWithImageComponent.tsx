@@ -31,7 +31,7 @@ const TwoColumnWithImage = (props: TwoColumnWIthImageProps): JSX.Element => {
             </span>
           </Col>
         </Row>
-        <Row className="contentContainer">
+        <Row className={`${TCWICCSS.contentContainer}`}>
           {props.fields.TwoColumnWithImageComponentItems.map(
             (m: TwoColumnWithImageComponentList, index) => (
               <Col lg="6" className={`${TCWICCSS.cardWithImage}`} key={index}>

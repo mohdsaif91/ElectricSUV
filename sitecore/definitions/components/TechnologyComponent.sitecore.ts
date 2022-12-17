@@ -16,6 +16,7 @@ export default function TechnologyComponent(manifest: Manifest): void {
       { name: 'subheading', type: CommonFieldTypes.SingleLineText },
       { name: 'body', type: CommonFieldTypes.MultiLineText },
       { name: 'bodyimg', type: CommonFieldTypes.Image },
+      { name: 'tabletbodyimg', type: CommonFieldTypes.Image },
       { name: 'closeIcon', type: CommonFieldTypes.Image },
       { name: 'platFormTitle', type: CommonFieldTypes.SingleLineText },
       { name: 'platformMainTitle', type: CommonFieldTypes.SingleLineText },
