@@ -96,3 +96,39 @@
     top: 0;
   }
 }
+
+/* TABLET */
+@media only screen and (max-width: 850px) and (min-width: 700px) {
+  .technology-content {
+    top: -815px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .graphic-image {
+    margin: 0 72px;
+    max-width: 80%;
+  }
+  .graphic-sub-heading {
+    font-size: 18px;
+    margin-top: -20px;
+  }
+  .graphic-body {
+    margin-left: 112px;
+    margin-right: 112px;
+  }
+  .technology-container {
+    height: 454px;
+    background-color: inherit;
+  }
+  .graphic-body-img {
+    padding-top: 136px;
+  }
+}
+
+@media only screen and (max-width: 760px) and (min-width: 700px) {
+  .graphic-body {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+  }
+}

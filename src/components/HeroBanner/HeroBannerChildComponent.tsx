@@ -26,7 +26,6 @@ const HeroBannerChildComponent = (props: Props) => {
 
   useEffect(() => {
     if (props.render) {
-      console.log('calledOnce PARENT', typeof props.render);
       props.changeRender(false);
       setRenderTyping(false);
     }
@@ -34,8 +33,6 @@ const HeroBannerChildComponent = (props: Props) => {
       setMobile(window.innerWidth < window.innerHeight);
     }
   }, []);
-
-  console.log(props.render, ' PARENT CHILD');
 
   return (
     <>
@@ -84,8 +81,10 @@ const HeroBannerChildComponent = (props: Props) => {
           </div>
           <div className={`${HBCCSS.banner}`}>
             <div className={`${HBCCSS.richTextBodyWrapper} ${HBCCSS.richTextBodyWrapperVideo}`}>
-              <div className={`${HBCCSS.richTextContainer} ${renderTyping ? 'typingDemo' : ''}`}>
-                <RichText field={props.mediaText} />
+              <div className={`${HBCCSS.richTextContainer} `}>
+                <div className={`${renderTyping ? 'typingDemo' : ''}`}>
+                  <RichText field={props.mediaText} />
+                </div>
                 <div
                   className={`${HBCCSS.bannergrid} ${HBCCSS.bannerVideoGrid} btn-group`}
                   role="group"

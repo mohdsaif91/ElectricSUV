@@ -55,6 +55,7 @@
 }
 .connect-body {
   padding-right: 120px !important;
+  margin-top: 23px;
 }
 .image-row {
   height: 100%;
@@ -104,5 +105,18 @@
   .h1-text {
     display: contents;
     line-height: 2rem;
+  }
+}
+@media only screen and (max-width: 850px) and (min-width: 700px) {
+  .right-image-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .connect-figure {
+    left: -6.5%;
+  }
+  .text-column {
+    padding-left: 50px;
+    padding-right: 72px;
   }
 }

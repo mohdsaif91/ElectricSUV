@@ -27,11 +27,10 @@
 .socialMediaContainer {
   justify-content: flex-end;
 }
-.socialMediaContainer div div a svg{
+.socialMediaContainer div div a svg {
   color: white;
   width: 1.2rem;
   height: 1.2rem;
-
 }
 
 @media only screen and (max-width: 450px) and (min-width: 340px) {
@@ -56,5 +55,19 @@
   .socialMediaContainer {
     justify-content: flex-start;
     padding-left: 0;
+  }
+}
+
+/* TABLET */
+@media only screen and (max-width: 850px) and (min-width: 700px) {
+  .footer-container {
+    position: absolute;
+  }
+}
+
+@media only screen and (max-width: 760px) and (min-width: 700px) {
+  .footer-container {
+    position: absolute;
+    margin-top: 570px;
   }
 }

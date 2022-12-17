@@ -30,10 +30,10 @@ const FooterComponent = (props: FooterComponentProps): JSX.Element => {
     >
       <div className="footertext container " id="footer">
         <Row className=" p-2 pt-3 pb-3">
-          <Col lg={2} md={3} sm={12} className="col-md-2 d-flex p-0 align-items-center ">
+          <Col lg={2} md={6} sm={12} className="col-md-2 d-flex p-0 align-items-center ">
             <img src={props.fields.logo.value?.toString()} width="130" height="20" alt="Mahindra" />
           </Col>
-          <Col lg={7} md={5} sm={12} className={`${FCCSS.footerLinks} col-md-2 p-0 d-flex `}>
+          <Col lg={7} md={6} sm={12} className={`${FCCSS.footerLinks} col-md-2 p-0 d-flex `}>
             <div className="">
               {props.fields.footList.map((item, index) => {
                 return (
@@ -52,7 +52,7 @@ const FooterComponent = (props: FooterComponentProps): JSX.Element => {
           </Col>
           <Col
             lg={3}
-            md={4}
+            md={7}
             sm={12}
             className={`${FCCSS.socialMediaContainer}  d-flex align-items-center  p-0`}
           >

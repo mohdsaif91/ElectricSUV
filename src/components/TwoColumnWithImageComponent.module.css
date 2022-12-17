@@ -1,5 +1,6 @@
-.mainContainer{
+.mainContainer {
   background-image: -webkit-linear-gradient(top, black, #1f1f1f 65%, white 35%);
+  width: 100%;
 }
 .cardWithImageContainer {
   padding-top: 200px;
@@ -94,8 +95,16 @@
 .vh100 {
   height: 100vh;
 }
+.contentContainer {
+  margin-right: 0;
+  margin-left: 0;
+}
 
 @media only screen and (max-width: 450px) and (min-width: 360px) {
+  .mainContainer {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .vh100 {
     height: auto;
   }

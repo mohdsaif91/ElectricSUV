@@ -158,12 +158,39 @@ body {
   width: 850px;
 }
 
+.connect-description {
+  font-size: 58px;
+  width: 684px;
+}
+
 @media only screen and (max-width: 450px) and (min-width: 320px) {
   .heroBannerTitle {
     font-size: calc(30px + 40 * ((100vw - 320px) / 1120));
   }
   .typeReveal {
     width: 396px;
+  }
+  .connect-description {
+    width: auto;
+    font-size: 50px;
+    line-height: 1;
+  }
+}
+
+/* TABLET */
+@media only screen and (max-width: 850px) and (min-width: 700px) {
+  .heroBannerTitle {
+    font-size: 47px;
+  }
+  .typeReveal {
+    width: 647px;
+  }
+  .typingDemo {
+    max-width: 647px;
+  }
+  .connect-description {
+    font-size: 47px;
+    margin-bottom: 0;
   }
 }
 
