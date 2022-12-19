@@ -125,3 +125,14 @@
     margin: 0px 96px 50px 96px;
   }
 }
+@media only screen and (max-width: 850px) and (min-width: 700px) {
+  .cardBody {
+    padding: 30px 50px;
+  }
+}
+
+@media only screen and (max-width: 720px) and (min-width: 700px) {
+  .cardWithImageContainer {
+    max-width: 100%;
+  }
+}

@@ -97,7 +97,6 @@
   padding-left: 1rem !important;
 }
 
-
 .sideNavOffcanvas h1 {
   color: black !important;
   font-family: Oxanium;
@@ -159,7 +158,6 @@ select:focus {
   box-shadow: none !important;
 }
 .updateForm div div select {
-
   background: transparent;
   background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
   background-repeat: no-repeat;
@@ -181,6 +179,11 @@ select:focus {
   color: #1f1f1f;
 }
 
-
 @media only screen and (max-width: 450px) and (min-width: 340px) {
+  .nav-container {
+    margin-right: 8px;
+    margin-left: 8px;
+    justify-content: space-between;
+    max-width: 100%;
+  }
 }

@@ -41,8 +41,6 @@ const TechnologyComponent = (props: TechnologyComponentProps): JSX.Element => {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      console.log(window.innerWidth);
-
       setTablet(window.innerWidth >= 700);
     }
   }, []);

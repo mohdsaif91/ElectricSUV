@@ -119,4 +119,7 @@
     padding-left: 50px;
     padding-right: 72px;
   }
+  .connect-row {
+    margin: 0;
+  }
 }
