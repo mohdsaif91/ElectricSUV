@@ -51,11 +51,9 @@ placeholders:
         heading: TWO <br/>REVOLUTIONARY <br/>eSUV BRANDS
         mobileHeading: TWO REVOLUTIONARY eSUV BRANDS
         body: |
-          <p>Welcome to the reimagined world of electric SUVs. Futuristic design, pulsating performance and dynamic innovation.</p>
-
-          <p>Two revolutionary brands from the house of Mahindra. Unique yet connected. Inspired by our past yet focused on tomorrow. Next-generation vehicles for the visionaries, the disrupters, the go-getters and the accelerators of change.</p>
-
-          <p>Our vision is to put sport back into electric sports utility vehicles.</p>
+          <p class="p-tag-description">Welcome to the reimagined world of electric SUVs. Futuristic design, pulsating performance and dynamic innovation.</p>
+          <p class="p-tag-description">Two revolutionary brands from the house of Mahindra. Unique yet connected. Inspired by our past yet focused on tomorrow. Next-generation vehicles for the visionaries, the disrupters, the go-getters and the accelerators of change.</p>
+          <p class="p-tag-description">Our vision is to put sport back into electric sports utility vehicles.</p>
     - componentName: YouTubeComponent
       fields:
         embedId: gobKb0dWwTI

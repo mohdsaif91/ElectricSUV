@@ -79,7 +79,7 @@
     width: 100%;
   }
   .graphic-body {
-    margin: 0 !important;
+    margin: 0 0 40px 0;
   }
   .graphic-body-container {
     padding: 0 !important;
@@ -93,7 +93,7 @@
     flex-direction: column-reverse;
   }
   .technology-content {
-    top: 0;
+    top: 100px;
   }
 }
 

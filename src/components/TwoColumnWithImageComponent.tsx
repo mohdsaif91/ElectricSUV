@@ -34,7 +34,7 @@ const TwoColumnWithImage = (props: TwoColumnWIthImageProps): JSX.Element => {
         <Row className={`${TCWICCSS.contentContainer}`}>
           {props.fields.TwoColumnWithImageComponentItems.map(
             (m: TwoColumnWithImageComponentList, index) => (
-              <Col lg="6" className={`${TCWICCSS.cardWithImage}`} key={index}>
+              <Col lg="6" md={6} sm={12} className={`${TCWICCSS.cardWithImage}`} key={index}>
                 <div className={`${TCWICCSS.humanImage}`}>
                   <figure className={`${TCWICCSS.humanImageFigure}`}>
                     <img

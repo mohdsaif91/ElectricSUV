@@ -163,6 +163,10 @@ body {
   width: 684px;
 }
 
+.p-tag-description {
+  margin-bottom: 1.5rem;
+}
+
 @media only screen and (max-width: 450px) and (min-width: 320px) {
   .heroBannerTitle {
     font-size: calc(30px + 40 * ((100vw - 320px) / 1120));
@@ -191,6 +195,7 @@ body {
   .connect-description {
     font-size: 47px;
     margin-bottom: 0;
+    width: 54px;
   }
 }
 

@@ -36,6 +36,7 @@
 }
 
 .media-date {
+  color: #333;
   font-family: Oxanium, sans-serif;
   letter-spacing: 0.2em;
   font-size: 13px;
@@ -44,6 +45,7 @@
 }
 
 .media-dec {
+  color: #333;
   font-size: 18px;
   font-weight: 300;
   margin: 0 0 1em -0.07em;
@@ -82,10 +84,14 @@
     padding: 80px 50px;
   }
   .media-image-container {
-    gap: 32px;
+    /* gap: 32px; */
+    gap: 20px;
   }
   .media-column {
     width: 202px;
+  }
+  .media-figure {
+    height: 110px;
   }
 }
 
@@ -96,5 +102,14 @@
   }
   .media-column {
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 720px) and (min-width: 700px) {
+  .connect-figure {
+    left: -4%;
+  }
+  .media-figure {
+    height: 270px;
   }
 }
