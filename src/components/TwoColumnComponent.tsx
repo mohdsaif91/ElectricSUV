@@ -23,7 +23,7 @@ const TwoColumnComponent = (props: TwoColumnComponentProps): JSX.Element => {
   useEffect(() => {
     Aos.init();
     if (typeof window !== 'undefined') {
-      setMobile(window.innerWidth < window.innerHeight);
+      setMobile(window.innerWidth < 450);
     }
   }, []);
 

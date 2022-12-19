@@ -48,7 +48,7 @@ placeholders:
         id: brands
         backgroundColor: black
         fontColor: white
-        heading: TWO <br/>REVOLUTIONARY <br/>eSUV BRANDS
+        heading: TWO <br />REVOLUTIONARY <br />eSUV BRANDS
         mobileHeading: TWO REVOLUTIONARY eSUV BRANDS
         body: |
           <p class="p-tag-description">Welcome to the reimagined world of electric SUVs. Futuristic design, pulsating performance and dynamic innovation.</p>

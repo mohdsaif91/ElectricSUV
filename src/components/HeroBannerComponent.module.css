@@ -38,7 +38,7 @@
   margin-top: 180px;
 }
 .bannerVideoGrid {
-  margin-top: 42px;
+  margin-top: 132px;
 }
 .bannergrid button {
   height: 3rem;
@@ -92,7 +92,7 @@
   margin: 180px 0 0 0;
 }
 .richTextBodyWrapperVideo {
-  padding: 142px 0 0 0;
+  padding: 200px 0 0 0;
 }
 
 .heroVideo {
@@ -172,7 +172,7 @@
     top: auto;
   }
   .bannerVideoGrid {
-    margin-top: 106px;
+    margin-top: 64px;
   }
   .banner {
     height: 600px;
