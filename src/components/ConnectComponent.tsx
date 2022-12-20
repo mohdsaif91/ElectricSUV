@@ -84,7 +84,7 @@ const ConnectComponent = (props: ConnectComponentProps): JSX.Element => {
               <img
                 style={{ transform: `translate3d(0px, ${scrollY}%, 0px)` }}
                 className="right-image"
-                src={props.fields.rightImage.value?.toString()}
+                src={props.fields.rightImage.value?.src}
                 alt="Mahindra"
               />
             </figure>

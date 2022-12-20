@@ -51,7 +51,7 @@ const TechnologyComponent = (props: TechnologyComponentProps): JSX.Element => {
         {techDrawer.platform && (
           <TechnologyGenericComponent
             flag={techDrawer.platform}
-            closeIcon={props.fields.closeIcon.value}
+            closeIcon={props.fields.closeIcon.value?.src}
             onClose={() => setTechDrawer({ ...techDrawer, platform: false })}
             title={props.fields.platFormTitle}
             platformMainTitle={props.fields.platformMainTitle}
@@ -63,7 +63,7 @@ const TechnologyComponent = (props: TechnologyComponentProps): JSX.Element => {
         {techDrawer.hmi && (
           <TechnologyGenericComponent
             flag={techDrawer.hmi}
-            closeIcon={props.fields.closeIcon.value}
+            closeIcon={props.fields.closeIcon.value?.src}
             onClose={() => setTechDrawer({ ...techDrawer, hmi: false })}
             title={props.fields.hmiTitle}
             platformMainTitle={props.fields.hmiMainTitle}
@@ -76,7 +76,7 @@ const TechnologyComponent = (props: TechnologyComponentProps): JSX.Element => {
           <Col lg={12} md={12} sm={12} className="graphic-body-container">
             <img
               className="graphic-body-img"
-              src={tablet ? props.fields.tabletbodyimg.value : props.fields.bodyimg.value}
+              src={tablet ? props.fields.tabletbodyimg.value?.src : props.fields.bodyimg.value?.src}
               alt="Mahindra"
             />
           </Col>
@@ -90,7 +90,11 @@ const TechnologyComponent = (props: TechnologyComponentProps): JSX.Element => {
               </span>
             </Col>
             <div className="graphic-title">
-              <img className="graphic-image" src={props.fields.graphicImage.value} alt="Mahindra" />
+              <img
+                className="graphic-image"
+                src={props.fields.graphicImage.value?.src}
+                alt="Mahindra"
+              />
             </div>
             <Col className="graphic-sub-heading">
               <Text field={props.fields.subheading}></Text>

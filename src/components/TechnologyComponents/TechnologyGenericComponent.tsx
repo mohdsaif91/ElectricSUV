@@ -1,4 +1,4 @@
-import { Text, Field, RichText } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Text, Field, RichText, ImageField } from '@sitecore-jss/sitecore-jss-nextjs';
 import { Col, Row } from 'react-bootstrap';
 
 import TGCCSS from './TechnologyGenericComponent.module.css';
@@ -7,7 +7,7 @@ interface platformImageItem {
   fields: {
     imgWithTitle: Field<string>;
     imgWithDec: Field<string>;
-    imgWithDecImg: Field<string>;
+    imgWithDecImg: ImageField;
   };
 }
 
@@ -66,7 +66,7 @@ const TechnologyGenericComponent = (props: platformProps): JSX.Element => {
             <Text field={m.fields.imgWithDec}></Text>
           </div>
           <figure className="platform-figure">
-            <img className="dec-img" src={m.fields.imgWithDecImg.value} alt="Mahindra" />
+            <img className="dec-img" src={m.fields.imgWithDecImg.value?.src} alt="Mahindra" />
           </figure>
         </div>
       ))}

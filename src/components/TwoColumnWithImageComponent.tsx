@@ -39,7 +39,7 @@ const TwoColumnWithImage = (props: TwoColumnWIthImageProps): JSX.Element => {
                   <figure className={`${TCWICCSS.humanImageFigure}`}>
                     <img
                       className={`${TCWICCSS.cardImage}`}
-                      src={m.fields.cardImage.value?.toString()}
+                      src={m.fields.cardImage.value?.src}
                       alt="Mahindra"
                     />
                   </figure>
@@ -48,7 +48,7 @@ const TwoColumnWithImage = (props: TwoColumnWIthImageProps): JSX.Element => {
                   <div className={`${TCWICCSS.cardIconContainer}`}>
                     <img
                       className={`${TCWICCSS.cardIcon}`}
-                      src={m.fields.cardIcon.value?.toString()}
+                      src={m.fields.cardIcon.value?.src}
                       alt="Mahindra"
                     />
                   </div>

@@ -21,7 +21,7 @@ type GalleryComponentProps = ComponentProps & {
 };
 
 const GalleryComponent = (props: GalleryComponentProps): JSX.Element => {
-  const [slideImage, setSlideImage] = useState(0);   
+  const [slideImage, setSlideImage] = useState(0);
 
   const changeImage = (index: number) => {
     setSlideImage(index);
@@ -48,7 +48,11 @@ const GalleryComponent = (props: GalleryComponentProps): JSX.Element => {
                 >
                   {props.fields.carImageListSlide.map((m: galleryItemList, index: number) => (
                     <Carousel.Item key={index}>
-                      <img className="car-img" src={m.fields.galleryImage.value?.toString()} alt="Mahindra" />
+                      <img
+                        className="car-img"
+                        src={m.fields.galleryImage.value?.src}
+                        alt="Mahindra"
+                      />
                     </Carousel.Item>
                   ))}
                 </Carousel>
@@ -64,7 +68,7 @@ const GalleryComponent = (props: GalleryComponentProps): JSX.Element => {
                     setSlideImage(slideImage - 1);
                   }
                 }}
-                src={props.fields.previousIcon.value?.toString()}
+                src={props.fields.previousIcon.value?.src}
                 alt="Mahindra"
               />
               <img
@@ -74,7 +78,7 @@ const GalleryComponent = (props: GalleryComponentProps): JSX.Element => {
                     setSlideImage(slideImage + 1);
                   }
                 }}
-                src={props.fields.nextIcon.value?.toString()}
+                src={props.fields.nextIcon.value?.src}
                 alt="Mahindra"
               />
             </div>
@@ -87,7 +91,7 @@ const GalleryComponent = (props: GalleryComponentProps): JSX.Element => {
                     key={index}
                     className="car-img"
                     onClick={() => changeImage(index)}
-                    src={m.fields.galleryImage.value?.toString()}
+                    src={m.fields.galleryImage.value?.src}
                     alt="Mahindra"
                   />
                 );

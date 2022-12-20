@@ -23,7 +23,8 @@ placeholders:
     - componentName: HeaderComponent
       fields:
         heading: header
-        logo: /data/media/img/Header/logo.svg
+        logo:
+          src: /data/media/img/Header/logo.svg
         menuItems:
           - id: header-brands
           - id: header-design
@@ -77,7 +78,8 @@ placeholders:
           <p>But design is not just about making you stop in your tracks. Design is an attitude. An unmissable presence. A statement of intent, even at rest. Our design philosophy is Heartcore-hard core SUVs, straight from the heart.</p>
     - componentName: BannerComponent
       fields:
-        bannerImage: /data/media/img/Banner/group-hero-shot.webp
+        bannerImage:
+          src: /data/media/img/Banner/group-hero-shot.webp
         title: eSUV
     - componentName: TwoColumnComponent
       fields:
@@ -95,12 +97,16 @@ placeholders:
     - componentName: TechnologyComponent
       fields:
         heading: technology
-        graphicImage: /data/media/img/Technology/INGLO.svg
+        graphicImage:
+          src: /data/media/img/Technology/INGLO.svg
         subheading: BREATHTAKING INNOVATION
         body: We call our intelligent neural network of multi-sensory experiences and platform capabilities - INGLO. It is Indian at heart and Global in its reach and the experience it will deliver.
-        bodyimg: /data/media/img/Technology/car-chase-body.webp
-        tabletbodyimg: /data/media/img/Technology/technology-Chasce-Tablet.webp
-        closeIcon: /data/media/img/Technology/closeIcon.png
+        bodyimg:
+          src: /data/media/img/Technology/car-chase-body.webp
+        tabletbodyimg:
+          src: /data/media/img/Technology/technology-Chasce-Tablet.webp
+        closeIcon:
+          src: /data/media/img/Technology/closeIcon.png
         platFormTitle: PLATFORM
         platformMainTitle: VERSATILE POWERFUL DYNAMIC
         platformDescription: <p class="description h3">
@@ -128,8 +134,10 @@ placeholders:
     - componentName: GalleryComponent
       fields:
         heading: gallery
-        nextIcon: /data/media/img/Gallery/scroller-next.svg
-        previousIcon: /data/media/img/Gallery/scroller-back.svg
+        nextIcon:
+          src: /data/media/img/Gallery/scroller-next.svg
+        previousIcon:
+          src: /data/media/img/Gallery/scroller-back.svg
         carImageListSlide:
           - id: mahindrasuv-gallery-image-1
           - id: mahindrasuv-gallery-image-2
@@ -157,12 +165,14 @@ placeholders:
           <p class="connect-description">2024.</p>
           <p class="connect-description">IT STARTS</p>
           <p class="connect-description">HERE.</p>
-        rightImage: /data/media/img/Connect/femaleDriver.webp
+        rightImage:
+          src: /data/media/img/Connect/femaleDriver.webp
         body: |
           Be part of our electrifying journey. To a brighter, bolder, cleaner tomorrow. Be ready.
     - componentName: FooterComponent
       fields:
-        logo: /data/media/img/Header/logo.svg
+        logo:
+          src: /data/media/img/Header/logo.svg
         copyright: Copyright ©2022 Mahindra & Mahindra Ltd
         footList:
           - id: footer-privacy

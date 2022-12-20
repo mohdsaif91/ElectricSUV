@@ -5,4 +5,5 @@ template: MahindraSuv-Technology-Item-Template
 fields:
   imgWithTitle: WORLD CLASS SAFETY
   imgWithDec: Building for 5 Star Global NCAP ratings with Ultra-strong protection for the passenger cabin and battery tray.
-  imgWithDecImg: /data/media/img/Technology/Platform/safety.webp
+  imgWithDecImg:
+    src: /data/media/img/Technology/Platform/safety.webp

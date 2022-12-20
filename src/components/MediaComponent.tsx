@@ -22,7 +22,7 @@ const MediaComponent = (props: MediaComponentProps): JSX.Element => (
           className="main-img"
           loading="lazy"
           sizes="(-webkit-min-device-pixel-ratio: 2) 150vw, (min-resolution: 192dpi) 150vw, 100vw"
-          src={props.image.value}
+          src={props.image.value?.src}
           alt={'Image'}
         />
       </figure>

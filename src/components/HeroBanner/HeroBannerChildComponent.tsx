@@ -42,7 +42,9 @@ const HeroBannerChildComponent = (props: Props) => {
             <div
               className={` ${HBCCSS.banner} vw-100 `}
               style={{
-                backgroundImage: `url(${mobile ? props.mediaMobile.value : props.media.value})`,
+                backgroundImage: `url(${
+                  mobile ? props.mediaMobile.value?.src : props.media.value?.src
+                })`,
               }}
             >
               <div className={`${HBCCSS.richTextBodyWrapper} ${HBCCSS.richTextBodyWrapperImage}`}>

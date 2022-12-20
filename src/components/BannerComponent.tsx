@@ -19,7 +19,7 @@ const BannerComponent = (props: BannerComponentProps): JSX.Element => (
               <img
                 className="banner-image"
                 loading="lazy"
-                src={props.fields.bannerImage.value}
+                src={props.fields.bannerImage.value?.src}
                 alt="Group Hero Shot"
                 width="1920"
                 height="1333"

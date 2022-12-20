@@ -5,7 +5,8 @@ template: MahindraSuv-Herobanner-Item-template
 fields:
   mediaType: video
   media: /data/media/img/HeroBanner/heroBanner01.webm
-  mediaMobile: null
+  mediaMobile:
+    src: null
   mediaText: <h1 class="heroBannerTitle">
     <span class="typeReveal" data-orig-text="5  E-SUVs" data-delay="250">
     <span class="live">5  E-SUVs</span>

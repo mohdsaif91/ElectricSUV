@@ -3,6 +3,7 @@ import { Field, RichText, withDatasourceCheck } from '@sitecore-jss/sitecore-jss
 import { ComponentProps } from 'lib/component-props';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { Col, Row } from 'react-bootstrap';
 
 import TCCCSS from './TwoColumnComponent.module.css';
 
@@ -34,8 +35,13 @@ const TwoColumnComponent = (props: TwoColumnComponentProps): JSX.Element => {
         style={{ backgroundColor: props.fields.backgroundColor.value }}
       >
         <div className={`container-fluid  d-flex ${TCCCSS.vh100}`}>
-          <div className={`${TCCCSS.twoColRow}`} data-aos-delay="500" data-aos="fade-up">
-            <div className={`col-md-6 d-flex align-items-start ${TCCCSS.twoColBrandsHheading}`}>
+          <Row className={`${TCCCSS.twoColRow}`} data-aos-delay="500" data-aos="fade-up">
+            <Col
+              lg={6}
+              md={6}
+              sm={12}
+              className={`d-flex align-items-start ${TCCCSS.twoColBrandsHheading}`}
+            >
               <div className="d-flex align-items-start">
                 <h1
                   className={`${TCCCSS.twoColHead}`}
@@ -44,16 +50,22 @@ const TwoColumnComponent = (props: TwoColumnComponentProps): JSX.Element => {
                   <RichText field={mobile ? props.fields.mobileHeading : props.fields.heading} />
                 </h1>
               </div>
-            </div>
-            <div className={`${TCCCSS.twoColDescriptionCol} col-md-6 d-flex align-items-start `}>
+            </Col>
+
+            <Col
+              lg={6}
+              md={6}
+              sm={12}
+              className={`${TCCCSS.twoColDescriptionCol} col-lg-6 col-md-6 col-sm-12 d-flex align-items-start`}
+            >
               <div
-                className={`${TCCCSS.headingAlignment} d-flex align-items-start w-75`}
+                className={`${TCCCSS.headingAlignment} d-flex align-items-start`}
                 style={{ color: props.fields.fontColor.value }}
               >
                 <RichText field={props.fields.body} />
               </div>
-            </div>
-          </div>
+            </Col>
+          </Row>
         </div>
       </div>
     </section>
