@@ -45,9 +45,9 @@ const TwoColumnComponent = (props: TwoColumnComponentProps): JSX.Element => {
                 </h1>
               </div>
             </div>
-            <div className={`${TCCCSS.twoColDescriptionCol} col-md-6 d-flex align-items-start`}>
+            <div className={`${TCCCSS.twoColDescriptionCol} col-md-6 d-flex align-items-start `}>
               <div
-                className={`${TCCCSS.headingAlignment} d-flex align-items-start`}
+                className={`${TCCCSS.headingAlignment} d-flex align-items-start w-75`}
                 style={{ color: props.fields.fontColor.value }}
               >
                 <RichText field={props.fields.body} />
