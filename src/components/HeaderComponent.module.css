@@ -1,10 +1,15 @@
 .navbar {
   background-color: black !important;
   position: sticky !important;
+  padding: 8px 100px;
+  max-width: 100% !important;
 }
 .navbar div button svg {
   font-size: 2em !important;
   color: white !important;
+}
+.nav-container {
+  max-width: 100%;
 }
 
 .navlinks {
@@ -179,7 +184,16 @@ select:focus {
   color: #1f1f1f;
 }
 
+@media only screen and (max-width: 850px) and (min-width: 700px) {
+  .navbar {
+    padding: 0;
+  }
+}
+
 @media only screen and (max-width: 450px) and (min-width: 340px) {
+  .navbar {
+    padding: 0;
+  }
   .nav-container {
     margin-right: 8px;
     margin-left: 8px;

@@ -59,7 +59,7 @@ const HeaderComponent = (props: HeaderComponentProps): JSX.Element => {
 
   return (
     <>
-      <Navbar expand="xl" fixed="top" className="navbar p-0 pb-2 pt-2 m-0 ">
+      <Navbar expand="xl" fixed="top" className="navbar m-0 ">
         <Container className="p-0 nav-container m-0">
           <Navbar.Toggle aria-controls="offcanvasNavbar-expand-xl" className="navbarToggleIcon">
             <svg
