@@ -4,6 +4,8 @@ import { Col, Row } from 'react-bootstrap';
 
 import MediaComponent from './MediaComponent';
 
+import MCCSS from './MediaRoomComponent.module.css';
+
 interface mediaList {
   image: ImageField;
   date: Field<string>;
@@ -19,16 +21,16 @@ type MediaRoomComponentProps = ComponentProps & {
 };
 
 const MediaRoomComponent = (props: MediaRoomComponentProps): JSX.Element => (
-  <div className="media-room-container">
+  <div className={MCCSS.mediaRoomContainer}>
     <section id="mediaroom">
-      <div className="media-body-push">
-        <Row className="media-row">
-          <Col lg="12" className="media-heading-text">
-            <h2 className="media-room-text">{props.fields.title.value}</h2>
+      <div className={MCCSS.mediaBodyPush}>
+        <Row className={MCCSS.mediaRow}>
+          <Col lg="12" className={MCCSS.mediaHeadingText}>
+            <h2 className={MCCSS.mediaRoomText}>{props.fields.title.value}</h2>
           </Col>
         </Row>
-        <Row className="media-row">
-          <Col className="media-image-container">
+        <Row className={MCCSS.mediaRow}>
+          <Col className={MCCSS.mediaImageContainer}>
             {props.fields.mediaList.map((_media: any, index) => {
               return (
                 <MediaComponent

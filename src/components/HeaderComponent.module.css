@@ -1,23 +1,7 @@
-.navbar {
-  background-color: black !important;
-  position: sticky !important;
-  padding: 8px 100px;
-  max-width: 100% !important;
-}
-.navbar div button svg {
-  font-size: 2em !important;
-  color: white !important;
-}
-.nav-container {
+.navContainer {
   max-width: 100%;
 }
 
-.navlinks {
-  color: white !important;
-  font-size: 0.8rem;
-  letter-spacing: 0.15rem;
-  font-family: Oxanium;
-}
 .navlinks svg,
 .spbtn2 svg {
   font-size: 1.2rem;
@@ -35,11 +19,7 @@
   left: +5px;
 }
 
-.navlinks:hover {
-  color: skyblue !important;
-}
-
-.navCanvas div div .navlinks.active:not(.button):after {
+/* .navCanvas div div .navlinks.active:not(.button):after {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
   border-width: 1px;
@@ -65,7 +45,7 @@
   transform: scaleX(0);
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
+} */
 .spbtn1 {
   color: white !important;
   font-size: 0.8rem;
@@ -92,7 +72,7 @@
   color: skyblue !important;
 }
 
-.navCanvas {
+/* .navCanvas {
   background-color: #1f1f1f !important;
   width: 400px !important;
   max-width: 75% !important;
@@ -100,7 +80,7 @@
 .navCanvas div div {
   align-items: flex-start !important;
   padding-left: 1rem !important;
-}
+} */
 
 .sideNavOffcanvas h1 {
   color: black !important;
@@ -148,20 +128,20 @@
   box-shadow: none !important;
 }
 
-.updateForm div div input,
+/* .updateForm div div input,
 select {
   border-radius: 1px;
   box-shadow: none;
   font-family: Oxanium;
-}
+} */
 
-.updateForm div div input:focus,
+/* .updateForm div div input:focus,
 select:focus {
   border: 2px solid orange !important;
   border-radius: 3px;
   outline: none;
   box-shadow: none !important;
-}
+} */
 .updateForm div div select {
   background: transparent;
   background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
@@ -194,10 +174,16 @@ select:focus {
   .navbar {
     padding: 0;
   }
-  .nav-container {
+  .navContainer {
     margin-right: 8px;
     margin-left: 8px;
     justify-content: space-between;
     max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1350px) and (min-width: 1200px) {
+  .navbar {
+    padding: 8px 80px;
   }
 }

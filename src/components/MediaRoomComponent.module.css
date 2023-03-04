@@ -1,18 +1,18 @@
-.media-room-container {
+.mediaRoomContainer {
   background: #fff;
   color: #000;
 }
-.media-body-push {
+.mediaBodyPush {
   padding: 80px 100px;
 }
-.media-row {
+.mediaRow {
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
-.media-heading-text {
+.mediaHeadingText {
   padding: 0;
 }
-.media-room-text {
+.mediaRoomText {
   line-height: 1.1;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -21,21 +21,19 @@
   font-family: Oxanium, sans-serif;
 }
 
-.media-image-container {
+.mediaImageContainer {
   padding: 0 !important;
   width: 100%;
   display: grid;
   grid-template-columns: 33.33% 33.33% 33.33%;
-  /* flex-direction: row;
-  justify-content: space-between; */
 }
-.media-column {
+.mediaColumn {
   height: 400px;
   width: 356px;
   text-decoration: none;
 }
 
-.media-date {
+.mediaDate {
   color: #333;
   font-family: Oxanium, sans-serif;
   letter-spacing: 0.2em;
@@ -44,7 +42,7 @@
   line-height: 1;
 }
 
-.media-dec {
+.mediaDec {
   color: #333;
   font-size: 18px;
   font-weight: 300;
@@ -52,64 +50,63 @@
   font-family: Oxanium, sans-serif;
 }
 
-.main-img {
+.mainImg {
   height: 100%;
   width: 100%;
 }
 
-.media-figure {
+.mediaFigure {
   width: 100%;
   height: 200px;
 }
 
-.image-container {
+.imageContainer {
   margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 450px) and (min-width: 340px) {
-  .media-body-push {
+  .mediaBodyPush {
     padding: 32px !important;
   }
-  .media-image-container {
+  .mediaImageContainer {
     display: flex;
     flex-direction: column;
   }
-  .media-column {
+  .mediaColumn {
     width: 100%;
   }
 }
 /* TABLET */
 @media only screen and (max-width: 850px) and (min-width: 700px) {
-  .media-body-push {
+  .mediaBodyPush {
     padding: 80px 50px;
   }
-  .media-image-container {
-    /* gap: 32px; */
+  .mediaImageContainer {
     gap: 20px;
   }
-  .media-column {
+  .mediaColumn {
     width: 202px;
   }
-  .media-figure {
+  .mediaFigure {
     height: 110px;
   }
 }
 
 @media only screen and (max-width: 760px) and (min-width: 700px) {
-  .media-image-container {
+  .mediaImageContainer {
     display: flex;
     flex-direction: column;
   }
-  .media-column {
+  .mediaColumn {
     width: 100%;
   }
 }
 
 @media only screen and (max-width: 720px) and (min-width: 700px) {
-  .connect-figure {
+  .connectFigure {
     left: -4%;
   }
-  .media-figure {
+  .mediaFigure {
     height: 270px;
   }
 }

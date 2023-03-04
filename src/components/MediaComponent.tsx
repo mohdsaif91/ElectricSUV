@@ -1,5 +1,7 @@
 import { Field, ImageField } from '@sitecore-jss/sitecore-jss-nextjs';
 
+import MCCSS from './MediaRoomComponent.module.css';
+
 type MediaComponentProps = {
   image: ImageField;
   date: Field<string>;
@@ -10,16 +12,16 @@ type MediaComponentProps = {
 const MediaComponent = (props: MediaComponentProps): JSX.Element => (
   <a
     href={`${props.url.value}`}
-    className="media-column aos-init aos-animate"
+    className={`${MCCSS.mediaColumn} aos-init aos-animate`}
     data-aos="fade-up"
     data-aos-duration="500"
     data-aos-easing="ease-out-cubic"
     data-aos-delay="250"
   >
-    <div className="image-container">
-      <figure className="media-figure">
+    <div className={MCCSS.imageContainer}>
+      <figure className={MCCSS.mediaFigure}>
         <img
-          className="main-img"
+          className={MCCSS.mainImg}
           loading="lazy"
           sizes="(-webkit-min-device-pixel-ratio: 2) 150vw, (min-resolution: 192dpi) 150vw, 100vw"
           src={props.image.value?.src}
@@ -27,8 +29,8 @@ const MediaComponent = (props: MediaComponentProps): JSX.Element => (
         />
       </figure>
     </div>
-    <p className="media-date">{props.date.value}</p>
-    <h3 className="media-dec">{props.desc.value}</h3>
+    <p className={MCCSS.mediaDate}>{props.date.value}</p>
+    <h3 className={MCCSS.mediaDec}>{props.desc.value}</h3>
   </a>
 );
 

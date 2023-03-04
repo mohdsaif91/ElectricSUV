@@ -28,16 +28,16 @@ const GalleryComponent = (props: GalleryComponentProps): JSX.Element => {
   };
 
   return (
-    <Container fluid className="gallery-container">
+    <Container fluid className={GCCSS.galleryContainer}>
       <section id="gallery">
-        <Row className="gallery-row">
+        <Row className={GCCSS.galleryRow}>
           <Col>
-            <span className="gallery-text">
+            <span className={GCCSS.galleryText}>
               <Text field={props.fields.heading} />
             </span>
           </Col>
           <Col lg="12">
-            <div className="scroll-container">
+            <div className={GCCSS.scrollContainer}>
               <div className="scroll-left"></div>
               <div className="scroll-right"></div>
               <div className="image-conatiner-main">
@@ -49,7 +49,7 @@ const GalleryComponent = (props: GalleryComponentProps): JSX.Element => {
                   {props.fields.carImageListSlide.map((m: galleryItemList, index: number) => (
                     <Carousel.Item key={index}>
                       <img
-                        className="car-img"
+                        className={GCCSS.carImg}
                         src={m.fields.galleryImage.value?.src}
                         alt="Mahindra"
                       />
@@ -59,7 +59,7 @@ const GalleryComponent = (props: GalleryComponentProps): JSX.Element => {
               </div>
             </div>
           </Col>
-          <Col lg="12" className="allImageContainerArrow">
+          <Col lg="12" className={GCCSS.allImageContainerArrow}>
             <div className={`${GCCSS.galleryBtnContainer}`}>
               <img
                 className="c-p"
@@ -83,13 +83,13 @@ const GalleryComponent = (props: GalleryComponentProps): JSX.Element => {
               />
             </div>
           </Col>
-          <Col lg="12" className="all-image-container-main">
-            <div className="all-image-container">
+          <Col lg="12" className={GCCSS.allImageContainerMain}>
+            <div className={GCCSS.allImageContainer}>
               {props.fields.carImageListSlide.map((m: galleryItemList, index: number) => {
                 return (
                   <img
                     key={index}
-                    className="car-img"
+                    className={GCCSS.carImg}
                     onClick={() => changeImage(index)}
                     src={m.fields.galleryImage.value?.src}
                     alt="Mahindra"

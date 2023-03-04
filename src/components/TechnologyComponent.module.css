@@ -1,4 +1,4 @@
-.technology-container {
+.technologyContainer {
   background-color: #000;
   padding-top: 294px;
   padding-left: 0 !important;
@@ -6,7 +6,7 @@
   height: 700px;
 }
 
-.technology-content {
+.technologyContent {
   position: relative;
   top: -980px;
 }
@@ -14,30 +14,30 @@
 .heading {
   margin-bottom: 27px;
 }
-.graphic-image {
+.graphicImage {
   margin: 0 284px;
 }
-.graphic-sub-heading {
+.graphicSubHeading {
   text-align: center;
   font-weight: 300;
   margin: 0 0 1em -0.07em;
   font-family: Oxanium, sans-serif;
   margin-bottom: 40px;
 }
-.graphic-body {
+.graphicBody {
   text-align: center;
   margin: 0 326px 70px 326px;
   max-width: 496px;
 }
 
-.btn-container {
+.btnContainer {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.tech-btn {
+.techBtn {
   font-family: Oxanium, sans-serif;
   line-height: 1;
   cursor: pointer;
@@ -63,7 +63,7 @@
   flex: 1 0 100%;
 }
 
-.graphic-body-img {
+.graphicBodyImg {
   width: 100%;
 }
 
@@ -74,59 +74,59 @@
 }
 
 @media only screen and (max-width: 450px) and (min-width: 340px) {
-  .graphic-image {
+  .graphicImage {
     margin: 0 !important;
     width: 100%;
   }
-  .graphic-body {
+  .graphicBody {
     margin: 0 0 40px 0;
   }
-  .graphic-body-container {
+  .graphicBodyContainer {
     padding: 0 !important;
   }
-  .technology-row {
+  .technologyRow {
     margin: 0 !important;
   }
-  .technology-container {
+  .technologyContainer {
     padding-top: 0;
     display: flex;
     flex-direction: column-reverse;
   }
-  .technology-content {
+  .technologyContent {
     top: 100px;
   }
 }
 
 /* TABLET */
 @media only screen and (max-width: 850px) and (min-width: 700px) {
-  .technology-content {
+  .technologyContent {
     top: -815px;
     padding-left: 0;
     padding-right: 0;
   }
-  .graphic-image {
+  .graphicImage {
     margin: 0 72px;
     max-width: 80%;
   }
-  .graphic-sub-heading {
+  .graphicSubHeading {
     font-size: 18px;
     margin-top: -20px;
   }
-  .graphic-body {
+  .graphicBody {
     margin-left: 112px;
     margin-right: 112px;
   }
-  .technology-container {
+  .technologyContainer {
     height: 454px;
     background-color: inherit;
   }
-  .graphic-body-img {
+  .graphicBodyImg {
     padding-top: 136px;
   }
 }
 
 @media only screen and (max-width: 760px) and (min-width: 700px) {
-  .graphic-body {
+  .graphicBody {
     margin-left: 0;
     margin-right: 0;
     max-width: 100%;

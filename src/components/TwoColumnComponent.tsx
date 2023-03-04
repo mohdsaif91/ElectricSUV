@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 import { Field, RichText, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 import Aos from 'aos';
-import 'aos/dist/aos.css';
 import { Col, Row } from 'react-bootstrap';
 
 import TCCCSS from './TwoColumnComponent.module.css';
+import 'aos/dist/aos.css';
 
 type TwoColumnComponentProps = ComponentProps & {
   fields: {
@@ -51,7 +51,6 @@ const TwoColumnComponent = (props: TwoColumnComponentProps): JSX.Element => {
                 </h1>
               </div>
             </Col>
-
             <Col
               lg={6}
               md={6}
@@ -59,7 +58,7 @@ const TwoColumnComponent = (props: TwoColumnComponentProps): JSX.Element => {
               className={`${TCCCSS.twoColDescriptionCol} col-lg-6 col-md-6 col-sm-12 d-flex align-items-start`}
             >
               <div
-                className={`${TCCCSS.headingAlignment} d-flex align-items-start`}
+                className={`${TCCCSS.headingAlignment} d-flex align-items-start w-75`}
                 style={{ color: props.fields.fontColor.value }}
               >
                 <RichText field={props.fields.body} />

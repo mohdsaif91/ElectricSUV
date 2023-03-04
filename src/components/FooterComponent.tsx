@@ -25,10 +25,10 @@ type FooterComponentProps = ComponentProps & {
 const FooterComponent = (props: FooterComponentProps): JSX.Element => {
   return (
     <div
-      className="container-fluid footer-container no-padding "
+      className={`container-fluid ${FCCSS.footerContainer} ${FCCSS.noPadding}`}
       style={{ backgroundColor: 'black' }}
     >
-      <div className="footertext container " id="footer">
+      <div className={`${FCCSS.footertext} container`} id="footer">
         <Row className=" p-2 pt-3 pb-3">
           <Col lg={2} md={6} sm={12} className="col-md-2 d-flex p-0 align-items-center ">
             <img src={props.fields.logo.value?.src} width="130" height="20" alt="Mahindra" />

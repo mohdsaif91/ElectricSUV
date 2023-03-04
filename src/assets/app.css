@@ -1,39 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Oxanium:wght@200;300;400&display=swap');
 
-@import url('../components/BannerComponent.module.css');
-@import url('../components/BrandsComponent.module.css');
-@import url('../components/ConnectComponent.module.css');
-@import url('../components/FooterComponent.module.css');
-@import url('../components/GalleryComponent.module.css');
-@import url('../components/HeaderComponent.module.css');
-@import url('../components/MediaComponent.module.css');
-@import url('../components/MediaRoomComponent.module.css');
-@import url('../components/TechnologyComponent.module.css');
-@import url('../components/YouTubeComponent.module.css');
-@import url('../components/TechnologyComponents/TechnologyGenericComponent.module.css');
-
-/*
-  Hides Sitecore editor markup,
-  if you run the app in connected mode while the Sitecore cookies
-  are set to edit mode.
-*/
 .scChromeData,
 .scpm {
   display: none !important;
 }
 
-/*
-  Styles for default JSS error components
-*/
 .sc-jss-editing-error,
 .sc-jss-placeholder-error {
   padding: 1em;
   background-color: lightyellow;
 }
 
-/* 
-  Style for default content block
-*/
 .contentTitle {
   font-size: 3.5rem;
   font-weight: 300;
@@ -55,6 +32,63 @@
   color: #64dcff;
   -webkit-animation: none;
   animation: none;
+}
+
+.navCanvas {
+  background-color: #1f1f1f !important;
+  width: 400px !important;
+  max-width: 75% !important;
+}
+.navCanvas div div {
+  align-items: flex-start !important;
+  padding-left: 1rem !important;
+}
+
+.navlinks:hover {
+  color: skyblue !important;
+}
+
+.navlinks {
+  color: white !important;
+  font-size: 0.8rem;
+  letter-spacing: 0.15rem;
+  font-family: Oxanium;
+}
+
+.navCanvas div div .navlinks.active:not(.button):after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  border-width: 1px;
+  -webkit-box-shadow: 0 0 14px 4px #64dcff;
+  box-shadow: 0 0 14px 4px #64dcff;
+}
+
+.navCanvas div div .navlinks.active:not(.button):after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  border-width: 1px;
+  -webkit-box-shadow: 0 0 14px 4px #64dcff;
+  box-shadow: 0 0 14px 4px #64dcff;
+}
+.navlinks.active:not(.button):after {
+  position: relative;
+  left: -1px;
+  content: '';
+  display: block;
+  width: 40px;
+  height: 4px;
+  margin: auto;
+  border-radius: 3px;
+  background: #fff;
+  border: 0 solid rgba(100, 220, 255, 0.5);
+  -webkit-transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -167,6 +201,42 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.navbar {
+  background-color: black !important;
+  position: sticky !important;
+  padding: 8px 100px;
+  max-width: 100% !important;
+}
+.navbar div button svg {
+  font-size: 2em !important;
+  color: white !important;
+}
+
+.offcanvas.offcanvas-start {
+  top: 0;
+  left: 0;
+  width: var(--bs-offcanvas-width);
+  border-right: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+  transform: translateX(-100%);
+}
+.offcanvas,
+.offcanvas-xxl,
+.offcanvas-xl,
+.offcanvas-lg,
+.offcanvas-md,
+.offcanvas-sm {
+  --bs-offcanvas-zindex: 1045;
+  --bs-offcanvas-width: 40rem;
+  --bs-offcanvas-height: 30vh;
+  --bs-offcanvas-padding-x: 1rem;
+  --bs-offcanvas-padding-y: 1rem;
+  --bs-offcanvas-color: ;
+  --bs-offcanvas-bg: #fff;
+  --bs-offcanvas-border-width: 1px;
+  --bs-offcanvas-border-color: var(--bs-border-color-translucent);
+  --bs-offcanvas-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
 @media only screen and (max-width: 450px) and (min-width: 320px) {
   .heroBannerTitle {
     font-size: calc(30px + 40 * ((100vw - 320px) / 1120));
@@ -178,6 +248,15 @@ body {
     width: auto;
     font-size: 50px;
     line-height: 1;
+  }
+  .navbar {
+    padding: 0;
+  }
+  .navContainer {
+    margin-right: 8px;
+    margin-left: 8px;
+    justify-content: space-between;
+    max-width: 100%;
   }
 }
 
@@ -214,14 +293,8 @@ body {
   }
 }
 
-/* @keyframes typing {
-  from {
-    width: 0;
+@media only screen and (max-width: 1350px) and (min-width: 1200px) {
+  .navbar {
+    padding: 8px 80px;
   }
-} */
-
-/* @keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-} */
+}

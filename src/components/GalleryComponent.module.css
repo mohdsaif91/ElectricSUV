@@ -1,10 +1,10 @@
-.gallery-container {
+.galleryContainer {
   background: #000;
   margin-top: 348px;
   padding: 200px 0;
 }
 
-.gallery-text {
+.galleryText {
   padding-left: 100px;
   padding-right: 100px;
   line-height: 1.1;
@@ -19,11 +19,11 @@
   /* padding-left: 150px; */
 }
 
-.scroll-container {
+.scrollContainer {
   margin-top: 40px;
 }
 
-.all-image-container {
+.allImageContainer {
   margin-top: 50px;
   padding: 0 100px;
   display: grid;
@@ -43,7 +43,7 @@
   width: 100%;
 }
 
-.car-img {
+.carImg {
   width: 100%;
   cursor: pointer;
 }
@@ -52,7 +52,7 @@
   width: 20%;
 }
 
-.all-image-container-main {
+.allImageContainerMain {
   display: block;
 }
 .allImageContainerArrow {
@@ -66,17 +66,17 @@
 }
 
 @media only screen and (max-width: 450px) and (min-width: 360px) {
-  .gallery-row {
+  .galleryRow {
     margin: 0 !important;
   }
-  .gallery-container {
+  .galleryContainer {
     margin-top: 0;
     padding: 80px 0;
   }
-  .gallery-text {
+  .galleryText {
     padding: 0;
   }
-  .all-image-container-main {
+  .allImageContainerMain {
     display: none;
   }
   .allImageContainerArrow {
