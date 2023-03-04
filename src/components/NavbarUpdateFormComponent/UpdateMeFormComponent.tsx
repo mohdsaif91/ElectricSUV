@@ -17,7 +17,7 @@ type Props = {
   checkboxItems: updateMeFormItems[];
 };
 
-const UpdateMeFormComponent = (props: Props) => {
+const UpdateMeFormComponent: React.FunctionComponent<Props> = (props: Props) => {
   return (
     <div>
       <Offcanvas show={props.show} onHide={() => props.setShow(!props.show)}>

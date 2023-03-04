@@ -62,6 +62,7 @@ const ConnectComponent = (props: ConnectComponentProps): JSX.Element => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -86,7 +87,7 @@ const ConnectComponent = (props: ConnectComponentProps): JSX.Element => {
               <img
                 style={{ transform: `translate3d(0px, ${scrollY}%, 0px)` }}
                 className={CCCSS.rightImage}
-                src={props.fields.rightImage.value?.src}
+                src={props.fields.rightImage.value?.src || ''}
                 alt="Mahindra"
               />
             </figure>

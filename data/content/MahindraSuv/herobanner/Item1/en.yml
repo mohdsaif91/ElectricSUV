@@ -5,9 +5,9 @@ template: MahindraSuv-Herobanner-Item-template
 fields:
   mediaType: image
   media:
-    src: /data/media/img/HeroBanner/bannerImg1.jpg
+    src: /data/media/img/HeroBanner/bannerImg1.webp
   mediaMobile:
-    src: /data/media/img/HeroBanner/XUV400_Desktop_mobile.jpg
+    src: /data/media/img/HeroBanner/XUV400_Desktop_mobile.webp
   mediaText: <h1 class="heroBannerTitle">
     <span class="typeReveal" data-orig-text="" data-delay="250">
     <span class="live"></span><span class="ghost">

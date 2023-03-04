@@ -20,7 +20,7 @@ type Props = {
   changeRender: any;
 };
 
-const HeroBannerChildComponent = (props: Props) => {
+const HeroBannerChildComponent: React.FunctionComponent<Props> = (props: Props) => {
   const [mobile, setMobile] = useState(false);
   const [renderTyping, setRenderTyping] = useState(true);
 
@@ -32,6 +32,7 @@ const HeroBannerChildComponent = (props: Props) => {
     if (typeof window !== 'undefined') {
       setMobile(window.innerWidth < window.innerHeight);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
