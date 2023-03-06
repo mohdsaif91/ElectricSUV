@@ -43,13 +43,13 @@ const HeroBannerComponent = (props: HeroBannerComponentProps): JSX.Element => {
   }, [counter]);
 
   useEffect(() => {
-    const heroChildElement = document.querySelector('#heroChildComponent');
-    const heroElementPosition: any = heroChildElement?.getBoundingClientRect();
-    if (heroElementPosition.top < window.innerHeight && heroElementPosition.bottom >= 0) {
-      if (!render) {
-        setRender(true);
-      }
-    }
+    // const heroChildElement = document.querySelector('#heroChildComponent');
+    // const heroElementPosition: any = heroChildElement?.getBoundingClientRect();
+    // if (heroElementPosition.top < window.innerHeight && heroElementPosition.bottom >= 0) {
+    //   if (!render) {
+    //     setRender(true);
+    //   }
+    // }
     const counterTimer = setInterval(() => {
       setCounter((stateValue: number) => stateValue + 1);
     }, 4000);

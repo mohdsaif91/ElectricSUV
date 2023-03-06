@@ -25,15 +25,28 @@ const HeroBannerChildComponent: React.FunctionComponent<Props> = (props: Props) 
   const [renderTyping, setRenderTyping] = useState(true);
 
   useEffect(() => {
-    if (props.render) {
-      props.changeRender(false);
-      setRenderTyping(false);
-    }
+    // if (props.render) {
+    //   props.changeRender(false);
+    //   setRenderTyping(false);
+    // }
     if (typeof window !== 'undefined') {
       setMobile(window.innerWidth < window.innerHeight);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    if (props.mediaType.value === 'video') {
+      const heroChildElement = document.querySelector('#heroChildComponent');
+      const heroElementPosition: any = heroChildElement?.getBoundingClientRect();
+      if (heroElementPosition.top < window.innerHeight && heroElementPosition.bottom >= 0) {
+        if (props.render) {
+          props.changeRender(false);
+          setRenderTyping(false);
+        }
+      }
+    }
+  }, [props.mediaType.value]);
 
   return (
     <>
