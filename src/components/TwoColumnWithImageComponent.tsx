@@ -1,6 +1,9 @@
 import { withDatasourceCheck, Field, Text, ImageField } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
+import Image from 'next/image';
 import { Col, Container, Row } from 'react-bootstrap';
+
+import { imgLoader } from 'src/util/util';
 
 import TCWICCSS from './TwoColumnWithImageComponent.module.css';
 
@@ -21,6 +24,12 @@ type TwoColumnWIthImageProps = ComponentProps & {
 };
 
 const TwoColumnWithImage = (props: TwoColumnWIthImageProps): JSX.Element => {
+  // {
+  //   src, width, quality;
+  // }
+  // const imgLoader = (data: any) => {
+  //   return `${data.src}?w=${data.width}&q=${data.quality || 75}`;
+  // };
   return (
     <div className={`${TCWICCSS.mainContainer} container-fluid`}>
       <Container className={`${TCWICCSS.cardWithImageContainer}`}>
@@ -37,11 +46,19 @@ const TwoColumnWithImage = (props: TwoColumnWIthImageProps): JSX.Element => {
               <Col lg="6" md={6} sm={12} className={`${TCWICCSS.cardWithImage}`} key={index}>
                 <div className={`${TCWICCSS.humanImage}`}>
                   <figure className={`${TCWICCSS.humanImageFigure}`}>
-                    <img
+                    <Image
+                      loader={imgLoader}
+                      className={`${TCWICCSS.cardImage}`}
+                      src={m.fields.cardImage.value?.src || ''}
+                      width={600}
+                      height={500}
+                      alt="Mahindra"
+                    />
+                    {/* <img
                       className={`${TCWICCSS.cardImage}`}
                       src={m.fields.cardImage.value?.src}
                       alt="Mahindra"
-                    />
+                    /> */}
                   </figure>
                 </div>
                 <div className={`${TCWICCSS.cardBody}`}>

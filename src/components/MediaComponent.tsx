@@ -1,4 +1,6 @@
 import { Field, ImageField } from '@sitecore-jss/sitecore-jss-nextjs';
+import Image from 'next/image';
+import { imgLoader } from 'src/util/util';
 
 import MCCSS from './MediaRoomComponent.module.css';
 
@@ -20,13 +22,24 @@ const MediaComponent = (props: MediaComponentProps): JSX.Element => (
   >
     <div className={MCCSS.imageContainer}>
       <figure className={MCCSS.mediaFigure}>
-        <img
+        <Image
+          loader={imgLoader}
+          className={MCCSS.mainImg}
+          loading="lazy"
+          sizes="(-webkit-min-device-pixel-ratio: 2) 150vw, (min-resolution: 192dpi) 150vw, 100vw"
+          src={props.image.value?.src || ''}
+          alt={'Image'}
+          height="16%"
+          width="32%"
+          layout="responsive"
+        />
+        {/* <img
           className={MCCSS.mainImg}
           loading="lazy"
           sizes="(-webkit-min-device-pixel-ratio: 2) 150vw, (min-resolution: 192dpi) 150vw, 100vw"
           src={props.image.value?.src}
           alt={'Image'}
-        />
+        /> */}
       </figure>
     </div>
     <p className={MCCSS.mediaDate}>{props.date.value}</p>

@@ -10,6 +10,8 @@ import { ComponentProps } from 'lib/component-props';
 import { Col, Row } from 'react-bootstrap';
 
 import CCCSS from './ConnectComponent.module.css';
+import Image from 'next/image';
+import { imgLoader } from 'src/util/util';
 
 type ConnectComponentProps = ComponentProps & {
   fields: {
@@ -84,12 +86,21 @@ const ConnectComponent = (props: ConnectComponentProps): JSX.Element => {
           </Col>
           <Col lg="7" md="6" sm="12" className={CCCSS.rightImageContainer}>
             <figure className={`${CCCSS.connectFigure} ${CCCSS.rellax}`}>
-              <img
+              <Image
+                loader={imgLoader}
                 style={{ transform: `translate3d(0px, ${scrollY}%, 0px)` }}
                 className={CCCSS.rightImage}
                 src={props.fields.rightImage.value?.src || ''}
                 alt="Mahindra"
+                height={100}
+                width={760}
               />
+              {/* <img
+                style={{ transform: `translate3d(0px, ${scrollY}%, 0px)` }}
+                className={CCCSS.rightImage}
+                src={props.fields.rightImage.value?.src || ''}
+                alt="Mahindra"
+              /> */}
             </figure>
           </Col>
         </Row>

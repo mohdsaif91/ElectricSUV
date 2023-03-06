@@ -2,6 +2,9 @@ import { useState } from 'react';
 import { Text, Field, withDatasourceCheck, ImageField } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 import { Carousel, Col, Container, Row } from 'react-bootstrap';
+import Image from 'next/image';
+
+import { imgLoader } from 'src/util/util';
 
 import GCCSS from './GalleryComponent.module.css';
 
@@ -48,11 +51,19 @@ const GalleryComponent = (props: GalleryComponentProps): JSX.Element => {
                 >
                   {props.fields.carImageListSlide.map((m: galleryItemList, index: number) => (
                     <Carousel.Item key={index}>
-                      <img
+                      <Image
+                        loader={imgLoader}
+                        className={GCCSS.carImg}
+                        src={m.fields.galleryImage.value?.src || ''}
+                        alt="Mahindra"
+                        width={1500}
+                        height={700}
+                      />
+                      {/* <img
                         className={GCCSS.carImg}
                         src={m.fields.galleryImage.value?.src}
                         alt="Mahindra"
-                      />
+                      /> */}
                     </Carousel.Item>
                   ))}
                 </Carousel>
@@ -61,7 +72,20 @@ const GalleryComponent = (props: GalleryComponentProps): JSX.Element => {
           </Col>
           <Col lg="12" className={GCCSS.allImageContainerArrow}>
             <div className={`${GCCSS.galleryBtnContainer}`}>
-              <img
+              <Image
+                className="c-p"
+                onClick={() => {
+                  if (slideImage > 0) {
+                    setSlideImage(slideImage - 1);
+                  }
+                }}
+                src={props.fields.previousIcon.value?.src || ''}
+                alt="Mahindra"
+                loader={imgLoader}
+                width={80}
+                height={90}
+              />
+              {/* <img
                 className="c-p"
                 onClick={() => {
                   if (slideImage > 0) {
@@ -70,8 +94,21 @@ const GalleryComponent = (props: GalleryComponentProps): JSX.Element => {
                 }}
                 src={props.fields.previousIcon.value?.src}
                 alt="Mahindra"
+              /> */}
+              <Image
+                loader={imgLoader}
+                className="c-p"
+                onClick={() => {
+                  if (props.fields.carImageListSlide.length - 1 > slideImage) {
+                    setSlideImage(slideImage + 1);
+                  }
+                }}
+                src={props.fields.nextIcon.value?.src || ''}
+                alt="Mahindra"
+                width={80}
+                height={90}
               />
-              <img
+              {/* <img
                 className="c-p"
                 onClick={() => {
                   if (props.fields.carImageListSlide.length - 1 > slideImage) {
@@ -80,20 +117,30 @@ const GalleryComponent = (props: GalleryComponentProps): JSX.Element => {
                 }}
                 src={props.fields.nextIcon.value?.src}
                 alt="Mahindra"
-              />
+              /> */}
             </div>
           </Col>
           <Col lg="12" className={GCCSS.allImageContainerMain}>
             <div className={GCCSS.allImageContainer}>
               {props.fields.carImageListSlide.map((m: galleryItemList, index: number) => {
                 return (
-                  <img
+                  <Image
                     key={index}
+                    loader={imgLoader}
                     className={GCCSS.carImg}
                     onClick={() => changeImage(index)}
-                    src={m.fields.galleryImage.value?.src}
+                    src={m.fields.galleryImage.value?.src || ''}
                     alt="Mahindra"
+                    width={250}
+                    height={200}
                   />
+                  // <img
+                  //   key={index}
+                  //   className={GCCSS.carImg}
+                  //   onClick={() => changeImage(index)}
+                  //   src={m.fields.galleryImage.value?.src}
+                  //   alt="Mahindra"
+                  // />
                 );
               })}
             </div>
