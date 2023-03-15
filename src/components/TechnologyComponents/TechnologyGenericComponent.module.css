@@ -23,13 +23,19 @@
   transform: translateX(100%);
 }
 
-.closeIcon {
-  cursor: pointer;
-  height: 42px;
-  width: 42px;
+.iconParent {
   position: sticky;
   left: calc(100% - 42px);
   top: 0;
+  cursor: pointer;
+  height: 42px;
+  width: 42px;
+}
+
+.closeIcon {
+  height: 42px;
+  width: 42px;
+
   background: #1f1f1f;
 }
 .platformMainTitle {

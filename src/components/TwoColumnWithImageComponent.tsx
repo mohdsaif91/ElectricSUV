@@ -63,11 +63,17 @@ const TwoColumnWithImage = (props: TwoColumnWIthImageProps): JSX.Element => {
                 </div>
                 <div className={`${TCWICCSS.cardBody}`}>
                   <div className={`${TCWICCSS.cardIconContainer}`}>
-                    <img
-                      className={`${TCWICCSS.cardIcon}`}
-                      src={m.fields.cardIcon.value?.src}
-                      alt="Mahindra"
-                    />
+                    <div className={TCWICCSS.imgParent}>
+                      <Image
+                        loader={imgLoader}
+                        className={`${TCWICCSS.cardIcon}`}
+                        src={m.fields.cardIcon.value?.src || ''}
+                        alt="Mahindra"
+                        height={90}
+                        width={150}
+                        objectFit="contain"
+                      />
+                    </div>
                   </div>
                   <span className={`${TCWICCSS.cardTtext}`}>
                     <Text field={m.fields.cardText} />

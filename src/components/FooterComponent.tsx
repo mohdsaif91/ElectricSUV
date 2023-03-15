@@ -1,5 +1,6 @@
 import { Field, ImageField, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
+import Image from 'next/image';
 import { Col, Row } from 'react-bootstrap';
 import { BsYoutube } from 'react-icons/bs';
 import { TbBrandInstagram } from 'react-icons/tb';
@@ -31,7 +32,12 @@ const FooterComponent = (props: FooterComponentProps): JSX.Element => {
       <div className={`${FCCSS.footertext} container`} id="footer">
         <Row className=" p-2 pt-3 pb-3">
           <Col lg={2} md={6} sm={12} className="col-md-2 d-flex p-0 align-items-center ">
-            <img src={props.fields.logo.value?.src || ''} width="130" height="20" alt="Mahindra" />
+            <Image
+              src={props.fields.logo.value?.src || ''}
+              width={130}
+              height={20}
+              alt="Mahindra"
+            />
           </Col>
           <Col lg={7} md={6} sm={12} className={`${FCCSS.footerLinks} col-md-2 p-0 d-flex `}>
             <div className="">

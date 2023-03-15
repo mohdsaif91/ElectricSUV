@@ -5,6 +5,9 @@
 .cardWithImageContainer {
   padding-top: 200px;
 }
+.imgParent {
+  margin: 0 128px 50px 128px;
+}
 
 .cardWithImageHeading {
   font-family: Oxanium, sans-serif;

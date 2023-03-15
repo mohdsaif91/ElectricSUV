@@ -7,6 +7,7 @@ import { AiOutlineArrowRight } from 'react-icons/ai';
 import UpdateMeFormComponent from './NavbarUpdateFormComponent/UpdateMeFormComponent';
 
 import HCCSS from './HeaderComponent.module.css';
+import Image from 'next/image';
 
 interface headerItem {
   fields: {
@@ -79,10 +80,10 @@ const HeaderComponent = (props: HeaderComponentProps): JSX.Element => {
             </svg>
           </Navbar.Toggle>
           <Navbar.Brand href="#">
-            <img
-              src={props.fields.logo.value?.src}
-              width="130"
-              height="20"
+            <Image
+              src={props.fields.logo.value?.src || ''}
+              width={130}
+              height={20}
               alt="Mahindra"
               className="m-0 mb-1 p-0"
             />
