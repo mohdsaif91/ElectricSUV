@@ -1,14 +1,14 @@
-.connect-container {
+.connectContainer {
   height: 737px;
   background-image: linear-gradient(to bottom, #000 0%, #1f1f1f 100%);
 }
-.connect-row {
+.connectRow {
   height: 100%;
 }
-.text-column {
+.textColumn {
   padding: 200px 10px 100px 100px;
 }
-.connect-heading {
+.connectHeading {
   font-family: Oxanium, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -46,14 +46,14 @@
   font-family: Oxanium, sans-serif;
 }
 
-.h1-text {
+.h1Text {
   display: block;
   white-space: normal !important;
   margin-top: 50px;
   letter-spacing: 0.9rem;
   line-height: 4rem;
 }
-.connect-body {
+.connectBody {
   padding-right: 120px !important;
   margin-top: 23px;
 }
@@ -61,13 +61,13 @@
   height: 100%;
 }
 
-.right-image-container {
+.rightImageContainer {
   height: 100%;
   position: relative;
   overflow: hidden;
 }
 
-.connect-figure {
+.connectFigure {
   display: flex;
   position: absolute;
   top: 0;
@@ -81,7 +81,7 @@
   transform: scale(1.1);
 }
 
-.right-image {
+.rightImage {
   transform: translate3d(0px, 0px, 0px);
   transition: 0.7s;
   object-fit: cover;
@@ -91,35 +91,35 @@
 }
 
 @media only screen and (max-width: 450px) and (min-width: 340px) {
-  .connect-row {
+  .connectRow {
     margin: 0 !important;
     padding-top: 80px;
   }
-  .text-column {
+  .textColumn {
     padding: 0 20px 80px 20px;
   }
-  .right-image-container {
+  .rightImageContainer {
     padding: 150% 0 0 0 !important;
     height: 0 !important;
   }
-  .h1-text {
+  .h1Text {
     display: contents;
     line-height: 2rem;
   }
 }
 @media only screen and (max-width: 850px) and (min-width: 700px) {
-  .right-image-container {
+  .rightImageContainer {
     padding-left: 0;
     padding-right: 0;
   }
-  .connect-figure {
+  .connectFigure {
     left: -6.5%;
   }
-  .text-column {
+  .textColumn {
     padding-left: 50px;
     padding-right: 72px;
   }
-  .connect-row {
+  .connectRow {
     margin: 0;
   }
 }

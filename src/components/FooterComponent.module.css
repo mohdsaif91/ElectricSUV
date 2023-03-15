@@ -10,7 +10,7 @@
   color: white;
   font-size: large;
 }
-.footer-row {
+.footerRow {
   padding: 20px 80px;
 }
 
@@ -34,17 +34,17 @@
 }
 
 @media only screen and (max-width: 450px) and (min-width: 340px) {
-  .no-padding {
+  .noPadding {
     padding: 10px 20px !important;
   }
-  .footer-container {
+  .footerContainer {
     position: absolute;
     margin-top: 71%;
   }
   .connect-body {
     padding-right: 0;
   }
-  .footer-row {
+  .footerRow {
     padding: 32px 20px;
   }
   .footerLinks {
@@ -63,13 +63,13 @@
 
 /* TABLET */
 @media only screen and (max-width: 850px) and (min-width: 700px) {
-  .footer-container {
+  .footerContainer {
     position: absolute;
   }
 }
 
 @media only screen and (max-width: 760px) and (min-width: 700px) {
-  .footer-container {
+  .footerContainer {
     position: absolute;
     margin-top: 570px;
   }

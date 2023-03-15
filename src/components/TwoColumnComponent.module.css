@@ -4,11 +4,6 @@
   letter-spacing: 0.3rem;
 }
 
-.twoColDescriptionCol {
-  /* margin-top: 3rem;
-  padding-top: 3rem; */
-}
-
 .heading-alignment {
   margin-top: 3rem;
 }
@@ -16,25 +11,6 @@
 .twoColRow {
   display: flex;
 }
-
-/* [data-aos^='fade'][data-aos^='fade'] {
-  opacity: 0;
-  -webkit-transition-property: opacity, -webkit-transform;
-  transition-property: opacity, -webkit-transform;
-  transition-property: opacity, transform;
-  transition-property: opacity, transform, -webkit-transform;
-}
-
-[data-aos^='fade'][data-aos^='fade'].aos-animate {
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-[data-aos='fade-up'] {
-  -webkit-transform: translate3d(0, 100px, 0);
-  transform: translate3d(0, 100px, 0);
-} */
 
 .lineUp {
   animation: 2s anim-lineUp ease-out infinite;
@@ -59,14 +35,10 @@
 
 .vh100 {
   padding: 0 96px;
-  /* height: 100vh; */
 }
 
 .twoColContainer {
   padding: 200px 0;
-}
-
-.twoColBrandsHheading {
 }
 
 @media only screen and (max-width: 450px) and (min-width: 360px) {

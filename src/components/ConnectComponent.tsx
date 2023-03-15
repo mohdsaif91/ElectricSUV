@@ -9,6 +9,10 @@ import {
 import { ComponentProps } from 'lib/component-props';
 import { Col, Row } from 'react-bootstrap';
 
+import CCCSS from './ConnectComponent.module.css';
+import Image from 'next/image';
+import { imgLoader } from 'src/util/util';
+
 type ConnectComponentProps = ComponentProps & {
   fields: {
     sectionHeading: Field<string>;
@@ -60,33 +64,43 @@ const ConnectComponent = (props: ConnectComponentProps): JSX.Element => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <section id="connect">
-      <div className="connect-container">
-        <Row className="connect-row">
-          <Col lg="5" sm="12" md="6" className="text-column">
-            <span className="connect-heading is-view">
+      <div className={CCCSS.connectContainer}>
+        <Row className={CCCSS.connectRow}>
+          <Col lg="5" sm="12" md="6" className={CCCSS.textColumn}>
+            <span className={`${CCCSS.connectHeading} is-view`}>
               <Text field={props.fields.sectionHeading} />
             </span>
-            <h1 className="h1">
-              <span className={`h1-text ${render ? 'typingDemo' : ''}`}>
+            <h1 className={CCCSS.h1}>
+              <span className={`${CCCSS.h1Ttext} ${render ? 'typingDemo' : ''}`}>
                 <RichText field={props.fields.heading} />
               </span>
             </h1>
-            <div className="connect-body">
+            <div className={CCCSS.connectBody}>
               <Text field={props.fields.body} />
             </div>
           </Col>
-          <Col lg="7" md="6" sm="12" className="right-image-container">
-            <figure className="connect-figure rellax">
-              <img
+          <Col lg="7" md="6" sm="12" className={CCCSS.rightImageContainer}>
+            <figure className={`${CCCSS.connectFigure} ${CCCSS.rellax}`}>
+              <Image
+                loader={imgLoader}
                 style={{ transform: `translate3d(0px, ${scrollY}%, 0px)` }}
-                className="right-image"
-                src={props.fields.rightImage.value?.src}
+                className={CCCSS.rightImage}
+                src={props.fields.rightImage.value?.src || ''}
                 alt="Mahindra"
+                height={100}
+                width={760}
               />
+              {/* <img
+                style={{ transform: `translate3d(0px, ${scrollY}%, 0px)` }}
+                className={CCCSS.rightImage}
+                src={props.fields.rightImage.value?.src || ''}
+                alt="Mahindra"
+              /> */}
             </figure>
           </Col>
         </Row>

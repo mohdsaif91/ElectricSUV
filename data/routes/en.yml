@@ -39,8 +39,8 @@ placeholders:
         formBody: Register your interest and join us on an electrifying journey of discovery.
     - componentName: HeroBannerComponent
       fields:
-        bannerImage: /data/media/img/HeroBanner/XUV400_Desktop.jpg
-        bannerImageMobile: /data/media/img/HeroBanner/XUV400_Desktop_mobile.jpg
+        bannerImage: /data/media/img/HeroBanner/XUV400_Desktop.webp
+        bannerImageMobile: /data/media/img/HeroBanner/XUV400_Desktop_mobile.webp
         bannerList:
           - id: herobanner-item1
           - id: herobanner-item2
@@ -106,7 +106,7 @@ placeholders:
         tabletbodyimg:
           src: /data/media/img/Technology/technology-Chasce-Tablet.webp
         closeIcon:
-          src: /data/media/img/Technology/closeIcon.png
+          src: /data/media/img/Technology/closeIcon.webp
         platFormTitle: PLATFORM
         platformMainTitle: VERSATILE POWERFUL DYNAMIC
         platformDescription: <p class="description h3">

@@ -25,12 +25,12 @@ type platformProps = {
 const TechnologyGenericComponent = (props: platformProps): JSX.Element => {
   return (
     <div
-      className={`${TGCCSS.platformContainer} technology-transition ${
+      className={`${TGCCSS.platformContainer} ${TGCCSS.technologyTransition} ${
         props.flag ? '' : 'is-hidden'
       }`}
     >
       <img
-        className="close-icon"
+        className={TGCCSS.closeIcon}
         src={props.closeIcon}
         onClick={() => props.onClose()}
         alt="close"
@@ -44,7 +44,7 @@ const TechnologyGenericComponent = (props: platformProps): JSX.Element => {
           </div>
         </Col>
         <Col lg={12} md={12} sm={12}>
-          <h3 className="platform-main-title">
+          <h3 className={TGCCSS.platformMainTitle}>
             <Text field={props.platformMainTitle}></Text>
           </h3>
         </Col>
@@ -54,19 +54,19 @@ const TechnologyGenericComponent = (props: platformProps): JSX.Element => {
           </div>
         </Col>
       </Row>
-      <div className="platform-text-1">
+      <div className={TGCCSS.platformText1}>
         <Text field={props.platformText1}></Text>
       </div>
       {props.listItem.map((m: platformImageItem, index) => (
         <div className="img-with-dec" key={index}>
-          <div className="image-with-dec-title h4">
+          <div className={`${TGCCSS.imageWithDecTitle} h4`}>
             <Text field={m.fields.imgWithTitle}></Text>
           </div>
-          <div className="image-with-dec-dec">
+          <div className={TGCCSS.imageWithDecDec}>
             <Text field={m.fields.imgWithDec}></Text>
           </div>
-          <figure className="platform-figure">
-            <img className="dec-img" src={m.fields.imgWithDecImg.value?.src} alt="Mahindra" />
+          <figure className={TGCCSS.platformFigure}>
+            <img className={TGCCSS.decImg} src={m.fields.imgWithDecImg.value?.src} alt="Mahindra" />
           </figure>
         </div>
       ))}

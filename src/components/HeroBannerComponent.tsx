@@ -39,22 +39,24 @@ const HeroBannerComponent = (props: HeroBannerComponentProps): JSX.Element => {
     if (counter === props.fields.bannerList.length + 1) {
       setCounter(1);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [counter]);
 
   useEffect(() => {
-    const heroChildElement = document.querySelector('#heroChildComponent');
-    const heroElementPosition: any = heroChildElement?.getBoundingClientRect();
-    if (heroElementPosition.top < window.innerHeight && heroElementPosition.bottom >= 0) {
-      if (!render) {
-        setRender(true);
-      }
-    }
-    let counterTimer = setInterval(() => {
+    // const heroChildElement = document.querySelector('#heroChildComponent');
+    // const heroElementPosition: any = heroChildElement?.getBoundingClientRect();
+    // if (heroElementPosition.top < window.innerHeight && heroElementPosition.bottom >= 0) {
+    //   if (!render) {
+    //     setRender(true);
+    //   }
+    // }
+    const counterTimer = setInterval(() => {
       setCounter((stateValue: number) => stateValue + 1);
     }, 4000);
     return () => {
       clearInterval(counterTimer);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

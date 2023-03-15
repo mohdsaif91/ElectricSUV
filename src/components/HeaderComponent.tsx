@@ -6,6 +6,8 @@ import { useEffect, useState } from 'react';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import UpdateMeFormComponent from './NavbarUpdateFormComponent/UpdateMeFormComponent';
 
+import HCCSS from './HeaderComponent.module.css';
+
 interface headerItem {
   fields: {
     label: Field<string>;
@@ -60,7 +62,7 @@ const HeaderComponent = (props: HeaderComponentProps): JSX.Element => {
   return (
     <>
       <Navbar expand="xl" fixed="top" className="navbar m-0 ">
-        <Container className="p-0 nav-container m-0">
+        <Container className={`p-0 ${HCCSS.navContainer}  m-0`}>
           <Navbar.Toggle aria-controls="offcanvasNavbar-expand-xl" className="navbarToggleIcon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -89,6 +91,7 @@ const HeaderComponent = (props: HeaderComponentProps): JSX.Element => {
             id="offcanvasNavbar-expand-xl"
             aria-labelledby="offcanvasNavbarLabel-expand-xl"
             placement="start"
+            // className={HCCSS.navCanvas}
             className="navCanvas"
           >
             <Offcanvas.Header closeButton>
@@ -104,7 +107,7 @@ const HeaderComponent = (props: HeaderComponentProps): JSX.Element => {
                     <Nav.Link
                       href={el.fields.url.value}
                       key={index}
-                      className="navlinks p-2 pt-3 pb-0 mx-0 m-0"
+                      className={`navlinks p-2 pt-3 pb-0 mx-0 m-0`}
                     >
                       {el.fields.label.value} <AiOutlineArrowRight className="d-lg-none" />
                       <span></span>
@@ -115,7 +118,7 @@ const HeaderComponent = (props: HeaderComponentProps): JSX.Element => {
                   <Nav.Link className="m-0 p-0 pt-2 pb-2 ">
                     <button
                       type="button"
-                      className="btn btn-outline-light d-md-none d-lg-block d-sm-none spbtn1"
+                      className={`btn btn-outline-light d-md-none d-lg-block d-sm-none ${HCCSS.spbtn1}`}
                       onClick={() => setShow(!show)}
                     >
                       {'UPDATE ME'}
@@ -125,7 +128,7 @@ const HeaderComponent = (props: HeaderComponentProps): JSX.Element => {
                 <Nav.Item>
                   <Nav.Link className="p-0 ">
                     <button
-                      className="d-md-block d-sm-block d-lg-none btn btn-link p-2 pt-0 border border-0 spbtn2"
+                      className={`d-md-block d-sm-block d-lg-none btn btn-link p-2 pt-0 border border-0 ${HCCSS.spbtn2}`}
                       onClick={() => setShow(!show)}
                     >
                       {'UPDATE ME'} <AiOutlineArrowRight className="d-lg-none" />

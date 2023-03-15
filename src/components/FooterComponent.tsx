@@ -25,13 +25,13 @@ type FooterComponentProps = ComponentProps & {
 const FooterComponent = (props: FooterComponentProps): JSX.Element => {
   return (
     <div
-      className="container-fluid footer-container no-padding "
+      className={`container-fluid ${FCCSS.footerContainer} ${FCCSS.noPadding}`}
       style={{ backgroundColor: 'black' }}
     >
-      <div className="footertext container " id="footer">
+      <div className={`${FCCSS.footertext} container`} id="footer">
         <Row className=" p-2 pt-3 pb-3">
           <Col lg={2} md={6} sm={12} className="col-md-2 d-flex p-0 align-items-center ">
-            <img src={props.fields.logo.value?.src} width="130" height="20" alt="Mahindra" />
+            <img src={props.fields.logo.value?.src || ''} width="130" height="20" alt="Mahindra" />
           </Col>
           <Col lg={7} md={6} sm={12} className={`${FCCSS.footerLinks} col-md-2 p-0 d-flex `}>
             <div className="">
@@ -42,6 +42,7 @@ const FooterComponent = (props: FooterComponentProps): JSX.Element => {
                     key={index}
                     className={`${FCCSS.footerLinkItems} me-3`}
                     target={'_blank'}
+                    rel="noreferrer"
                   >
                     {item.fields.label.value}
                   </a>
@@ -58,27 +59,31 @@ const FooterComponent = (props: FooterComponentProps): JSX.Element => {
           >
             <div className="d-flex justify-content-end  ">
               <div className="me-4">
-                <a href="https://www.facebook.com/mahindrabornelectric/" target="_blank">
+                <a
+                  href="https://www.facebook.com/mahindrabornelectric/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <TfiFacebook />
                 </a>
               </div>
               <div className="me-4">
-                <a href="https://twitter.com/born_electric/" target={'_blank'}>
+                <a href="https://twitter.com/born_electric/" target={'_blank'} rel="noreferrer">
                   <TfiTwitterAlt />
                 </a>
               </div>
               <div className="me-4">
-                <a href="#" target={'_blank'}>
+                <a href="#" target={'_blank'} rel="noreferrer">
                   <TbBrandInstagram />
                 </a>
               </div>
               <div className="me-4">
-                <a href="#" target={'_blank'}>
+                <a href="#" target={'_blank'} rel="noreferrer">
                   <TfiLinkedin />
                 </a>
               </div>
               <div className="">
-                <a href="#" target={'_blank'}>
+                <a href="#" target={'_blank'} rel="noreferrer">
                   <BsYoutube />
                 </a>
               </div>

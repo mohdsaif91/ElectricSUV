@@ -1,16 +1,18 @@
+import React from 'react';
+
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 // Prefix public assets with a public URL to enable compatibility with Sitecore Experience Editor.
 // If you're not supporting the Experience Editor, you can remove this.
 
-const Navigation = (): JSX.Element => {
+const Navigation: React.FunctionComponent = (): JSX.Element => {
   const menuItems = ['BRANDS', 'DESIGN', 'eSUVs', 'TECHNOLOGY', 'GALLERY', 'MEDIA ROOM'];
 
   return (
     <Navbar variant="dark" bg="dark" expand="lg" fixed="top">
       <Navbar.Brand href="#">
-        <img src="logo.svg" width="100" height="50" alt="Mahindra"></img>
+        <img src="logo.svg" width="100" height="50" alt="Mahindra" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav"></Navbar.Toggle>
       <Navbar.Collapse id="basic-navbar-nav">
@@ -27,7 +29,6 @@ const Navigation = (): JSX.Element => {
       <button type="button" className="btn btn-outline-light">
         {'UPDATE ME'}
       </button>
-      
     </Navbar>
   );
 };
