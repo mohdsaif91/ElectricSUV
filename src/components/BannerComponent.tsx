@@ -1,5 +1,6 @@
 import { Field, ImageField, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
+import Image from 'next/image';
 
 import BCCSS from './BannerComponent.module.css';
 
@@ -18,14 +19,14 @@ const BannerComponent = (props: BannerComponentProps): JSX.Element => (
         <div className="relative-wrapper">
           <div className="background-image">
             <figure className={BCCSS.bannerImageContainer}>
-              <img
+              <Image
                 className={BCCSS.bannerImage}
                 loading="lazy"
-                src={props.fields.bannerImage.value?.src}
+                src={props.fields.bannerImage.value?.src || ''}
                 alt="Group Hero Shot"
-                width="1920"
-                height="1333"
-              ></img>
+                width={1920}
+                height={1400}
+              />
             </figure>
           </div>
         </div>

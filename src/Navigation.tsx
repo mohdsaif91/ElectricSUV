@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 import Nav from 'react-bootstrap/Nav';
@@ -12,7 +13,7 @@ const Navigation: React.FunctionComponent = (): JSX.Element => {
   return (
     <Navbar variant="dark" bg="dark" expand="lg" fixed="top">
       <Navbar.Brand href="#">
-        <img src="logo.svg" width="100" height="50" alt="Mahindra" />
+        <Image src="logo.svg" width={100} height={50} alt="Mahindra" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav"></Navbar.Toggle>
       <Navbar.Collapse id="basic-navbar-nav">

@@ -12,6 +12,7 @@
   letter-spacing: 5.5vw;
   font-family: Oxanium;
   width: 100%;
+  z-index: 999;
 }
 .separator {
   background-color: white;
